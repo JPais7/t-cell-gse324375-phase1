@@ -20,6 +20,7 @@ The repository is a reproducible numbered pipeline: GEO manifest and QC (`01–0
 - Added balanced extracellular, intrinsic and multicellular candidate classes and a decomposable evidence score; the legacy 80/20 LR score is retained only as an input feature, not the final scientific rank.
 - Added explicit animal replication, effect, consistency, modality, state, temporal and power components, plus minimum evidence gates for TOP 3.
 - Added Phase 2 candidate table, TOP 3 rationale and final report.
+- Added candidate-family collapsing, leave-one-mouse-out stability, a 1,000-permutation rank null model, and fail-fast quality control (`scripts/21_phase1_quality_control.py`). The null model is a robustness benchmark for the composite score, not a replacement for molecular FDR.
 
 ## What remains associative
 
@@ -28,6 +29,8 @@ All Phase 1 candidates are associative. A positive RNA/ADT association, a source
 ## What cannot be inferred from GSE324375 alone
 
 The data do not provide same-animal longitudinal trajectories, spatial contact, direct protein measurements for every gene, perturbational effects, or proof that a ligand is delivered to a receptor. The relevant-vs-innate comparison is underpowered in several strata. No Phase 1 result can be called causal or therapeutic.
+
+No external perturbational or literature dataset was supplied/integrated; `external_perturbation_support` and `literature_novelty_status` therefore remain `NOT_ASSESSED`, and no candidate receives Tier 3 or Tier 4.
 
 ## Phase 2 outputs to use
 

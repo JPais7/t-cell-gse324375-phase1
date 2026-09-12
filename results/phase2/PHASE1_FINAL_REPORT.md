@@ -14,12 +14,12 @@ Use candidates_for_perturbation_validation.tsv and TOP3_candidates.md. Test nece
 
 ## TOP 10 candidates
 
-1. fibroblast → Adam10 → Cd44 → CD8 (extracellular; score=0.744; power=HIGH)
-2. fibroblast → Adam10 → Tspan5 → CD8 (extracellular; score=0.744; power=HIGH)
-3. fibroblast → Adam10 → Tspan14 → CD8 (extracellular; score=0.744; power=HIGH)
-4. Stat4 (intrinsic; score=0.492; power=MODERATE)
-5. Atf6 (intrinsic; score=0.492; power=MODERATE)
-6. Fli1 (intrinsic; score=0.471; power=MODERATE)
-7. T_cell → Pkm → Cd44 → CD8 (multicellular; score=0.777; power=HIGH)
-8. NK → Tnfsf4 → Tnfrsf4 → CD8 (multicellular; score=0.775; power=HIGH)
-9. T_cell → Cd80 → Ctla4 → CD4 (multicellular; score=0.764; power=HIGH)
+656. fibroblast → Adam10 → Cd44 → CD8 (extracellular; score=0.744; power=HIGH)
+991. neutrophil → Pdcd1lg2 → Pdcd1 → CD4 (extracellular; score=0.744; power=HIGH)
+66. fibroblast → Col1a2 → Cd44 → CD4 (extracellular; score=0.742; power=HIGH)
+64971. Stat4 (intrinsic; score=0.492; power=MODERATE)
+64972. Atf6 (intrinsic; score=0.492; power=MODERATE)
+64973. Fli1 (intrinsic; score=0.471; power=MODERATE)
+17. T_cell → Pkm → Cd44 → CD8 (multicellular; score=0.777; power=HIGH)
+910. NK → Tnfsf4 → Tnfrsf4 → CD8 (multicellular; score=0.775; power=HIGH)
+2. T_cell → Cd80 → Ctla4 → CD4 (multicellular; score=0.764; power=HIGH)
