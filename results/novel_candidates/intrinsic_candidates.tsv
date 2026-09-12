@@ -1,0 +1,201 @@
+candidate	candidate_type	mechanism_class	effect_size	FDR	RNA_evidence	ADT_evidence	data_driven_state_evidence	cell_source_evidence	receptor_evidence	pathway_evidence	treatment_consistency	novelty_indicator	evidence_class	score
+Stat4	intrinsic	inferred transcription-factor activity	0.6320756352928133	3.934714292939858e-06	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	7.037162432398094
+Atf6	intrinsic	inferred transcription-factor activity	0.3574314450022513	3.934714292939858e-06	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	6.762518242107531
+E2f4	intrinsic	inferred transcription-factor activity	1.4135144645543425	0.0052827759002884	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	4.690652276606836
+Fli1	intrinsic	inferred transcription-factor activity	-0.5558803089557954	0.0004328440776583	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	4.363668520292737
+Foxm1	intrinsic	inferred transcription-factor activity	0.8811886320351334	0.014219479417557	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	3.7283049350943314
+Irf1	intrinsic	inferred transcription-factor activity	-0.6106920661857678	0.0021909878323556	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.659360034285709
+Foxl2	intrinsic	inferred transcription-factor activity	-0.2545624745449515	0.0023938359948939	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.620905607042575
+Stat6	intrinsic	inferred transcription-factor activity	-0.3245140577068172	0.0034614574488197	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	3.460741002737042
+E2f3	intrinsic	inferred transcription-factor activity	0.5454669447284368	0.014219479417557	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.392583247787635
+Usf1	intrinsic	inferred transcription-factor activity	0.368312119065413	0.009687530351918	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	3.38209904286461
+Nfkb2	intrinsic	inferred transcription-factor activity	-0.5906905524243	0.0049454278787366	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.305796127254833
+Stat5b	intrinsic	inferred transcription-factor activity	-0.5257689380988256	0.0053761706335998	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.2695269557178475
+Atf2	intrinsic	inferred transcription-factor activity	-0.4648494213708968	0.0056052232566211	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.2514070847304497
+Foxa2	intrinsic	inferred transcription-factor activity	-0.4287530659394006	0.0056800887681079	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	3.2456448771062014
+Pknox1	intrinsic	inferred transcription-factor activity	0.1617888004789929	0.009687530351918	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	3.1755757242781897
+E2f1	intrinsic	inferred transcription-factor activity	0.8159868664184815	0.0477558070287255	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.1369606777826458
+Tfdp1	intrinsic	inferred transcription-factor activity	0.8198466993691725	0.0516059495279375	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	3.1071469260713287
+E2f2	intrinsic	inferred transcription-factor activity	0.6219652633170581	0.0367746235833875	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	3.0564170272334485
+Zc3h8	intrinsic	inferred transcription-factor activity	0.2202646064904151	0.019420653287745	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.932000771521379
+Nfyb	intrinsic	inferred transcription-factor activity	0.3306893670657665	0.0254499654458018	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.9250021700475193
+Cux1	intrinsic	inferred transcription-factor activity	0.3185062457077121	0.0254603261878827	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.9126422823409763
+Yy1	intrinsic	inferred transcription-factor activity	0.1876112455818903	0.020219010549708	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.881851346716429
+Irf3	intrinsic	inferred transcription-factor activity	0.3271702611387981	0.028284912570063	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.875615420484073
+Otx2	intrinsic	inferred transcription-factor activity	0.2603500651376964	0.027282379427855	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.824467820585678
+Nr2c2	intrinsic	inferred transcription-factor activity	0.3334769610579997	0.0326315217710523	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.8198396334742304
+Tead2	intrinsic	inferred transcription-factor activity	0.2292569316355794	0.0258778013155362	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.8163295575173573
+Hif1a	intrinsic	inferred transcription-factor activity	-0.4451971391916456	0.0173172425561924	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.761521260007342
+Mafb	intrinsic	inferred transcription-factor activity	-0.4638080686442298	0.0173172425561924	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.761521260007342
+Atf4	intrinsic	inferred transcription-factor activity	0.4847018057842618	0.0629068682143646	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.6860037411854227
+Jund	intrinsic	inferred transcription-factor activity	0.4077663179753935	0.0528830805151327	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.6844495724857644
+Relb	intrinsic	inferred transcription-factor activity	-0.3122097639092132	0.0230736841945169	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.6368830557778464
+Foxp2	intrinsic	inferred transcription-factor activity	-0.1326018758897147	0.0239818276217627	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.6201177229969117
+Mbd1	intrinsic	inferred transcription-factor activity	-0.1745076204366196	0.0239818276217627	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.6201177229969117
+Maff	intrinsic	inferred transcription-factor activity	-0.5019388435962573	0.0258778013155362	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.587072625881778
+Fosl2	intrinsic	inferred transcription-factor activity	-0.293335674947854	0.0258778013155362	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.587072625881778
+Snai1	intrinsic	inferred transcription-factor activity	0.3049088872145333	0.0528830805151327	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.5815921417249044
+Lyl1	intrinsic	inferred transcription-factor activity	-0.3787098089224004	0.0263681058088158	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.5789210672610183
+Zfp148	intrinsic	inferred transcription-factor activity	0.2933727524435539	0.0540155935501109	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.560853599747373
+Mafk	intrinsic	inferred transcription-factor activity	-0.565022192746823	0.028284912570063	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.5484451593452753
+Irf2	intrinsic	inferred transcription-factor activity	-0.428070144910485	0.0296562207110747	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.5278841948081006
+Elk1	intrinsic	inferred transcription-factor activity	0.2476934518187692	0.0557681999394493	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.5013068250604107
+Wt1	intrinsic	inferred transcription-factor activity	-0.2441938136421956	0.0318001600751779	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.497570693864892
+Mynn	intrinsic	inferred transcription-factor activity	0.2071946047288762	0.0529875758151707	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.4830205537591246
+Mybl2	intrinsic	inferred transcription-factor activity	0.1885849052362802	0.0540155935501109	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.4560657525400993
+Arid2	intrinsic	inferred transcription-factor activity	-0.1742827959588584	0.035075526496799	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.4549958013277298
+Irf9	intrinsic	inferred transcription-factor activity	-0.620460159894255	0.0361016686465743	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.442472724209259
+Meis2	intrinsic	inferred transcription-factor activity	-0.4942885774563584	0.0368460516055875	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.433609043972608
+Grhl2	intrinsic	inferred transcription-factor activity	-0.3166900408083252	0.0368460516055875	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.433609043972608
+Zbtb33	intrinsic	inferred transcription-factor activity	0.1484855346343747	0.0529875758151707	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.424311483664623
+Thap11	intrinsic	inferred transcription-factor activity	0.3483016596775072	0.0862340832504986	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.4126227089105763
+Runx3	intrinsic	inferred transcription-factor activity	-0.5145088016032611	0.0427761555400675	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.368798249749538
+Zfp143	intrinsic	inferred transcription-factor activity	0.2953256923830062	0.0943463609606075	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.320600538758647
+Neurod1	intrinsic	inferred transcription-factor activity	0.119776582770394	0.0634163045209054	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.317575652126629
+Bmal1	intrinsic	inferred transcription-factor activity	-0.3632304193200832	0.0508435743794117	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.2937639254923847
+Rest	intrinsic	inferred transcription-factor activity	-0.2120402423379245	0.0538276873580018	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.2689942787247888
+Gata1	intrinsic	inferred transcription-factor activity	-0.3603816426674617	0.0557681999394493	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.2536133732416417
+Ncoa3	intrinsic	inferred transcription-factor activity	-0.2901650264028508	0.0564953730708116	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.247987119120361
+Pgr	intrinsic	inferred transcription-factor activity	-0.4199618776128169	0.057334754988767	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.2415820390425445
+Pdx1	intrinsic	inferred transcription-factor activity	-0.2726637413832806	0.057334754988767	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.2415820390425445
+Mef2c	intrinsic	inferred transcription-factor activity	-0.3404474558109002	0.057334754988767	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.2415820390425445
+Tfap4	intrinsic	inferred transcription-factor activity	-0.2178124206243529	0.0655025777919293	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.1837416084237704
+E2f6	intrinsic	inferred transcription-factor activity	-0.1939765954414942	0.0655025777919293	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.1837416084237704
+Ybx1	intrinsic	inferred transcription-factor activity	-0.2175442830055273	0.0679036481642468	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.168106892361032
+Elf1	intrinsic	inferred transcription-factor activity	-0.2334164658730606	0.0698559697025743	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.155796474329974
+Pou4f2	intrinsic	inferred transcription-factor activity	-0.2988271546684995	0.0706863550672605	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.150664412100024
+Hmbox1	intrinsic	inferred transcription-factor activity	-0.2008613239315673	0.0741441255649875	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.129923252400598
+Etv6	intrinsic	inferred transcription-factor activity	-0.1133349163437138	0.0741441255649875	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.129923252400598
+Mef2b	intrinsic	inferred transcription-factor activity	-0.3033311469591106	0.075841071342926	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.120095540714364
+Duxbl1	intrinsic	inferred transcription-factor activity	-0.1702474060893845	0.075841071342926	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.120095540714364
+Zhx1	intrinsic	inferred transcription-factor activity	-0.1675705379988422	0.075841071342926	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.120095540714364
+Mef2bl	intrinsic	inferred transcription-factor activity	-0.3033311469591106	0.075841071342926	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.120095540714364
+Kmt2a	intrinsic	inferred transcription-factor activity	-0.2573353260130808	0.0792482661438709	True	False	False	False	False	False	1.0	True	RNA-supported (inferred activity)	2.101010230843796
+Esr2	intrinsic	inferred transcription-factor activity	-0.1699090724381452	0.0792482661438709	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.101010230843796
+Lhx2	intrinsic	inferred transcription-factor activity	-0.2762658366927337	0.0837083823655143	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.0772310505753104
+Mbd2	intrinsic	inferred transcription-factor activity	-0.1946470135174629	0.0837083823655143	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.0772310505753104
+Nfatc1	intrinsic	inferred transcription-factor activity	-0.4743275816819596	0.0840624639839252	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.0753978843884084
+Stat1	intrinsic	inferred transcription-factor activity	-0.6260489434833308	0.0943463609606075	True	False	False	False	False	False	0.5	True	RNA-supported (inferred activity)	2.0252748463756403
+Rbpj	intrinsic	inferred transcription-factor activity	-0.2141535163984567	0.0943463609606075	True	False	False	False	False	False	0.75	True	RNA-supported (inferred activity)	2.0252748463756403
+1110034G24Rik	intrinsic	T-cell-intrinsic regulator/program		0.0002852652603583	False	True	True	False	False	False		True	ADT-supported	
+1600020E01Rik	intrinsic	T-cell-intrinsic regulator/program		2.0087891874326533e-07	False	True	True	False	False	False		True	ADT-supported	
+1700025G04Rik	intrinsic	T-cell-intrinsic regulator/program		3.623613568632119e-16	True	True	True	False	False	False		True	RNA+ADT-supported	
+2010300F17Rik	intrinsic	T-cell-intrinsic regulator/program		3.8846867207720873e-07	False	True	True	False	False	False		True	ADT-supported	
+2410089E03Rik	intrinsic	T-cell-intrinsic regulator/program		1.726617893007147e-10	True	True	True	False	False	False		True	RNA+ADT-supported	
+2610035D17Rik	intrinsic	T-cell-intrinsic regulator/program		2.9082676715053736e-16	False	True	True	False	False	False		True	ADT-supported	
+2700097O09Rik	intrinsic	T-cell-intrinsic regulator/program		0.0299536411406831	False	False	True	False	False	False		True	state-supported	
+2810001G20Rik	intrinsic	T-cell-intrinsic regulator/program		0.0057949286125306	False	True	True	False	False	False		True	ADT-supported	
+2810474O19Rik	intrinsic	T-cell-intrinsic regulator/program		1.2673106891080245e-08	True	True	True	False	False	False		True	RNA+ADT-supported	
+2900060B14Rik	intrinsic	T-cell-intrinsic regulator/program		9.861085449813696e-06	False	True	True	False	False	False		True	ADT-supported	
+4930402H24Rik	intrinsic	T-cell-intrinsic regulator/program		1.0978918416942632e-08	False	False	True	False	False	False		True	state-supported	
+4932422M17Rik	intrinsic	T-cell-intrinsic regulator/program		0.0392812764231772	False	False	True	False	False	False		True	state-supported	
+4933406I18Rik	intrinsic	T-cell-intrinsic regulator/program		6.187653227500095e-07	True	True	True	False	False	False		True	RNA+ADT-supported	
+9130011E15Rik	intrinsic	T-cell-intrinsic regulator/program		0.0299217658799607	False	False	True	False	False	False		True	state-supported	
+9930111J21Rik2	intrinsic	T-cell-intrinsic regulator/program		1.1569436387454517e-64	True	True	True	False	False	False		True	RNA+ADT-supported	
+A430078G23Rik	intrinsic	T-cell-intrinsic regulator/program		1.1078912118238288e-22	False	True	True	False	False	False		True	ADT-supported	
+A630023P12Rik	intrinsic	T-cell-intrinsic regulator/program		0.0171766140540467	False	True	True	False	False	False		True	ADT-supported	
+AC151836.1	intrinsic	T-cell-intrinsic regulator/program		0.0050660075396683	False	True	True	False	False	False		True	ADT-supported	
+AC163354.1	intrinsic	T-cell-intrinsic regulator/program		0.0004259057533876	False	True	True	False	False	False		True	ADT-supported	
+AL590144.2	intrinsic	T-cell-intrinsic regulator/program		0.0001319505407536	False	True	True	False	False	False		True	ADT-supported	
+AY036118	intrinsic	T-cell-intrinsic regulator/program		0.0014971974940219	False	True	True	False	False	False		True	ADT-supported	
+Abcb1a	intrinsic	T-cell-intrinsic regulator/program		6.327912305453162e-83	False	True	True	False	False	False		True	ADT-supported	
+Abcb7	intrinsic	T-cell-intrinsic regulator/program		0.0030150107361319	True	False	True	False	False	False		True	RNA-supported	
+Abcg1	intrinsic	T-cell-intrinsic regulator/program		0.0123651521783315	False	True	True	False	False	False		True	ADT-supported	
+Abcg3	intrinsic	T-cell-intrinsic regulator/program		0.000659342298464	False	True	True	False	False	False		True	ADT-supported	
+Abhd18	intrinsic	T-cell-intrinsic regulator/program		6.483885090910718e-07	False	False	True	False	False	False		True	state-supported	
+Abi2	intrinsic	T-cell-intrinsic regulator/program		0.0201429788258205	True	False	True	False	False	False		True	RNA-supported	
+Abl1	intrinsic	T-cell-intrinsic regulator/program		7.281859384755159e-06	False	True	True	False	False	False		True	ADT-supported	
+Abl2	intrinsic	T-cell-intrinsic regulator/program		1.8835145020206776e-16	False	False	True	False	False	False		True	state-supported	
+Abr	intrinsic	T-cell-intrinsic regulator/program		2.2312564650067424e-16	False	False	True	False	False	False		True	state-supported	
+Abtb2	intrinsic	T-cell-intrinsic regulator/program		8.832153839412878e-42	False	True	True	False	False	False		True	ADT-supported	
+Acer3	intrinsic	T-cell-intrinsic regulator/program		1.7433690786697403e-09	False	False	True	False	False	False		True	state-supported	
+Acot11	intrinsic	T-cell-intrinsic regulator/program		0.0001431670678975	False	True	True	False	False	False		True	ADT-supported	
+Acoxl	intrinsic	T-cell-intrinsic regulator/program		0.0020581245438713	False	True	True	False	False	False		True	ADT-supported	
+Acsbg1	intrinsic	T-cell-intrinsic regulator/program		3.4085109807916964e-14	False	True	True	False	False	False		True	ADT-supported	
+Acss1	intrinsic	T-cell-intrinsic regulator/program		6.286793944437944e-06	False	True	True	False	False	False		True	ADT-supported	
+Acss2	intrinsic	T-cell-intrinsic regulator/program		1.638046120665333e-05	False	False	True	False	False	False		True	state-supported	
+Acvr2a	intrinsic	T-cell-intrinsic regulator/program		0.0001544688678984	False	True	True	False	False	False		True	ADT-supported	
+Adam19	intrinsic	T-cell-intrinsic regulator/program		6.281969943469849e-07	False	False	True	False	False	False		True	state-supported	
+Adam9	intrinsic	T-cell-intrinsic regulator/program		0.0031221497258431	True	True	True	False	False	False		True	RNA+ADT-supported	
+Adamts6	intrinsic	T-cell-intrinsic regulator/program		2.309812728540201e-07	False	False	True	False	False	False		True	state-supported	
+Adarb1	intrinsic	T-cell-intrinsic regulator/program		0.0172895291829582	False	True	True	False	False	False		True	ADT-supported	
+Adgre5	intrinsic	T-cell-intrinsic regulator/program		5.75639811514727e-24	True	True	True	False	False	False		True	RNA+ADT-supported	
+Adk	intrinsic	T-cell-intrinsic regulator/program		0.0455617963355829	True	True	True	False	False	False		True	RNA+ADT-supported	
+Adrb2	intrinsic	T-cell-intrinsic regulator/program		0.0346908090299144	True	False	True	False	False	False		True	RNA-supported	
+Aff1	intrinsic	T-cell-intrinsic regulator/program		1.8347286615601829e-13	True	True	True	False	False	False		True	RNA+ADT-supported	
+Aff3	intrinsic	T-cell-intrinsic regulator/program		1.638034418786108e-49	True	True	True	False	False	False		True	RNA+ADT-supported	
+Ago3	intrinsic	T-cell-intrinsic regulator/program		0.0048585020974935	False	True	True	False	False	False		True	ADT-supported	
+Ahcyl2	intrinsic	T-cell-intrinsic regulator/program		2.6575617041092546e-10	False	True	True	False	False	False		True	ADT-supported	
+Aig1	intrinsic	T-cell-intrinsic regulator/program		9.229577193250748e-16	False	True	True	False	False	False		True	ADT-supported	
+Airn	intrinsic	T-cell-intrinsic regulator/program		1.523106746074666e-12	True	False	True	False	False	False		True	RNA-supported	
+Akt3	intrinsic	T-cell-intrinsic regulator/program		1.024865332537843e-46	False	True	True	False	False	False		True	ADT-supported	
+Alcam	intrinsic	T-cell-intrinsic regulator/program		2.094509089351437e-208	False	True	True	False	False	False		True	ADT-supported	
+Amn1	intrinsic	T-cell-intrinsic regulator/program		0.0135669129490978	False	False	True	False	False	False		True	state-supported	
+Amz2	intrinsic	T-cell-intrinsic regulator/program		3.9784306939422555e-08	False	True	True	False	False	False		True	ADT-supported	
+Ankrd28	intrinsic	T-cell-intrinsic regulator/program		6.767601364818984e-64	False	False	True	False	False	False		True	state-supported	
+Ankrd6	intrinsic	T-cell-intrinsic regulator/program		9.982965029249216e-05	True	True	True	False	False	False		True	RNA+ADT-supported	
+Antxr2	intrinsic	T-cell-intrinsic regulator/program		3.877845199005605e-31	True	False	True	False	False	False		True	RNA-supported	
+Anxa1	intrinsic	T-cell-intrinsic regulator/program		0.0007935776022803	True	True	True	False	False	False		True	RNA+ADT-supported	
+Anxa2	intrinsic	T-cell-intrinsic regulator/program		1.4180350045441208e-06	True	True	True	False	False	False		True	RNA+ADT-supported	
+Apaf1	intrinsic	T-cell-intrinsic regulator/program		8.446165061906437e-33	True	True	True	False	False	False		True	RNA+ADT-supported	
+Aph1c	intrinsic	T-cell-intrinsic regulator/program		0.0335666870418872	False	False	True	False	False	False		True	state-supported	
+Aplp2	intrinsic	T-cell-intrinsic regulator/program		0.0207005900376957	False	True	True	False	False	False		True	ADT-supported	
+Apol7e	intrinsic	T-cell-intrinsic regulator/program		1.5896932607587263e-08	True	True	True	False	False	False		True	RNA+ADT-supported	
+Ar	intrinsic	T-cell-intrinsic regulator/program		0.0230144231593214	False	True	True	False	False	False		True	ADT-supported	
+Areg	intrinsic	T-cell-intrinsic regulator/program		0.0002166211991231	True	True	True	False	False	False		True	RNA+ADT-supported	
+Arhgap12	intrinsic	T-cell-intrinsic regulator/program		0.0110099587408454	False	True	True	False	False	False		True	ADT-supported	
+Arhgap18	intrinsic	T-cell-intrinsic regulator/program		5.183119412286138e-33	True	False	True	False	False	False		True	RNA-supported	
+Arhgap31	intrinsic	T-cell-intrinsic regulator/program		2.344346662137756e-38	True	True	True	False	False	False		True	RNA+ADT-supported	
+Arhgef10	intrinsic	T-cell-intrinsic regulator/program		0.0002032006640126	True	False	True	False	False	False		True	RNA-supported	
+Arhgef11	intrinsic	T-cell-intrinsic regulator/program		0.0062439387697449	False	False	True	False	False	False		True	state-supported	
+Arhgef18	intrinsic	T-cell-intrinsic regulator/program		4.9511110460824434e-51	True	True	True	False	False	False		True	RNA+ADT-supported	
+Arhgef3	intrinsic	T-cell-intrinsic regulator/program		0.0289181154052345	False	True	True	False	False	False		True	ADT-supported	
+Arl5a	intrinsic	T-cell-intrinsic regulator/program		1.294374584439676e-08	True	True	True	False	False	False		True	RNA+ADT-supported	
+Arl5b	intrinsic	T-cell-intrinsic regulator/program		4.447628252791679e-06	True	True	True	False	False	False		True	RNA+ADT-supported	
+Arl5c	intrinsic	T-cell-intrinsic regulator/program		0.0145771512410981	True	True	True	False	False	False		True	RNA+ADT-supported	
+Armc7	intrinsic	T-cell-intrinsic regulator/program		0.0320739533286539	True	True	True	False	False	False		True	RNA+ADT-supported	
+Arnt2	intrinsic	T-cell-intrinsic regulator/program		0.0281094130853706	True	True	True	False	False	False		True	RNA+ADT-supported	
+Arntl	intrinsic	T-cell-intrinsic regulator/program		0.0001437367163664	False	True	True	False	False	False		True	ADT-supported	
+Arrb1	intrinsic	T-cell-intrinsic regulator/program		0.0001167131642945	False	True	True	False	False	False		True	ADT-supported	
+Asap1	intrinsic	T-cell-intrinsic regulator/program		0.018003185178082	True	True	True	False	False	False		True	RNA+ADT-supported	
+Asap2	intrinsic	T-cell-intrinsic regulator/program		9.545145619302456e-05	False	False	True	False	False	False		True	state-supported	
+Ass1	intrinsic	T-cell-intrinsic regulator/program		0.0035447534151356	True	True	True	False	False	False		True	RNA+ADT-supported	
+Atad2	intrinsic	T-cell-intrinsic regulator/program		8.796423186798211e-52	True	False	True	False	False	False		True	RNA-supported	
+Atad5	intrinsic	T-cell-intrinsic regulator/program		0.0003720817280767	True	True	True	False	False	False		True	RNA+ADT-supported	
+Atf3	intrinsic	T-cell-intrinsic regulator/program		1.9409523582759188e-63	True	True	True	False	False	False		True	RNA+ADT-supported	
+Atg10	intrinsic	T-cell-intrinsic regulator/program		5.881459070099889e-11	False	False	True	False	False	False		True	state-supported	
+Atp10a	intrinsic	T-cell-intrinsic regulator/program		1.2950306465507743e-32	False	True	True	False	False	False		True	ADT-supported	
+Atp11c	intrinsic	T-cell-intrinsic regulator/program		7.522968638945723e-05	False	True	True	False	False	False		True	ADT-supported	
+Atp8a1	intrinsic	T-cell-intrinsic regulator/program		4.1801363418972743e-13	False	True	True	False	False	False		True	ADT-supported	
+Atp8b4	intrinsic	T-cell-intrinsic regulator/program		3.919199527608191e-08	False	True	True	False	False	False		True	ADT-supported	
+Atrn	intrinsic	T-cell-intrinsic regulator/program		0.021731735159893	False	False	True	False	False	False		True	state-supported	
+Atrnl1	intrinsic	T-cell-intrinsic regulator/program		7.638992512265243e-07	True	False	True	False	False	False		True	RNA-supported	
+B930036N10Rik	intrinsic	T-cell-intrinsic regulator/program		1.756896529790585e-29	False	True	True	False	False	False		True	ADT-supported	
+Bach2	intrinsic	T-cell-intrinsic regulator/program		2.563613609162931e-16	False	True	True	False	False	False		True	ADT-supported	
+Bag3	intrinsic	T-cell-intrinsic regulator/program		0.0081647380050584	False	True	True	False	False	False		True	ADT-supported	
+Batf	intrinsic	T-cell-intrinsic regulator/program		0.000282609264571	True	True	True	False	False	False		True	RNA+ADT-supported	
+Baz2b	intrinsic	T-cell-intrinsic regulator/program		5.813613921339859e-12	True	True	True	False	False	False		True	RNA+ADT-supported	
+Bbs9	intrinsic	T-cell-intrinsic regulator/program		2.5514928984670523e-19	False	True	True	False	False	False		True	ADT-supported	
+Bcas3	intrinsic	T-cell-intrinsic regulator/program		6.850521036513025e-36	False	True	True	False	False	False		True	ADT-supported	
+Bcl2	intrinsic	T-cell-intrinsic regulator/program		0.0004127831091069	False	True	True	False	False	False		True	ADT-supported	
+Bcl2l1	intrinsic	T-cell-intrinsic regulator/program		5.281267825108095e-151	True	True	True	False	False	False		True	RNA+ADT-supported	
+Bcl2l11	intrinsic	T-cell-intrinsic regulator/program		4.862538386893849e-27	False	True	True	False	False	False		True	ADT-supported	
+Bcorl1	intrinsic	T-cell-intrinsic regulator/program		0.0061644506408722	False	False	True	False	False	False		True	state-supported	
+Bend4	intrinsic	T-cell-intrinsic regulator/program		0.0115233774060977	False	False	True	False	False	False		True	state-supported	
+Bhlhe40	intrinsic	T-cell-intrinsic regulator/program		1.0667667199735858e-24	True	True	True	False	False	False		True	RNA+ADT-supported	
+Bicdl1	intrinsic	T-cell-intrinsic regulator/program		0.0011984507232851	False	True	True	False	False	False		True	ADT-supported	
+Birc3	intrinsic	T-cell-intrinsic regulator/program		4.0157482425585906e-11	True	True	True	False	False	False		True	RNA+ADT-supported	
+Birc5	intrinsic	T-cell-intrinsic regulator/program		4.4493783128873787e-13	True	True	True	False	False	False		True	RNA+ADT-supported	
+Bmp2k	intrinsic	T-cell-intrinsic regulator/program		1.4386096459038868e-10	False	True	True	False	False	False		True	ADT-supported	
+Bmpr2	intrinsic	T-cell-intrinsic regulator/program		0.0366058793284091	False	True	True	False	False	False		True	ADT-supported	
+Bmt2	intrinsic	T-cell-intrinsic regulator/program		8.499845514771218e-08	True	False	True	False	False	False		True	RNA-supported	
+Btbd11	intrinsic	T-cell-intrinsic regulator/program		2.3306681480336824e-13	False	True	True	False	False	False		True	ADT-supported	
+Btg2	intrinsic	T-cell-intrinsic regulator/program		2.108267876004893e-20	True	True	True	False	False	False		True	RNA+ADT-supported	
+Btla	intrinsic	T-cell-intrinsic regulator/program		4.883428535456313e-09	False	True	True	False	False	False		True	ADT-supported	
+Bzw2	intrinsic	T-cell-intrinsic regulator/program		2.0538141879833116e-50	False	True	True	False	False	False		True	ADT-supported	
+Cables1	intrinsic	T-cell-intrinsic regulator/program		2.806397426864324e-17	False	False	True	False	False	False		True	state-supported	
+Calcrl	intrinsic	T-cell-intrinsic regulator/program		8.201615092387375e-05	False	True	True	False	False	False		True	ADT-supported	
+Camkmt	intrinsic	T-cell-intrinsic regulator/program		1.1220316674000815e-09	False	False	True	False	False	False		True	state-supported	
+Camsap2	intrinsic	T-cell-intrinsic regulator/program		0.0018731605107208	False	True	True	False	False	False		True	ADT-supported	
+Capg	intrinsic	T-cell-intrinsic regulator/program		2.1348170410457274e-12	True	True	True	False	False	False		True	RNA+ADT-supported	
+Car5b	intrinsic	T-cell-intrinsic regulator/program		0.0001678238797437	False	False	True	False	False	False		True	state-supported	
