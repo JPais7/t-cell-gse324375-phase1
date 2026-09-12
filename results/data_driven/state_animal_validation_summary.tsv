@@ -1,0 +1,3 @@
+lineage	n_mice	direction_consistency	median_effect	FDR	informative_mice	power_flag
+CD4	48	0.125	0.0		47	MODERATE
+CD8	48	0.5	0.0052244738473146675		47	MODERATE

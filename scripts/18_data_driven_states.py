@@ -48,6 +48,28 @@ state_means.to_csv(OUT/"state_summary.tsv",sep="\t")
 
 sub.obs["data_driven_activation_state"] = sub.obs.data_driven_cluster.eq(state_means.index[0])
 sub.obs["data_driven_activation_state"] = sub.obs.data_driven_activation_state.astype(bool)
+
+# Animal-level validation is the inferential result; cell-level markers below are
+# exploratory annotations only.
+cell_state = sub.obs[["mouse_id","t_lineage_provisional","treatment","time_hours","checkpoint_blockade",
+                      "data_driven_activation_state","curated_activation_external"]].copy()
+cell_state["state_n"] = cell_state["data_driven_activation_state"].astype(int)
+animal = cell_state.groupby(["mouse_id","t_lineage_provisional","treatment","time_hours","checkpoint_blockade"], observed=True).agg(
+    n_total_Tcells=("state_n","size"), n_state_cells=("state_n","sum"),
+    activation_score_mean=("curated_activation_external","mean"), activation_score_median=("curated_activation_external","median"),
+).reset_index()
+animal["state_fraction"] = animal.n_state_cells / animal.n_total_Tcells
+animal["state_enrichment_logit"] = np.log((animal.state_fraction+0.01)/(1-animal.state_fraction+0.01))
+animal.to_csv(OUT/"state_animal_validation.tsv",sep="\t",index=False)
+summary=[]
+for lineage,g in animal.groupby("t_lineage_provisional",observed=True):
+    med=g.groupby("mouse_id",observed=True).state_fraction.median()
+    overall=g.state_fraction.median(); consistency=max((med>overall).mean(),(med<overall).mean()) if len(med) else np.nan
+    summary.append({"lineage":lineage,"n_mice":len(med),"direction_consistency":consistency,
+                    "median_effect":float(g.state_fraction.median()),"FDR":np.nan,
+                    "informative_mice":int((g.n_total_Tcells>=20).sum()),
+                    "power_flag":"LOW" if len(med)<6 else "MODERATE"})
+pd.DataFrame(summary).to_csv(OUT/"state_animal_validation_summary.tsv",sep="\t",index=False)
 sub.obs[["data_driven_cluster","data_driven_activation_state","curated_activation_external"]].to_csv(OUT/"cell_state_assignments.tsv.gz",sep="\t")
 sub.write_h5ad(OUT/"Tcell_data_driven_state_atlas.h5ad",compression="gzip")
 
