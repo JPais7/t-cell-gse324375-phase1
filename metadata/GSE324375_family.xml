@@ -1,0 +1,2400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Tyler</First><Middle>T</Middle><Last>Dao</Last></Person>
+    <Email>tylerdao@mit.edu</Email>
+    <Organization>Massachusetts Institute of Technology</Organization>
+    <Address>
+      <Line>45 Carleton St</Line>
+      <City>Cambridge</City>
+      <State>MA</State>
+      <Zip-Code>02142</Zip-Code>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>GEO</Organization>
+    <Address>
+      <City></City>
+      <Country>USA</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Olivia</First><Middle>C</Middle><Last>Ghirardelli Smith</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib4">
+    <Person><First>Noah</First><Middle>V</Middle><Last>Gavil</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib5">
+    <Person><First>Stephen</First><Middle>D</Middle><Last>O'Flanagan</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib6">
+    <Person><First>Adam</First><Middle>J</Middle><Last>Rubin</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib7">
+    <Person><First>Son</First><Last>Nguyen</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib8">
+    <Person><First>Matthew</First><Middle>B</Middle><Last>Watowich</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib9">
+    <Person><First>Nuo</First><Last>Liu</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib10">
+    <Person><First>Eyob</First><Last>Weyu</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib11">
+    <Person><First>Clare</First><Middle>F</Middle><Last>Quarnstrom</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib12">
+    <Person><First>Andrew</First><Middle>G</Middle><Last>Soerens</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib13">
+    <Person><First>Vineet</First><Last>Goag</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib14">
+    <Person><First>Pamela</First><Middle>C</Middle><Last>Rosato</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib15">
+    <Person><First>Matthew</First><Middle>F</Middle><Last>Krummel</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib16">
+    <Person><First>Melissa</First><Middle>A</Middle><Last>Geller</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib17">
+    <Person><First>Jeffrey</First><Middle>S</Middle><Last>Miller</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib18">
+    <Person><First>Alessio</First><Last>Giubellino</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib19">
+    <Person><First>Vaiva</First><Last>Vezys</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib20">
+    <Person><First>Alex</First><Middle>K</Middle><Last>Shalek</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib21">
+    <Person><First>David</First><Last>Masopust</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL24247">
+    <Status database="GEO">
+      <Submission-Date>2017-11-08</Submission-Date>
+      <Release-Date>2017-11-08</Release-Date>
+      <Last-Update-Date>2019-03-08</Last-Update-Date>
+    </Status>
+    <Title>Illumina NovaSeq 6000 (Mus musculus)</Title>
+    <Accession database="GEO">GPL24247</Accession>
+    <Technology>high-throughput sequencing</Technology>
+    <Distribution>virtual</Distribution>
+    <Organism taxid="10090">Mus musculus</Organism>
+    <Manufacturer></Manufacturer>
+    <Manufacture-Protocol>
+    </Manufacture-Protocol>
+    <Contact-Ref ref="contrib2" />
+  </Platform>
+
+  <Sample iid="GSM9574578">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, baseline or relevant peptide treated (12h), channel 1, RNA</Title>
+    <Accession database="GEO">GSM9574578</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Baseline and relevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_1a_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574578/suppl/GSM9574578_Masopust_053_1a_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406535" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430322" />
+  </Sample>
+
+  <Sample iid="GSM9574579">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, baseline or relevant peptide treated (12h), channel 2, RNA</Title>
+    <Accession database="GEO">GSM9574579</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Baseline and relevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_1b_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574579/suppl/GSM9574579_Masopust_053_1b_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406534" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430323" />
+  </Sample>
+
+  <Sample iid="GSM9574580">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant (48h) or irrelevant peptide treated (12h), channel 1, RNA</Title>
+    <Accession database="GEO">GSM9574580</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_2a_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574580/suppl/GSM9574580_Masopust_053_2a_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406533" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430324" />
+  </Sample>
+
+  <Sample iid="GSM9574581">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant (48h) or irrelevant peptide treated (12h), channel 2, RNA</Title>
+    <Accession database="GEO">GSM9574581</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_2b_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574581/suppl/GSM9574581_Masopust_053_2b_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406532" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430325" />
+  </Sample>
+
+  <Sample iid="GSM9574582">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant (48h) or relevant peptide treated (12h), channel 1, RNA</Title>
+    <Accession database="GEO">GSM9574582</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_3a_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574582/suppl/GSM9574582_Masopust_053_3a_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406531" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430326" />
+  </Sample>
+
+  <Sample iid="GSM9574583">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant (48h) or relevant peptide treated (12h), channel 2, RNA</Title>
+    <Accession database="GEO">GSM9574583</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_3b_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574583/suppl/GSM9574583_Masopust_053_3b_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406530" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430327" />
+  </Sample>
+
+  <Sample iid="GSM9574584">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated, channel 1, RNA</Title>
+    <Accession database="GEO">GSM9574584</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_6a_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574584/suppl/GSM9574584_Masopust_053_6a_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406529" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430328" />
+  </Sample>
+
+  <Sample iid="GSM9574585">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated, channel 2, RNA</Title>
+    <Accession database="GEO">GSM9574585</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_6b_GEX_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574585/suppl/GSM9574585_Masopust_053_6b_GEX_FL_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406528" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430329" />
+  </Sample>
+
+  <Sample iid="GSM9574586">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, baseline or relevant peptide treated (12h), channel 1, ADT</Title>
+    <Accession database="GEO">GSM9574586</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Baseline and relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_1a_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574586/suppl/GSM9574586_Masopust_053_1a_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406527" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430330" />
+  </Sample>
+
+  <Sample iid="GSM9574587">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, baseline or relevant peptide treated (12h), channel 2, ADT</Title>
+    <Accession database="GEO">GSM9574587</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Baseline and relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_1b_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574587/suppl/GSM9574587_Masopust_053_1b_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406526" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430331" />
+  </Sample>
+
+  <Sample iid="GSM9574588">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant (48h) or irrelevant peptide treated (12h), channel 1, ADT</Title>
+    <Accession database="GEO">GSM9574588</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_2a_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574588/suppl/GSM9574588_Masopust_053_2a_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406525" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430332" />
+  </Sample>
+
+  <Sample iid="GSM9574589">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant (48h) or irrelevant peptide treated (12h), channel 2, ADT</Title>
+    <Accession database="GEO">GSM9574589</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_2b_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574589/suppl/GSM9574589_Masopust_053_2b_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406524" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430333" />
+  </Sample>
+
+  <Sample iid="GSM9574590">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant (48h) or relevant peptide treated (12h), channel 1, ADT</Title>
+    <Accession database="GEO">GSM9574590</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_3a_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574590/suppl/GSM9574590_Masopust_053_3a_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406523" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430334" />
+  </Sample>
+
+  <Sample iid="GSM9574591">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant (48h) or relevant peptide treated (12h), channel 2, ADT</Title>
+    <Accession database="GEO">GSM9574591</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_3b_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574591/suppl/GSM9574591_Masopust_053_3b_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406522" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430335" />
+  </Sample>
+
+  <Sample iid="GSM9574592">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated, channel 1, ADT</Title>
+    <Accession database="GEO">GSM9574592</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_6a_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574592/suppl/GSM9574592_Masopust_053_6a_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406521" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430336" />
+  </Sample>
+
+  <Sample iid="GSM9574593">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated, channel 2, ADT</Title>
+    <Accession database="GEO">GSM9574593</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_6b_ADT_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574593/suppl/GSM9574593_Masopust_053_6b_ADT_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406520" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430337" />
+  </Sample>
+
+  <Sample iid="GSM9574594">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, baseline or relevant peptide treated (12h), channel 1, HTO</Title>
+    <Accession database="GEO">GSM9574594</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Baseline and relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_1a_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574594/suppl/GSM9574594_Masopust_053_1a_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406519" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430338" />
+  </Sample>
+
+  <Sample iid="GSM9574595">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, baseline or relevant peptide treated (12h), channel 2, HTO</Title>
+    <Accession database="GEO">GSM9574595</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Baseline and relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_1b_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574595/suppl/GSM9574595_Masopust_053_1b_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406518" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430339" />
+  </Sample>
+
+  <Sample iid="GSM9574596">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant (48h) or irrelevant peptide treated (12h), channel 1, HTO</Title>
+    <Accession database="GEO">GSM9574596</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_2a_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574596/suppl/GSM9574596_Masopust_053_2a_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406517" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430340" />
+  </Sample>
+
+  <Sample iid="GSM9574597">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant (48h) or irrelevant peptide treated (12h), channel 2, HTO</Title>
+    <Accession database="GEO">GSM9574597</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_2b_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574597/suppl/GSM9574597_Masopust_053_2b_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406516" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430341" />
+  </Sample>
+
+  <Sample iid="GSM9574598">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant (48h) or relevant peptide treated (12h), channel 1, HTO</Title>
+    <Accession database="GEO">GSM9574598</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_3a_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574598/suppl/GSM9574598_Masopust_053_3a_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406515" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430342" />
+  </Sample>
+
+  <Sample iid="GSM9574599">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant (48h) or relevant peptide treated (12h), channel 2, HTO</Title>
+    <Accession database="GEO">GSM9574599</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant and irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_3b_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574599/suppl/GSM9574599_Masopust_053_3b_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406514" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430343" />
+  </Sample>
+
+  <Sample iid="GSM9574600">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated, channel 1, HTO</Title>
+    <Accession database="GEO">GSM9574600</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_6a_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574600/suppl/GSM9574600_Masopust_053_6a_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406513" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430344" />
+  </Sample>
+
+  <Sample iid="GSM9574601">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated, channel 2, HTO</Title>
+    <Accession database="GEO">GSM9574601</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_053_6b_HTO_FL
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574601/suppl/GSM9574601_Masopust_053_6b_HTO_FL.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406512" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430345" />
+  </Sample>
+
+  <Sample iid="GSM9574602">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant peptide treated (12h), RNA</Title>
+    <Accession database="GEO">GSM9574602</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_A_GEX
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574602/suppl/GSM9574602_Masopust_054_A_GEX_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406511" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430346" />
+  </Sample>
+
+  <Sample iid="GSM9574603">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant peptide treated (48h), RNA</Title>
+    <Accession database="GEO">GSM9574603</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_B_GEX
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574603/suppl/GSM9574603_Masopust_054_B_GEX_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406510" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430347" />
+  </Sample>
+
+  <Sample iid="GSM9574604">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant peptide treated (12h), RNA</Title>
+    <Accession database="GEO">GSM9574604</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Irrelevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_C_GEX
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574604/suppl/GSM9574604_Masopust_054_C_GEX_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406509" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430348" />
+  </Sample>
+
+  <Sample iid="GSM9574605">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant peptide treated (48h), RNA</Title>
+    <Accession database="GEO">GSM9574605</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Irrelevant peptide
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_D_GEX
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574605/suppl/GSM9574605_Masopust_054_D_GEX_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406508" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430349" />
+  </Sample>
+
+  <Sample iid="GSM9574606">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated (12h), RNA</Title>
+    <Accession database="GEO">GSM9574606</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_E_GEX
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>transcriptomic</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="H5">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574606/suppl/GSM9574606_Masopust_054_E_GEX_filtered_feature_bc_matrix.h5
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406507" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430350" />
+  </Sample>
+
+  <Sample iid="GSM9574607">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant peptide treated (12h), ADT</Title>
+    <Accession database="GEO">GSM9574607</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_A_ADT
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574607/suppl/GSM9574607_Masopust_054_A_ADT.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406506" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430351" />
+  </Sample>
+
+  <Sample iid="GSM9574608">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant peptide treated (48h), ADT</Title>
+    <Accession database="GEO">GSM9574608</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_B_ADT
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574608/suppl/GSM9574608_Masopust_054_B_ADT.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406505" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430352" />
+  </Sample>
+
+  <Sample iid="GSM9574609">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant peptide treated (12h), ADT</Title>
+    <Accession database="GEO">GSM9574609</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_C_ADT
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574609/suppl/GSM9574609_Masopust_054_C_ADT.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406504" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430353" />
+  </Sample>
+
+  <Sample iid="GSM9574610">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant peptide treated (48h), ADT</Title>
+    <Accession database="GEO">GSM9574610</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_D_ADT
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574610/suppl/GSM9574610_Masopust_054_D_ADT.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406503" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430354" />
+  </Sample>
+
+  <Sample iid="GSM9574611">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated (12h), ADT</Title>
+    <Accession database="GEO">GSM9574611</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_E_ADT
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574611/suppl/GSM9574611_Masopust_054_E_ADT.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406502" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430357" />
+  </Sample>
+
+  <Sample iid="GSM9574612">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant peptide treated (12h), HTO</Title>
+    <Accession database="GEO">GSM9574612</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_A_HTO
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574612/suppl/GSM9574612_Masopust_054_A_HTO.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406501" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430356" />
+  </Sample>
+
+  <Sample iid="GSM9574613">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, relevant peptide treated (48h), HTO</Title>
+    <Accession database="GEO">GSM9574613</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Relevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_B_HTO
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574613/suppl/GSM9574613_Masopust_054_B_HTO.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406500" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430355" />
+  </Sample>
+
+  <Sample iid="GSM9574614">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant peptide treated (12h), HTO</Title>
+    <Accession database="GEO">GSM9574614</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_C_HTO
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574614/suppl/GSM9574614_Masopust_054_C_HTO.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406499" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430360" />
+  </Sample>
+
+  <Sample iid="GSM9574615">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, irrelevant peptide treated (48h), HTO</Title>
+    <Accession database="GEO">GSM9574615</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Irrelevant peptide
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_D_HTO
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574615/suppl/GSM9574615_Masopust_054_D_HTO.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406498" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430358" />
+  </Sample>
+
+  <Sample iid="GSM9574616">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-05</Last-Update-Date>
+    </Status>
+    <Title>Tumor, innate agonist treated (12h), HTO</Title>
+    <Accession database="GEO">GSM9574616</Accession>
+    <Type>SRA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>B16 tumors</Source>
+      <Organism taxid="10090">Mus musculus</Organism>
+      <Characteristics tag="tissue">
+B16 tumors
+      </Characteristics>
+      <Characteristics tag="cell line">
+B16.F10 melanoma
+      </Characteristics>
+      <Characteristics tag="cell type">
+Melanoma and infiltrated immune cells
+      </Characteristics>
+      <Characteristics tag="treatment">
+Innate agonist
+      </Characteristics>
+      <Molecule>protein</Molecule>
+      <Extract-Protocol>
+Tumors were isolated, dissociated in gentleMACSTM C tubes and dissociator, and filtered. Single cells were processed via the 10x Genomics Next GEM single-cell 3' RNA-seq protocol.
+Gene expression, ADT and HTO libraries were generated following the 10x Genomics 3' protocol.
+      </Extract-Protocol>
+    </Channel>
+    <Description>
+Library name: Masopust_054_E_HTO
+Libraries were sequenced first on a Nextseq2000 for quality control, and then a Novaseq6000 for deeper sequencing
+    </Description>
+    <Data-Processing>
+Raw Illumina output files were processed to fastq files using the Cumulus V2.4.0 CellRanger pipeline on the Terra platform.
+Assembly: mm10
+Supplementary files format and content: Sample specific filtered_feature_bc_matrix.h5, adt.csv and hto.csv files were uploaded.
+Library strategy: CITE-seq
+    </Data-Processing>
+    <Platform-Ref ref="GPL24247" />
+    <Library-Strategy>OTHER</Library-Strategy>
+    <Library-Source>other</Library-Source>
+    <Library-Selection>other</Library-Selection>
+    <Instrument-Model>
+      <Predefined>Illumina NovaSeq 6000</Predefined>
+    </Instrument-Model>
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="CSV">
+ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9574nnn/GSM9574616/suppl/GSM9574616_Masopust_054_E_HTO.csv.gz
+    </Supplementary-Data>
+    <Relation type="BioSample" target="https://www.ncbi.nlm.nih.gov/biosample/SAMN56406497" />
+    <Relation type="SRA" target="https://www.ncbi.nlm.nih.gov/sra?term=SRX32430359" />
+  </Sample>
+
+  <Series iid="GSE324375">
+    <Status database="GEO">
+      <Submission-Date>2026-03-09</Submission-Date>
+      <Release-Date>2026-08-05</Release-Date>
+      <Last-Update-Date>2026-08-06</Last-Update-Date>
+    </Status>
+    <Title>Robust T cell activation kills tumors regardless of T cell specificity</Title>
+    <Accession database="GEO">GSE324375</Accession>
+    <Summary>
+Immunotherapies putatively depend upon tumor-specific T cells. Here, we show how T cells can eliminate tumors without tumor-specificity via paracrine signaling. Activating unexhausted bystander non-tumor-specific T cells within tumors resulted in tumor elimination without conventional recognition-dependent mechanisms and in the absence of any tumor-specific TCRαâ T cell. Robust T cell activation recruited immune cells, utilized innate leukocytes, and triggered a tumoricidal combination of effector molecules and panoptotic pathways. Mechanistically, IFN-γ, TNF, and NO induced caspase-dependent death, recapitulating melanoma clearance in mice or human melanoma cell death in vitro. Gene expression signatures associated with this response in mice predicted survival among human melanoma patients. Thus, triggering productive T cell activation within tumors can be sufficient for immunotherapy, without needing to induce or rescue cancer-specific responses.
+    </Summary>
+    <Overall-Design>
+B16.F10 tumors were seeded into OT-I chimeras (C57BL/6J CD45.2 mice with CD45.1 OT-I CD8+ T cells transferred in) and treated with relevant or irrelevant viral peptide, innate agonist and/or checkpoint blockade. Before treatment, 24 hours and 48 hours after treatment, tumors were harvested and procesed for scRNAseq via the 10x 3’ pipeline.
+    </Overall-Design>
+    <Type>Expression profiling by high throughput sequencing</Type>
+    <Type>Other</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contributor-Ref ref="contrib1" position="2" />
+    <Contributor-Ref ref="contrib4" position="3" />
+    <Contributor-Ref ref="contrib5" position="4" />
+    <Contributor-Ref ref="contrib6" position="5" />
+    <Contributor-Ref ref="contrib7" position="6" />
+    <Contributor-Ref ref="contrib8" position="7" />
+    <Contributor-Ref ref="contrib9" position="8" />
+    <Contributor-Ref ref="contrib10" position="9" />
+    <Contributor-Ref ref="contrib11" position="10" />
+    <Contributor-Ref ref="contrib12" position="11" />
+    <Contributor-Ref ref="contrib13" position="12" />
+    <Contributor-Ref ref="contrib14" position="13" />
+    <Contributor-Ref ref="contrib15" position="14" />
+    <Contributor-Ref ref="contrib16" position="15" />
+    <Contributor-Ref ref="contrib17" position="16" />
+    <Contributor-Ref ref="contrib18" position="17" />
+    <Contributor-Ref ref="contrib19" position="18" />
+    <Contributor-Ref ref="contrib20" position="19" />
+    <Contributor-Ref ref="contrib21" position="20" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM9574578" />
+    <Sample-Ref ref="GSM9574579" />
+    <Sample-Ref ref="GSM9574580" />
+    <Sample-Ref ref="GSM9574581" />
+    <Sample-Ref ref="GSM9574582" />
+    <Sample-Ref ref="GSM9574583" />
+    <Sample-Ref ref="GSM9574584" />
+    <Sample-Ref ref="GSM9574585" />
+    <Sample-Ref ref="GSM9574586" />
+    <Sample-Ref ref="GSM9574587" />
+    <Sample-Ref ref="GSM9574588" />
+    <Sample-Ref ref="GSM9574589" />
+    <Sample-Ref ref="GSM9574590" />
+    <Sample-Ref ref="GSM9574591" />
+    <Sample-Ref ref="GSM9574592" />
+    <Sample-Ref ref="GSM9574593" />
+    <Sample-Ref ref="GSM9574594" />
+    <Sample-Ref ref="GSM9574595" />
+    <Sample-Ref ref="GSM9574596" />
+    <Sample-Ref ref="GSM9574597" />
+    <Sample-Ref ref="GSM9574598" />
+    <Sample-Ref ref="GSM9574599" />
+    <Sample-Ref ref="GSM9574600" />
+    <Sample-Ref ref="GSM9574601" />
+    <Sample-Ref ref="GSM9574602" />
+    <Sample-Ref ref="GSM9574603" />
+    <Sample-Ref ref="GSM9574604" />
+    <Sample-Ref ref="GSM9574605" />
+    <Sample-Ref ref="GSM9574606" />
+    <Sample-Ref ref="GSM9574607" />
+    <Sample-Ref ref="GSM9574608" />
+    <Sample-Ref ref="GSM9574609" />
+    <Sample-Ref ref="GSM9574610" />
+    <Sample-Ref ref="GSM9574611" />
+    <Sample-Ref ref="GSM9574612" />
+    <Sample-Ref ref="GSM9574613" />
+    <Sample-Ref ref="GSM9574614" />
+    <Sample-Ref ref="GSM9574615" />
+    <Sample-Ref ref="GSM9574616" />
+    <Supplementary-Data type="TAR">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE324nnn/GSE324375/suppl/GSE324375_RAW.tar
+    </Supplementary-Data>
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE324nnn/GSE324375/suppl/GSE324375_feature_README.txt
+    </Supplementary-Data>
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1434514" />
+  </Series>
+
+</MINiML>

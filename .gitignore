@@ -1,0 +1,8 @@
+.venv/
+data/raw/
+data/extracted/
+*.h5ad
+*.h5mu
+.DS_Store
+__pycache__/
+*.pyc

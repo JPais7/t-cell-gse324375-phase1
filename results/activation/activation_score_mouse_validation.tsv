@@ -1,0 +1,3 @@
+lineage	comparison	n_mice	spearman_rho	pvalue
+CD4	mouse_RNA_vs_ADT	47	-0.20316836262719704	0.1707868914402179
+CD8	mouse_RNA_vs_ADT	42	-0.16975933878940122	0.28246895333764677
