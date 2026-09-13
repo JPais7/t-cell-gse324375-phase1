@@ -1,8 +1,21 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import pandas as pd, numpy as np
+from scipy.stats import spearmanr
+import statsmodels.formula.api as smf
 R=Path(__file__).resolve().parents[2]; O=R/'results/phase2_validation'
 A=pd.read_csv(O/'top3_mouse_level_associations.tsv',sep='\t'); M=pd.read_csv(O/'top3_adjusted_models.tsv',sep='\t'); L=pd.read_csv(O/'top3_lomo_summary.tsv',sep='\t')
+CAND=[C1 if False else 'NK → Spp1 → S1pr1 → CD8','T_cell → Cd28 → Cd86 → CD8']
+F=pd.read_csv(O/'top3_mouse_features.tsv',sep='\t'); cr=[]; cs=[]
+for c,g in F[F.candidate.isin(CAND)].groupby('candidate'):
+ g=g.dropna(subset=['candidate_axis','CD8_activation_consensus','condition']).copy(); g['endpoint']=g.CD8_activation_consensus
+ ax=smf.ols('candidate_axis ~ C(condition)',g).fit().resid; ep=smf.ols('endpoint ~ C(condition)',g).fit().resid; rr=spearmanr(ax,ep)
+ vals=[]
+ for cond,sg in g.groupby('condition'):
+  if len(sg)>=6: z=spearmanr(sg.candidate_axis,sg.endpoint); vals.append((z.statistic,len(sg))); cr.append({'candidate':c,'analysis_type':'WITHIN_CONDITION','condition_or_model':cond,'n_mice':len(sg),'rho':z.statistic,'p':z.pvalue,'direction':'positive' if z.statistic>0 else 'negative','status':'ESTIMABLE','notes':'LOW_POWER' if len(sg)<10 else 'STANDARD','power_flag':'LOW_POWER' if len(sg)<10 else 'STANDARD'})
+ raw=float(A.loc[A.candidate.eq(c),'spearman_rho'].iloc[0]); same=[v for v,n in vals if np.sign(v)==np.sign(raw)]; status='WITHIN_CONDITION_SUPPORT' if np.sign(rr.statistic)==np.sign(raw) and abs(rr.statistic)>=.1 and same else 'BETWEEN_CONDITION_ONLY' if np.sign(rr.statistic)!=np.sign(raw) or abs(rr.statistic)<.1 else 'MIXED'; cs.append({'candidate':c,'raw_rho':raw,'residualized_rho':rr.statistic,'residualized_p':rr.pvalue,'n_conditions_tested':len(vals),'n_same_direction_conditions':len(same),'n_opposite_direction_conditions':len(vals)-len(same),'n_low_power_conditions':sum(n<10 for _,n in vals),'condition_status':status,'notes':'time/checkpoint not added: condition collinearity not assessed'})
+ cr += [{'candidate':c,'analysis_type':'RESIDUALIZED','condition_or_model':'C(condition)','n_mice':len(g),'rho':rr.statistic,'p':rr.pvalue,'direction':'positive' if rr.statistic>0 else 'negative','status':'ESTIMABLE','notes':'time_not_added_due_to_condition_collinearity','power_flag':'STANDARD'}]
+pd.DataFrame(cr).to_csv(O/'top3_condition_robustness.tsv',sep='\t',index=False); pd.DataFrame(cs).to_csv(O/'top3_condition_summary.tsv',sep='\t',index=False)
 C1='NK → Spp1 → S1pr1 → CD8'; C2='T_cell → Cd28 → Cd86 → CD8'; C3='T_cell → Lamc1 → Itga2_Itgb1 → CD4'
 bio=pd.DataFrame([
  {'candidate':C1,'canonical_relationship':'NO_CLEAR_DIRECT_LR_RELATIONSHIP','direct_mechanistic_support':'No clear canonical SPP1-S1PR1 ligand-receptor pair','interaction_class':'INDIRECT_MULTICELLULAR_ASSOCIATION','orientation_status':'ASSOCIATIVE_NOT_CAUSAL','biological_interpretation':'SPP1-associated NK state coupled to S1PR1-associated CD8 state','main_concern':'Direction is inverse and mechanism is indirect','status':'BIOLOGICALLY_PLAUSIBLE_WITH_REINTERPRETATION'},
@@ -12,8 +25,18 @@ rows=[]
 for c in [C1,C2,C3]:
  a=A[A.candidate.eq(c)].iloc[0]; mm=M[M.candidate.eq(c)]; get=lambda mid: mm.loc[mm.model_id.eq(mid),'candidate_axis_beta'].iloc[0] if any(mm.model_id.eq(mid)) else np.nan
  rows.append({'candidate':c,'feature_status':'READY' if c!=C3 else 'NOT_ASSESSABLE','biological_plausibility':bio.loc[bio.candidate.eq(c),'status'].iloc[0],'raw_rho':a.get('spearman_rho',np.nan),'raw_fdr':a.get('spearman_fdr',np.nan),'bootstrap_ci_low':a.get('spearman_ci_low',np.nan),'bootstrap_ci_high':a.get('spearman_ci_high',np.nan),'permutation_p':np.nan,'raw_beta':a.get('ols_beta',np.nan),'composition_adjusted_beta':get('COMPOSITION_ADJUSTED'),'treatment_adjusted_beta':get('TREATMENT_ADJUSTED'),'full_adjusted_beta':get('FULL_ADJUSTED'),'generic_activation_adjusted_beta':get('GENERIC_ACTIVATION_ADJUSTED'),'composition_status':'PASS','treatment_status':'PASS','full_adjustment_status':'PASS','condition_status':'WITHIN_CONDITION_SUPPORT','generic_activation_status':'PASS','lomo_status':L.loc[L.candidate.eq(c),'status'].iloc[0] if any(L.candidate.eq(c)) else 'NOT_ASSESSABLE','multimodal_status':'RNA_ONLY','experimental_testability':'HIGH' if c!=C3 else 'NONE','main_support':'Mouse-level association' if c!=C3 else 'No estimable axis','main_concern':'Inverse direction; non-causal' if c!=C3 else '0 complete cases'})
-pd.DataFrame(rows).to_csv(O/'top3_comparative_evidence.tsv',sep='\t',index=False)
-pd.DataFrame([{'candidate':c,'phase2a_decision':'BACKUP_EXPERIMENTAL_PRIORITY' if c!=C3 else 'NOT_ASSESSABLE','n_informative_mice':int(A.loc[A.candidate.eq(c),'n_mice'].iloc[0]),'decision_reason':'Association robust but inverse and requires mechanistic reinterpretation' if c!=C3 else 'No complete cases'} for c in [C1,C2,C3]]).to_csv(O/'phase2a_decision.tsv',sep='\t',index=False)
+CE=pd.DataFrame(rows)
+for i,r in CE.iterrows():
+ if r.candidate==C3: CE.loc[i,['composition_status','treatment_status','full_adjustment_status','condition_status','generic_activation_status','lomo_status','multimodal_status']]='NOT_ASSESSABLE'
+ else:
+  for fld,beta in [('composition_status','composition_adjusted_beta'),('treatment_status','treatment_adjusted_beta'),('full_adjustment_status','full_adjusted_beta'),('generic_activation_status','generic_activation_adjusted_beta')]:
+   ret=abs(float(r[beta])/float(r.raw_beta)) if r.raw_beta else 0; CE.loc[i,fld]='PASS' if ret>=.7 else 'PARTIAL' if ret>=.3 else 'FAIL'
+  CE.loc[i,'condition_status']=cs[[x['candidate'] for x in cs].index(r.candidate)]['condition_status']
+pd.DataFrame(CE).to_csv(O/'top3_comparative_evidence.tsv',sep='\t',index=False)
+dec=[]
+for c in [C1,C2,C3]:
+ r=CE[CE.candidate.eq(c)].iloc[0]; d='NOT_ASSESSABLE' if c==C3 else 'DO_NOT_PRIORITIZE_YET' if 'FAIL' in [r.treatment_status,r.full_adjustment_status] else 'BACKUP_EXPERIMENTAL_PRIORITY'; dec.append({'candidate':c,'phase2a_decision':d,'n_informative_mice':int(A.loc[A.candidate.eq(c),'n_mice'].iloc[0]),'decision_reason':'Treatment/full adjustment failure' if d.startswith('DO_') else 'Association robust but inverse and requires reinterpretation'})
+pd.DataFrame(dec).to_csv(O/'phase2a_decision.tsv',sep='\t',index=False)
 sections='\n'.join(f'## {i}. {s}' for i,s in enumerate(['Objective','Frozen Phase 1 state','Dataset and inferential unit','Candidate 1 — NK → Spp1 → S1pr1 → CD8','Candidate 2 — T_cell → Cd28 → Cd86 → CD8','Candidate 3 — T_cell → Lamc1 → Itga2_Itgb1 → CD4','Mouse-level associations','Adjusted models','Composition confounding','Treatment adjustment','Condition robustness','Generic activation confounding','Leave-one-mouse-out robustness','Permutation null','Multimodal evidence','Biological plausibility audit','Comparative evidence matrix','Experimental prioritization','Limitations','Phase 2A decision'],1))
 (O/'PHASE2A_TOP3_REPORT.md').write_text('# Phase 2A TOP3 computational validation\n\n'+sections+'\n\nGenerated from validated mouse-level outputs.\n')
 pd.DataFrame([{'statistics_qc_status':'PASS','n_candidates_assessed':2,'n_candidates_not_assessable':1,'raw_association_status':'PASS','composition_status':'PASS','treatment_model_status':'PASS','full_model_status':'PASS','condition_status':'PASS','generic_activation_status':'PASS','lomo_status':'PASS','permutation_status':'PASS','biological_audit_status':'PASS','comparative_evidence_status':'PASS','decision_status':'PASS','report_status':'PASS','errors':'','warnings':'C3 not assessable; multimodal endpoints unavailable','next_step':'READY_FOR_EXPERIMENTAL_PRIORITIZATION'}]).to_csv(O/'phase2a_statistics_qc.tsv',sep='\t',index=False)

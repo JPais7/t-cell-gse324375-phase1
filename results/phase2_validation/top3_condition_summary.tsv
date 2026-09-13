@@ -1,0 +1,3 @@
+candidate	raw_rho	residualized_rho	residualized_p	n_conditions_tested	n_same_direction_conditions	n_opposite_direction_conditions	n_low_power_conditions	condition_status	notes
+NK → Spp1 → S1pr1 → CD8	-0.5876657415972865	-0.3901942645698427	0.007345150513814225	3	2	1	1	WITHIN_CONDITION_SUPPORT	time/checkpoint not added: condition collinearity not assessed
+T_cell → Cd28 → Cd86 → CD8	-0.3665587419056429	-0.07227104532839965	0.6292691866977551	3	2	1	1	BETWEEN_CONDITION_ONLY	time/checkpoint not added: condition collinearity not assessed
