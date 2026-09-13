@@ -1,17 +1,14 @@
 candidate	new_rank	old_rank	rank_change	reason_for_change
 Atf6		5.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
 Fli1		6.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Jund	10.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Maff	7.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-NK → Itgav → Thy1 → CD8	5.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-NK → Tnfsf4 → Tnfrsf4 → CD8	2.0	8.0	6.0	true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Nfkb2	8.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Relb	9.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Stat4	6.0	4.0	-2.0	true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-T_cell → Adam17 → Itgb1 → CD8	3.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+Jund	6.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+Maff	3.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+NK → Tnfsf4 → Tnfrsf4 → CD8	1.0	8.0	7.0	true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+Nfkb2	4.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+Relb	5.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+Stat4	2.0	4.0	2.0	true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
 T_cell → Cd80 → Ctla4 → CD4		9.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-T_cell → Pkm → Cd44 → CD8	1.0	7.0	6.0	true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+T_cell → Pkm → Cd44 → CD8		7.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
 fibroblast → Adam10 → Cd44 → CD8		1.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
 fibroblast → Col1a2 → Cd44 → CD4		3.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-neutrophil → Gpi1 → Amfr → CD8	4.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
 neutrophil → Pdcd1lg2 → Pdcd1 → CD4		2.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration

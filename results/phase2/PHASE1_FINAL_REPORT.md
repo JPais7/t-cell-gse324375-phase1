@@ -32,21 +32,17 @@ The leading hypothesis is falsified if verified on-target perturbation and rescu
 
 ## TOP 10
 
-17. T_cell → Pkm → Cd44 → CD8 (multicellular; score=0.741; power=HIGH)
 910. NK → Tnfsf4 → Tnfrsf4 → CD8 (multicellular; score=0.739; power=HIGH)
-770. T_cell → Adam17 → Itgb1 → CD8 (multicellular; score=0.644; power=HIGH)
-2821. neutrophil → Gpi1 → Amfr → CD8 (extracellular; score=0.632; power=HIGH)
-583. NK → Itgav → Thy1 → CD8 (multicellular; score=0.626; power=HIGH)
 64971. Stat4 (intrinsic; score=0.601; power=MODERATE)
 65002. Maff (intrinsic; score=0.569; power=MODERATE)
-64979. Nfkb2 (intrinsic; score=0.549; power=MODERATE)
+64979. Nfkb2 (intrinsic; score=0.554; power=MODERATE)
 64995. Relb (intrinsic; score=0.548; power=MODERATE)
 65030. Jund (intrinsic; score=0.545; power=MODERATE)
 
 ## Final decision fields
-A. Strongest mechanistic hypothesis: T_cell → Pkm → Cd44 → CD8.
+A. Strongest mechanistic hypothesis: NK → Tnfsf4 → Tnfrsf4 → CD8.
 B. Strongest independent intrinsic hypothesis: Stat4.
-C. Strongest independent multicellular/extracellular hypothesis: T_cell → Pkm → Cd44 → CD8.
+C. Strongest independent multicellular/extracellular hypothesis: NK → Tnfsf4 → Tnfrsf4 → CD8.
 D. Confidence: moderate; discovery-stage.
 E. Evidence gaps: spatial, longitudinal and system-matched perturbation.
 F. First experiment: necessity test for the leading mechanism.

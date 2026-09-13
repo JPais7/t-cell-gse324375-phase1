@@ -1,2 +1,2 @@
-commit_sha	run_utc	python	random_seed	null_permutations	cells_tcell_refined	animals	datasets	loocv_scope
-822a59243372d06e07bf3ba2cd412ee40ee5c246	2026-09-13T10:59:46.785570+00:00	3.12.13	17	1000	40952	48	GSE324375; GSE289772 external contextual perturbation	top 100 per candidate class; 289 unique candidates
+commit_sha	run_utc	python	random_seed	n_candidates	n_mice	n_permutations	LOOCV_candidates	external_datasets	pipeline_version
+df1200a85df3bc51e2e4c9d18b972c95d53337a0	2026-09-13T11:26:29.311689+00:00	3.12.13	17	65073	47	1000	279	GSE289772 (contextual); GSE314342 (not assessed)	Phase1 biological-audit v2

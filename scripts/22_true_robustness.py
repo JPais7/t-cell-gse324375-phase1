@@ -49,20 +49,25 @@ def score(row,values):
  consistency=max((v>0).mean(),(v<0).mean()); repl=min(len(v)/10,1)*consistency
  return .25*repl+.20*row.effect_component+.10*row.statistical_component+.15*row.multilayer_component+.10*row.temporal_component+.10*row.independence_component+.10*float(row.mechanistically_supported)
 
-universe=sorted(set().union(*[set(v) for v in per_candidate.values()])); rows=[]; rng=np.random.default_rng(SEED); nullrows=[]
+universe=sorted(set().union(*[set(v) for v in per_candidate.values()])); rows=[]; folds=[]; rng=np.random.default_rng(SEED); nullrows=[]
 base=priority.set_index("candidate")
 rank_records={c:[] for c in base.index}; score_records={c:[] for c in base.index}; fail={c:0 for c in base.index}
-for mouse in universe:
- scores={}
- for c,row in base.iterrows():
-  vals={m:v for m,v in per_candidate.get(c,{}).items() if m!=mouse}; s=score(row,vals)
-  if np.isfinite(s): scores[c]=s
-  else: fail[c]+=1
- ranks=pd.Series(scores).rank(ascending=False,method="min")
- for c,s in scores.items(): rank_records[c].append(float(ranks[c])); score_records[c].append(s)
+# Each focal candidate runs exactly once per mouse informative for that candidate.
+for focal in base.index:
+ for mouse in per_candidate.get(focal,{}):
+  scores={}
+  for c,row in base.iterrows():
+   vals={m:v for m,v in per_candidate.get(c,{}).items() if m!=mouse}; s=score(row,vals)
+   if np.isfinite(s): scores[c]=s
+  ranks=pd.Series(scores).rank(ascending=False,method="min")
+  if focal in scores:
+   rank_records[focal].append(float(ranks[focal])); score_records[focal].append(scores[focal]); folds.append({"candidate":focal,"removed_mouse":mouse,"fold_score":scores[focal],"fold_rank":ranks[focal],"eligible_after_removal":True,"failure_reason":""})
+  else:
+   fail[focal]+=1; folds.append({"candidate":focal,"removed_mouse":mouse,"fold_score":np.nan,"fold_rank":np.nan,"eligible_after_removal":False,"failure_reason":"insufficient remaining mice"})
 for c,row in base.iterrows():
  vals=per_candidate.get(c,{}); rr=np.asarray(rank_records[c]); ss=np.asarray(score_records[c]); n=len(vals)
- rows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"n_mice":n,"LOOCV_runs":len(rr),"LOOCV_top1_runs":int((rr<=1).sum()),"LOOCV_top3_runs":int((rr<=3).sum()),"LOOCV_top10_runs":int((rr<=10).sum()),"LOOCV_top10_fraction":float((rr<=10).mean()) if len(rr) else np.nan,"LOOCV_top3_fraction":float((rr<=3).mean()) if len(rr) else np.nan,"LOOCV_rank_median":float(np.median(rr)) if len(rr) else np.nan,"LOOCV_rank_mean":float(np.mean(rr)) if len(rr) else np.nan,"LOOCV_rank_min":float(np.min(rr)) if len(rr) else np.nan,"LOOCV_rank_max":float(np.max(rr)) if len(rr) else np.nan,"LOOCV_rank_IQR":float(np.subtract(*np.percentile(rr,[75,25]))) if len(rr) else np.nan,"LOOCV_score_median":float(np.median(ss)) if len(ss) else np.nan,"LOOCV_score_min":float(np.min(ss)) if len(ss) else np.nan,"LOOCV_score_max":float(np.max(ss)) if len(ss) else np.nan,"LOOCV_failure_reason":"insufficient remaining mice" if fail[c] else ""})
+ vv=np.asarray(list(vals.values()),float); support=max(int((vv>0).sum()),int((vv<0).sum())) if len(vv) else 0
+ rows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"n_mice":n,"n_mice_supporting":support,"n_mice_opposing":n-support,"direction_consistency":support/n if n else np.nan,"LOOCV_runs":len(rr),"LOOCV_failed_runs":fail[c],"LOOCV_top1_runs":int((rr<=1).sum()),"LOOCV_top3_runs":int((rr<=3).sum()),"LOOCV_top10_runs":int((rr<=10).sum()),"LOOCV_top1_fraction":float((rr<=1).mean()) if len(rr) else np.nan,"LOOCV_top10_fraction":float((rr<=10).mean()) if len(rr) else np.nan,"LOOCV_top3_fraction":float((rr<=3).mean()) if len(rr) else np.nan,"LOOCV_rank_median":float(np.median(rr)) if len(rr) else np.nan,"LOOCV_rank_mean":float(np.mean(rr)) if len(rr) else np.nan,"LOOCV_rank_min":float(np.min(rr)) if len(rr) else np.nan,"LOOCV_rank_max":float(np.max(rr)) if len(rr) else np.nan,"LOOCV_rank_IQR":float(np.subtract(*np.percentile(rr,[75,25]))) if len(rr) else np.nan,"LOOCV_score_median":float(np.median(ss)) if len(ss) else np.nan,"LOOCV_score_min":float(np.min(ss)) if len(ss) else np.nan,"LOOCV_score_max":float(np.max(ss)) if len(ss) else np.nan,"LOOCV_failure_reason":"insufficient remaining mice" if fail[c] else ""})
  v=np.asarray(list(vals.values()),float); observed=score(row,vals)
  if len(v)>=2:
   ns=[]
@@ -71,5 +76,5 @@ for c,row in base.iterrows():
  else: nullrows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"observed_score":observed,"null_model_type":"NOT_APPLICABLE","n_permutations":0,"random_seed":SEED})
 lo=pd.DataFrame(rows); nu=pd.DataFrame(nullrows); ok=nu.empirical_p.notna(); nu["empirical_FDR"]=np.nan
 if ok.any(): nu.loc[ok,"empirical_FDR"]=multipletests(nu.loc[ok,"empirical_p"],method="fdr_bh")[1]
-lo.to_csv(OUT/"loocv_candidate_stability.tsv",sep="\t",index=False); nu.to_csv(OUT/"permutation_null_results.tsv",sep="\t",index=False)
+lo.to_csv(OUT/"loocv_candidate_stability.tsv",sep="\t",index=False); pd.DataFrame(folds).to_csv(OUT/"loocv_fold_details.tsv",sep="\t",index=False); nu.rename(columns={"null_95":"null_p95","null_99":"null_p99"}).to_csv(OUT/"permutation_null_results.tsv",sep="\t",index=False)
 print(f"Priority candidates={len(priority)}; mouse universe={len(universe)}; true LOOCV rows={len(lo)}; permutation rows={len(nu)}")
