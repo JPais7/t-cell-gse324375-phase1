@@ -20,11 +20,30 @@ Candidate class: multicellular
 Evidence score: 0.5475
 Phase 2 decision: HOLD
 
+## 4. Animal-level replication
+
+Informative-mouse summary: NOT AVAILABLE.
+Reason: the leading candidate is not represented in the predeclared LOOCV/mouse-effect summary universe.
+
+## 5. LOOCV robustness
+
+LOOCV stability: NOT AVAILABLE.
+Reason: candidate-specific folds are unavailable.
+
+## 6. Permutation null
+
+Empirical p-value: NOT AVAILABLE.
+Empirical FDR: NOT AVAILABLE.
+Null percentile: NOT AVAILABLE.
+The null is candidate-specific and does not establish biological causality.
+
 ## 7. Multimodal evidence
 
-RNA evidence: True; ADT evidence: False; state evidence: False.
+RNA evidence: True.
+ADT evidence: False.
+Data-driven state evidence: False.
+These modalities support prioritization but do not establish causality.
 
-The association remains observational; independent perturbation is required before Phase 2.
 ## 8. External perturbation evidence
 
 Status: NOT_ASSESSED.
@@ -50,18 +69,30 @@ Mechanistic-chain evidence: NOT AVAILABLE.
 
 ## 12. Why the leading candidate remains HOLD
 
+Statistical status: PASS.
+Biological status: PASS.
+Mechanistic status: PASS.
+Experimental status: PASS.
+LOOCV status: FAIL.
+Null status: FAIL.
+External evidence status: NOT_ASSESSED.
 Decision reason: plausible but one or more robustness/mechanistic gates remain incomplete.
 
 ## 13. Experimental validation
 
-Use candidate-class-specific perturbation, matched controls, rescue where feasible, and measure activation, viability, abundance and tumor-cell killing.
+Use candidate-class-specific perturbation of source/signal and receptor/target arms, matched controls and rescue where feasible. Measure activation, viability, abundance and tumor-cell killing.
 
 ## 14. Falsifiers
 
-- No reproducible phenotype after independent perturbation.
+- Independent perturbations do not reproduce the effect.
 - Rescue fails.
-- Effect is explained by viability or abundance.
+- The phenotype is explained by viability, abundance or generic stress.
+- Tumor-killing effects do not track perturbation.
+- Independent replication fails.
 
 ## 15. Limitations
 
-The analysis is associative; residual confounding and lack of system-matched perturbation remain.
+The discovery remains observational and does not establish causality or therapeutic benefit.
+Residual treatment, batch, cell-composition and abundance effects may contribute.
+Spatial contact, longitudinal validation and direct perturbational causality are not established.
+
