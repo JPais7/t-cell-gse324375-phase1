@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 ROOT=Path(__file__).resolve().parents[1]; P=ROOT/"results/phase2"
-expected=[P/x for x in ["candidate_evidence_pre_audit.tsv","candidate_mouse_effects.tsv","candidate_evidence_matrix.tsv","candidates_for_perturbation_validation.tsv","top_extracellular.tsv","top_intrinsic.tsv","top_multicellular.tsv","loocv_candidate_stability.tsv","loocv_fold_details.tsv","permutation_null_results.tsv","ranking_sensitivity.tsv","ranking_changes_from_previous.tsv","external_perturbation_evidence.tsv","interaction_entity_annotation.tsv","interaction_biological_audit.tsv","interaction_biological_audit.md","top20_biological_audit.tsv","phase2_readiness.tsv","TOP3_candidates.md","PHASE1_FINAL_REPORT.md"]]+[ROOT/"results/audit/phase1_5b_pipeline_audit.md"]
+expected=[P/x for x in ["candidate_evidence_pre_audit.tsv","candidate_mouse_effects.tsv","candidate_evidence_matrix.tsv","candidates_for_perturbation_validation.tsv","top_extracellular.tsv","top_intrinsic.tsv","top_multicellular.tsv","loocv_candidate_stability.tsv","loocv_fold_details.tsv","permutation_null_results.tsv","ranking_sensitivity.tsv","ranking_changes_from_previous.tsv","external_perturbation_evidence.tsv","interaction_entity_annotation.tsv","interaction_biological_audit.tsv","interaction_biological_audit.md","top20_biological_audit.tsv","phase2_readiness.tsv","TOP3_candidates.md","PHASE1_FINAL_REPORT.md"]]+[ROOT/"results/audit/phase1_5d_pipeline_audit.md"]
 missing=[str(x) for x in expected if not x.exists()]
 if missing: raise SystemExit("FAIL missing outputs: "+"; ".join(missing))
 x=pd.read_csv(P/"candidate_evidence_matrix.tsv",sep="\t"); top=pd.read_csv(P/"candidates_for_perturbation_validation.tsv",sep="\t")
@@ -65,11 +65,17 @@ if "candidate_evidence_pre_audit.tsv" not in source23 or "candidate_evidence_mat
 if "candidate_evidence_pre_audit.tsv" not in source22 or "candidate_evidence_matrix.tsv" in source22: errs.append("robustness has circular final-matrix dependency")
 if "pd.read_csv(OUT/\"candidate_evidence_matrix.tsv\"" in source22 or "pd.read_csv(OUT/\"loocv_candidate_stability.tsv\"" in source22 or "pd.read_csv(OUT/\"permutation_null_results.tsv\"" in source22: errs.append("robustness reads prior robustness outputs")
 if not (ROOT/"scripts/run_phase1_5b_clean.sh").exists(): errs.append("missing clean-run workflow")
+for df,name in [(x,"candidate_evidence_matrix"),(top,"phase2_readiness"),(lo,"loocv_candidate_stability"),(nu,"permutation_null_results")]:
+ if len(df.columns)!=len(set(df.columns)): errs.append(f"duplicate columns in {name}")
+if {"null_test_type","null_status","n_unique_null_scores"}.issubset(nu.columns):
+ if ((nu.expected_direction=="UNRESOLVED") & ~nu.null_test_type.isin(["TWO_SIDED_SIGN_NULL","NOT_ASSESSABLE","NOT_APPLICABLE"])).any(): errs.append("UNRESOLVED candidate with directional null")
+ if ((nu.expected_direction!="UNRESOLVED") & (nu.n_permutations>0) & (nu.null_test_type!="DIRECTIONAL_SIGN_NULL")).any(): errs.append("directional candidate missing directional null")
+ if ((nu.n_permutations>0)&(nu.n_unique_null_scores<=1)&(nu.null_status!="DEGENERATE")).any(): errs.append("degenerate null not marked")
 pre=pd.read_csv(P/"candidate_evidence_pre_audit.tsv",sep="\t",nrows=1)
 if set(pre.columns)&{"LOOCV_stability","empirical_p","empirical_FDR","null_percentile","evidence_score","evidence_gate"}: errs.append("pre-audit table contains post-robustness/final-ranking fields")
 if errs: raise SystemExit("FAIL\n"+"\n".join(errs))
 print("PASS: Phase 1.5 outputs are current, finite, biologically gated, mouse-robust, sensitivity-complete and experimentally interpretable.")
 print(f"Candidates={len(x):,}; shortlist={len(top)}; families={x.candidate_family_id.nunique():,}")
 mouse_universe=pd.read_csv(P/"loocv_fold_details.tsv",sep="\t").removed_mouse.nunique()
-manifest=pd.DataFrame([{"commit_sha":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),"run_utc":datetime.now(timezone.utc).isoformat(),"python":sys.version.split()[0],"random_seed":17,"n_candidates":len(x),"n_mice":int(mouse_universe),"n_permutations":int(nu.n_permutations.max()),"LOOCV_candidates":len(lo),"input_datasets":"GSE324375","external_datasets":"GSE289772 (contextual); GSE314342 (not assessed)","pipeline_version":"Phase1.5 UniProt biological-audit v3"}])
+manifest=pd.DataFrame([{"commit_sha":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),"run_utc":datetime.now(timezone.utc).isoformat(),"python_version":sys.version.split()[0],"random_seed":17,"pipeline_version":"Phase1.5d final candidate-aware clean run","clean_run_status":"single_pass","qc_status":"PASS" if not errs else "FAIL","n_candidates_pre_audit":len(pd.read_csv(P/"candidate_evidence_pre_audit.tsv",sep="\t")),"n_candidates_final":len(x),"n_candidate_families":x.candidate_family_id.nunique(),"n_mice":int(mouse_universe),"n_permutations":int(nu.n_permutations.max()),"LOOCV_universe_type":"predeclared priority candidates","LOOCV_universe_size":len(lo),"n_directional_null":int((nu.null_test_type=="DIRECTIONAL_SIGN_NULL").sum()),"n_two_sided_null":int((nu.null_test_type=="TWO_SIDED_SIGN_NULL").sum()),"n_degenerate_null":int((nu.null_status=="DEGENERATE").sum()),"input_datasets":"GSE324375","external_datasets":"GSE289772 (contextual); GSE314342 (not assessed)"}])
 manifest.to_csv(ROOT/"results/audit/phase1_run_manifest.tsv",sep="\t",index=False)
