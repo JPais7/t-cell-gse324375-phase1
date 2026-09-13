@@ -21,5 +21,12 @@ if lo.exists():
     l['n_mice']=l[c]; break
   l=l.drop(columns=[c for c in ('n_mice_x','n_mice_y') if c in l.columns])
   l.to_csv(lo,sep='\t',index=False)
- else:
-  l.to_csv(lo,sep='\t',index=False)
+  else:
+   l.to_csv(lo,sep='\t',index=False)
+# Synchronize explicit leading-candidate headers from readiness + ranking.
+ready_path=out/'phase2_readiness.tsv'
+if src.exists() and ready_path.exists():
+ ranking=pd.read_csv(src,sep='\t',low_memory=False); ready=pd.read_csv(ready_path,sep='\t');
+ def lead(dec):
+  c=ready.loc[ready.phase2_decision.eq(dec),'candidate']; q=ranking[ranking.candidate.isin(c)].sort_values(['evidence_score','candidate'],ascending=[False,True]); return 'NONE' if q.empty else str(q.iloc[0].candidate)
+ lg,lh=lead('GO'),lead('HOLD'); report=out/'PHASE1_FINAL_REPORT.md'; old=report.read_text() if report.exists() else ''; report.write_text(f'Leading GO: {lg}\nLeading HOLD: {lh}\n\n'+old)
