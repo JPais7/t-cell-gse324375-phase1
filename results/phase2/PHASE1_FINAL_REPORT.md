@@ -1,3 +1,6 @@
+Leading GO: NONE
+Leading HOLD: NK → Spp1 → S1pr1 → CD8
+
 # Phase 1.5 final report
 
 ## 1. Executive summary
