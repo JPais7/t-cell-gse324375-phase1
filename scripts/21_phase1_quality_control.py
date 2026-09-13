@@ -13,6 +13,10 @@ expected=[P/x for x in ["candidate_evidence_pre_audit.tsv","candidate_mouse_effe
 missing=[str(x) for x in expected if not x.exists()]
 if missing: raise SystemExit("FAIL missing outputs: "+"; ".join(missing))
 x=pd.read_csv(P/"candidate_evidence_matrix.tsv",sep="\t"); top=pd.read_csv(P/"candidates_for_perturbation_validation.tsv",sep="\t")
+ready_path=P/"phase2_readiness.tsv"
+if ready_path.stat().st_size==0: raise SystemExit("FAIL phase2_readiness.tsv is zero bytes")
+ready_check=pd.read_csv(ready_path,sep="\t")
+if ready_check.empty: raise SystemExit("FAIL phase2_readiness.tsv has zero rows")
 required=["candidate","candidate_family_id","mechanistic_family_id","candidate_type","entity_type","mechanism_level","evidence_score","power_flag","causality_tier","RNA_evidence","ADT_evidence","RNA_direction","ADT_direction","RNA_ADT_direction_concordant","expected_direction","direction_mechanistically_concordant","temporal_support","independence_from_curated_score","LOOCV_stability","empirical_p","empirical_FDR","null_percentile","biological_validity_component","mechanistic_evidence_coherence","experimental_testability_component"]
 errs=[]
 for c in required:
