@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/"results/phase2"
-x=pd.read_csv(OUT/"candidate_evidence_matrix.tsv",sep="\t",low_memory=False); lr=x[x.candidate_type.isin(["extracellular","multicellular"])].copy()
+x=pd.read_csv(OUT/"candidate_evidence_pre_audit.tsv",sep="\t",low_memory=False); lr=x[x.candidate_type.isin(["extracellular","multicellular"])].copy()
 ann=pd.read_csv(OUT/"interaction_entity_annotation.tsv",sep="\t").set_index("gene")
 def entities(value): return [p for p in str(value).split("_") if p and p!="nan"]
 def rec(value): return ann.reindex(entities(value))
