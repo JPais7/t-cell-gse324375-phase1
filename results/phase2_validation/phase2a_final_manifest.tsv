@@ -1,0 +1,2 @@
+source_commit_sha	run_utc	feature_qc_status	statistics_qc_status	phase1_integrity_status	n_candidates	n_assessable	primary_candidate	backup_candidate	phase2a_complete
+f32de3a4261e5a492e72249c546891ff4520a4a8	2026-09-13T22:29:58.843486+00:00	PASS	PASS	PASS	3	2	NONE	NK → Spp1 → S1pr1 → CD8	YES

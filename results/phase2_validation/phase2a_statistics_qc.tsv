@@ -1,2 +1,2 @@
-statistics_qc_status	n_candidates_assessed	n_candidates_not_assessable	raw_association_status	composition_status	treatment_model_status	full_model_status	condition_status	generic_activation_status	lomo_status	permutation_status	biological_audit_status	comparative_evidence_status	decision_status	report_status	errors	warnings	next_step
-PASS	2	1	PASS	PASS	PASS	PASS	PASS	PASS	PASS	PASS	PASS	PASS	PASS	PASS		C3 not assessable; multimodal endpoints unavailable	READY_FOR_EXPERIMENTAL_PRIORITIZATION
+statistics_qc_status	n_candidates_assessed	n_candidates_not_assessable	condition_analysis_status	errors	warnings	next_step
+PASS	2	1	PASS		report below recommended length	READY_FOR_EXPERIMENTAL_PRIORITIZATION
