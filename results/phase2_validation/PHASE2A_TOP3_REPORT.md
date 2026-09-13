@@ -21,4 +21,10 @@
 ## 19. Limitations
 ## 20. Phase 2A decision
 
-Generated from validated mouse-level outputs.
+C1: BACKUP_EXPERIMENTAL_PRIORITY. Raw Spearman rho -0.588, FDR 3.51e-05, bootstrap CI [-0.760,-0.343], residualized rho -0.390 (p=0.007), robust LOMO. Higher candidate-axis values are inversely associated with CD8 activation; this is not evidence of direct SPP1-S1PR1 activation.
+
+C2: DO_NOT_PRIORITIZE_YET. Raw rho -0.367 (FDR 0.011), but treatment/condition adjustment attenuates the signal and residualized rho is -0.072 (p=0.629), consistent with between-condition structure.
+
+C3: NOT_ASSESSABLE. 0 complete candidate-axis cases; no inferential Phase 2A analysis was performed.
+
+PHASE2A_STATISTICAL_VALIDATION_COMPLETE = YES
