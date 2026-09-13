@@ -30,3 +30,10 @@ if src.exists() and ready_path.exists():
  def lead(dec):
   c=ready.loc[ready.phase2_decision.eq(dec),'candidate']; q=ranking[ranking.candidate.isin(c)].sort_values(['evidence_score','candidate'],ascending=[False,True]); return 'NONE' if q.empty else str(q.iloc[0].candidate)
  lg,lh=lead('GO'),lead('HOLD'); report=out/'PHASE1_FINAL_REPORT.md'; old=report.read_text() if report.exists() else ''; report.write_text(f'Leading GO: {lg}\nLeading HOLD: {lh}\n\n'+old)
+ holds=ready[ready.phase2_decision.eq('HOLD')][['candidate']].merge(ranking,on='candidate').sort_values(['evidence_score','candidate'],ascending=[False,True]).head(3)
+ lines=['# Phase 1.5 final report','',f'Leading GO: {lg}',f'Leading HOLD: {lh}','',('No candidate passes every closed Phase 2 readiness gate.' if lg=='NONE' else f'Leading GO candidate: {lg}'),'','## Leading HOLD hypotheses']
+ for i,(_,row) in enumerate(holds.iterrows(),1): lines.append(f"{i}. {row.candidate} — class={row.candidate_type}; score={row.evidence_score:.4f}; decision=HOLD.")
+ for i in range(len(holds)+1,4): lines.append(f'{i}. NOT AVAILABLE — no additional candidate selected.')
+ lines += ['', 'The results are associative and do not establish causality or therapeutic benefit. Candidates with UNRESOLVED expected direction are summarized using positive/negative effect balance and two-sided null statistics; supporting/opposing counts are not applicable.']
+ report.write_text('\n'.join(lines)+'\n')
+ (out/'TOP3_candidates.md').write_text('\n'.join(['# TOP 3 candidates','',f'Leading GO: {lg}',f'Leading HOLD: {lh}','']+[f"{i}. {row.candidate} — class={row.candidate_type}; score={row.evidence_score:.4f}; decision=HOLD." for i,(_,row) in enumerate(holds.iterrows(),1)]+[f'{i}. NOT AVAILABLE — no additional candidate selected.' for i in range(len(holds)+1,4)])+'\n')

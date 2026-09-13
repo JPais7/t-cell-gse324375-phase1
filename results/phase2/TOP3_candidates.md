@@ -1,7 +1,8 @@
 # TOP 3 candidates
 
-No candidate passes every closed Phase 2 readiness gate.
+Leading GO: NONE
+Leading HOLD: NK → Spp1 → S1pr1 → CD8
 
-## Leading HOLD: Eif2ak3
-
-This intrinsic candidate has association/robustness evidence but is not a causal conclusion. The unresolved direction and absence of independent perturbation evidence require candidate-specific validation before Phase 2.
+1. NK → Spp1 → S1pr1 → CD8 — class=multicellular; score=0.5475; decision=HOLD.
+2. T_cell → Cd28 → Cd86 → CD8 — class=multicellular; score=0.5467; decision=HOLD.
+3. T_cell → Lamc1 → Itga2_Itgb1 → CD4 — class=multicellular; score=0.5462; decision=HOLD.
