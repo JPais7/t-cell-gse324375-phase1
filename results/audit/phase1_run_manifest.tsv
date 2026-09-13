@@ -1,2 +1,2 @@
 commit_sha	run_utc	python	random_seed	n_candidates	n_mice	n_permutations	LOOCV_candidates	input_datasets	external_datasets	pipeline_version
-8bceb242e083e287f9b48ea20145d7a8c437c2c2	2026-09-13T12:39:26.686873+00:00	3.12.13	17	65073	48	1000	276	GSE324375	GSE289772 (contextual); GSE314342 (not assessed)	Phase1.5 UniProt biological-audit v3
+06c860dafe1a360e749ef024495b5e8edfe5bec3	2026-09-13T12:40:24.049113+00:00	3.12.13	17	65073	48	1000	276	GSE324375	GSE289772 (contextual); GSE314342 (not assessed)	Phase1.5 UniProt biological-audit v3

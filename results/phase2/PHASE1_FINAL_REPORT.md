@@ -37,7 +37,7 @@ TOP1: NOT_ASSESSED. No independent system-matched perturbation is currently inte
 Source/signal=SUPPORTED; receptor=SUPPORTED; T-cell state=PARTIALLY_SUPPORTED; transcriptional program=SUPPORTED; effector response=PARTIALLY_SUPPORTED; myeloid response=MISSING; tumor killing=MISSING. Chain evidence coherence=0.571. Missing downstream steps are not filled with prior-paper knowledge.
 
 ## 13. Final ranking
-One candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT rather than being promoted to fill a list.
+No candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT rather than being promoted to fill a list.
 
 ## 14. TOP3
 1. NK → Tnfsf4 → Tnfrsf4 → CD8: class=multicellular; effect=0.2881; FDR=0.06182; mice=43; consistency=0.721; LOOCV=1.000; empirical p/FDR=0.003996/0.0149; validity=VALID_LR; external=NOT_ASSESSED; tier=2; decision=HOLD.
@@ -45,7 +45,7 @@ One candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT r
 3. NOT AVAILABLE — did not pass all closed gates.
 
 ## 15. Why the candidate beat alternatives
-It combines a biologically defensible TNFSF4–TNFRSF4 direction, RNA+ADT evidence, high animal replication, candidate-specific LOOCV and an interpretable null. Intrinsic TF hypotheses fell below the revised LOOCV gate; invalid/unknown LR interpretations were excluded.
+The TNFSF4–TNFRSF4 molecular identity is biologically defensible and it combines high animal replication, candidate-specific LOOCV and an interpretable null. It is nevertheless HOLD because RNA and ADT directions disagree. Intrinsic TF hypotheses fell below the revised LOOCV gate; invalid/unknown LR interpretations were excluded.
 
 ## 16. Experimental validation
 Necessity: independent TNFSF4 loss/blockade in NK cells and TNFRSF4 CRISPRi in CD8 cells. Sufficiency: physiological cross-linked TNFSF4 or TNFSF4-high NK cells. Rescue: restore TNFSF4 or use OX40 agonism, requiring TNFRSF4. Measure CD69/CD137, state program, IFNG/TNF, viability, proliferation, cytotoxicity and live tumor killing.
