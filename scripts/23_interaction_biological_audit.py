@@ -1,31 +1,33 @@
 #!/usr/bin/env python3
-"""Auditable biological-type screen for ligand–receptor candidate interpretation."""
+"""Apply UniProt-derived entity annotations to every proposed interaction."""
 from pathlib import Path
 import numpy as np
 import pandas as pd
-
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/"results/phase2"
-x=pd.read_csv(OUT/"candidate_evidence_matrix.tsv",sep="\t"); lr=x[x.candidate_type.isin(["extracellular","multicellular"])].copy()
-METABOLIC={"Pkm","Gpi1","Hdc","Hk2","Ldha","Eno1","Gapdh","Aldoa"}; INTRACELLULAR={"Arf6","Vim","Traf2","Smap1","Stat4","Nfkb2","Relb","Jund","Rbpj"}; MEMBRANE={"Adam10","Adam17","Itgav","Thy1","Cd72","Cd38","H2-Ab1"}
-CANONICAL={"Tnfsf4","Pdcd1lg2","Il15","Ccl11","Ccl25","Cd80","Cd86","Spp1","Grn","Vegfa","Lgals3bp"}
-def ligand_class(g):
- if g in METABOLIC:return "METABOLIC_ENZYME"
- if g in INTRACELLULAR:return "INTRACELLULAR_NOT_LIGAND"
- if g in MEMBRANE:return "MEMBRANE_ASSOCIATED_SIGNAL"
- if g in CANONICAL or str(g).startswith(("Ccl","Cxcl","Il","Tnfsf")):return "VALID_CANONICAL_LIGAND_RECEPTOR"
- if str(g).startswith(("Col","Lam","Hspg")):return "VALID_NONCANONICAL_EXTRACELLULAR"
- return "UNKNOWN_UNVALIDATED"
-def receptor_class(g):
- parts=str(g).split("_")
- if any(p in INTRACELLULAR or p in METABOLIC for p in parts):return "INTRACELLULAR_NOT_RECEPTOR"
- if all(p.startswith(("Tnfrsf","Ccr","Cxcr","Il","Itga","Itgb")) or p in {"Cd44","Cd5","Cd28","Pdcd1","Lag3","Ptprs","Dpp4","Amfr","Pecam1","Thy1","Notch1","Rgmb"} for p in parts):return "VALID_CANONICAL_LIGAND_RECEPTOR"
- return "UNKNOWN_UNVALIDATED"
-lr["ligand_biological_class"]=lr.ligand.map(ligand_class); lr["receptor_biological_class"]=lr.receptor.map(receptor_class)
-invalid=lr.ligand_biological_class.isin(["METABOLIC_ENZYME","INTRACELLULAR_NOT_LIGAND"])|lr.receptor_biological_class.eq("INTRACELLULAR_NOT_RECEPTOR")|lr.ligand.eq("Itgav")
-unvalidated=lr.ligand_biological_class.eq("UNKNOWN_UNVALIDATED")|lr.receptor_biological_class.eq("UNKNOWN_UNVALIDATED")|(lr.ligand.isin(["Adam10","Adam17"])&~lr.receptor.isin(["Notch1","Tnfrsf1b","Il6r","Sell"]))
-lr["interaction_validity"]=np.where(invalid,"INVALID_AS_LIGAND_RECEPTOR",np.where(unvalidated,"UNKNOWN_UNVALIDATED","VALID_FOR_HYPOTHESIS"))
-lr["interaction_type"]=np.where(lr.ligand_biological_class.eq("MEMBRANE_ASSOCIATED_SIGNAL"),"membrane-associated/contact or processing","ligand-receptor hypothesis"); lr["validation_source"]="UniProt/GO-informed explicit rule set; mouseconsensus remains interaction-resource evidence"; lr["validation_confidence"]=np.where(lr.interaction_validity.eq("INVALID_AS_LIGAND_RECEPTOR"),"HIGH",np.where(lr.interaction_validity.eq("VALID_FOR_HYPOTHESIS"),"MODERATE","LOW")); lr["biological_reinterpretation"]=np.where(lr.ligand.eq("Pkm"),"Reclassify as intrinsic PKM-associated metabolic state; extracellular PKM→CD44 not established",np.where(lr.ligand.eq("Itgav"),"Integrin is represented in ligand position; direction is not supported",np.where(lr.ligand.isin(["Adam10","Adam17"]),"Membrane protease/shedding mechanism; specific substrate relationship required",""))); lr["valid_for_mechanistic_ranking"]=lr.interaction_validity.eq("VALID_FOR_HYPOTHESIS")
-lr.to_csv(OUT/"interaction_biological_audit.tsv",sep="\t",index=False)
-top=pd.concat([pd.read_csv(OUT/f"top_{c}.tsv",sep="\t").head(20) for c in ["extracellular","multicellular"]]).drop_duplicates("candidate").head(20); top=top.drop(columns=["interaction_validity","ligand_biological_class","receptor_biological_class","biological_reinterpretation","valid_for_mechanistic_ranking"],errors="ignore"); ta=top.merge(lr[["candidate","interaction_validity","ligand_biological_class","receptor_biological_class","biological_reinterpretation","valid_for_mechanistic_ranking"]],on="candidate",how="left"); ta["original_rank"]=range(1,len(ta)+1); ta["biological_validity"]=ta.interaction_validity; ta["ligand_validity"]=ta.ligand_biological_class; ta["receptor_validity"]=ta.receptor_biological_class; ta["direction_validity"]="ASSOCIATIVE_ONLY"; ta["mechanistic_plausibility"]=np.where(ta.valid_for_mechanistic_ranking,"SUPPORTED_AS_HYPOTHESIS","INSUFFICIENT"); ta["reclassification"]=ta.biological_reinterpretation; ta["reason"]=ta.interaction_validity; ta["recommended_action"]=np.where(ta.valid_for_mechanistic_ranking,"retain as hypothesis","exclude from LR ranking; retain appropriate intrinsic interpretation"); ta.to_csv(OUT/"top20_biological_audit.tsv",sep="\t",index=False)
-(OUT/"interaction_biological_audit.md").write_text("# Interaction biological audit\n\nThis audit separates canonical/noncanonical extracellular signals, membrane-associated processing/contact proteins, metabolic enzymes and intracellular components. Presence in mouseconsensus/LIANA is not sufficient for mechanistic validity. PKM is classified as a metabolic intracellular protein and PKM→CD44 is excluded as an LR mechanism. ADAM10/17 are membrane proteases and are not described as soluble ligands. Unknown pairs remain unvalidated rather than promoted.\n")
+x=pd.read_csv(OUT/"candidate_evidence_matrix.tsv",sep="\t",low_memory=False); lr=x[x.candidate_type.isin(["extracellular","multicellular"])].copy()
+ann=pd.read_csv(OUT/"interaction_entity_annotation.tsv",sep="\t").set_index("gene")
+def entities(value): return [p for p in str(value).split("_") if p and p!="nan"]
+def rec(value): return ann.reindex(entities(value))
+def join(value,col): return " | ".join(rec(value)[col].fillna("unknown/unvalidated" if col=="entity_type" else "").astype(str))
+def allflag(value,col):
+ z=rec(value); return bool(len(z) and z[col].fillna(False).astype(bool).all())
+def anyflag(value,col): return bool(rec(value)[col].fillna(False).astype(bool).any())
+lr["ligand_entity_type"]=lr.ligand.map(lambda g:join(g,"entity_type")); lr["receptor_entity_type"]=lr.receptor.map(lambda g:join(g,"entity_type")); lr["ligand_localization"]=lr.ligand.map(lambda g:join(g,"cellular_localization")); lr["receptor_localization"]=lr.receptor.map(lambda g:join(g,"cellular_localization"))
+lr["ligand_supported_annotation"]=lr.ligand.map(lambda g:allflag(g,"ligand_supported")); lr["receptor_supported_annotation"]=lr.receptor.map(lambda g:allflag(g,"receptor_supported"))
+intrinsic_lig=lr.ligand.map(lambda g:anyflag(g,"metabolic_regulator") or anyflag(g,"transcription_factor") or (allflag(g,"enzyme") and not anyflag(g,"secreted")))
+inverted=lr.ligand.map(lambda g:all(t=="receptor" for t in rec(g).entity_type.fillna("unknown/unvalidated")))
+shedding=lr.ligand.map(lambda g:anyflag(g,"shedding_or_processing_factor")); contact=lr.ligand.map(lambda g:anyflag(g,"adhesion_molecule") and (anyflag(g,"membrane_associated") or anyflag(g,"secreted"))); canonical=lr.ligand_supported_annotation&lr.receptor_supported_annotation
+def substrate_supported(row):
+ notes=" ".join(rec(row.ligand).biological_notes.fillna("").astype(str)).lower(); return any(p.lower() in notes for p in entities(row.receptor))
+substrate=lr.apply(substrate_supported,axis=1)
+lr["interaction_validity"]=np.select([intrinsic_lig|inverted,shedding&substrate,shedding,canonical,contact&lr.receptor_supported_annotation],["INVALID_LR","SHEDDING_PROCESSING","UNKNOWN","VALID_LR","MEMBRANE_CONTACT"],default="UNKNOWN")
+lr["interaction_type"]=lr.interaction_validity; lr["direction_validity"]=np.select([intrinsic_lig|inverted,shedding&substrate,shedding,canonical,contact&lr.receptor_supported_annotation],["INVALID","PLAUSIBLE_CONTACT_OR_PROCESSING","UNKNOWN","SUPPORTED","PLAUSIBLE_CONTACT_OR_PROCESSING"],default="UNKNOWN")
+lr["validation_source"]="UniProtKB mouse entity annotation plus interaction-resource hypothesis"; lr["validation_confidence"]=np.select([lr.interaction_validity.isin(["INVALID_LR","VALID_LR"]),lr.interaction_validity.isin(["MEMBRANE_CONTACT","SHEDDING_PROCESSING"])],["HIGH","MODERATE"],default="LOW")
+lr["biological_reinterpretation"]=np.select([lr.ligand.eq("Pkm"),lr.ligand.isin(["Adam10","Adam17"]),lr.ligand.eq("Itgav"),lr.ligand.eq("Thy1")],["T-cell intrinsic PKM-associated metabolic state; extracellular PKM→CD44 is not established","Membrane protease/shedding hypothesis; retain only with an annotated substrate","ITGAV is an integrin receptor/contact molecule and is directionally inappropriate as a conventional soluble ligand","THY1 is a membrane adhesion/contact molecule; interpret only as contact-dependent"],default="")
+lr["valid_for_mechanistic_ranking"]=lr.interaction_validity.isin(["VALID_LR","MEMBRANE_CONTACT","SHEDDING_PROCESSING"]); lr.to_csv(OUT/"interaction_biological_audit.tsv",sep="\t",index=False)
+ranked=pd.concat([pd.read_csv(OUT/f"top_{c}.tsv",sep="\t",low_memory=False).head(20) for c in ["extracellular","multicellular"]]).drop_duplicates("candidate").head(20)
+keep=["candidate","ligand","receptor","ligand_entity_type","receptor_entity_type","ligand_localization","receptor_localization","interaction_validity","direction_validity","biological_reinterpretation","validation_confidence","valid_for_mechanistic_ranking"]
+ta=ranked.drop(columns=[c for c in keep if c in ranked and c not in ["candidate","ligand","receptor"]]).merge(lr[keep].drop_duplicates("candidate"),on=["candidate","ligand","receptor"],how="left"); ta["original_rank"]=range(1,len(ta)+1); ta["biological_plausibility"]=np.where(ta.valid_for_mechanistic_ranking,"PLAUSIBLE_HYPOTHESIS","INSUFFICIENT"); ta["mechanistic_interpretation"]=ta.biological_reinterpretation.fillna(""); ta["external_evidence"]=ta.external_perturbation_support.fillna("NOT_ASSESSED")
+ta["recommended_action"]=np.select([ta.interaction_validity.eq("VALID_LR"),ta.interaction_validity.eq("MEMBRANE_CONTACT"),ta.interaction_validity.eq("SHEDDING_PROCESSING"),ta.interaction_validity.eq("INVALID_LR")&ta.ligand_entity_type.str.contains("metabolic|intracellular",case=False,na=False),ta.interaction_validity.eq("INVALID_LR")],["RETAIN_LR","RETAIN_CONTACT_MECHANISM","RETAIN_SHEDDING_MECHANISM","RECLASSIFY_INTRINSIC","REJECT_INVALID_LR"],default="HOLD_UNKNOWN"); ta.to_csv(OUT/"top20_biological_audit.tsv",sep="\t",index=False)
+(OUT/"interaction_biological_audit.md").write_text("# Interaction biological audit\n\nEntity types and localizations are derived reproducibly from the cached UniProtKB Mus musculus export. Interaction-resource membership is treated only as a hypothesis. Valid conventional LR, membrane contact, and substrate-supported shedding mechanisms are distinguished from invalid and unknown pairs. PKM→CD44 is excluded as LR; ADAM10/17 require an annotated substrate; ITGAV in ligand position is not treated as soluble signaling; THY1 is contact/adhesion.\n")
 print(lr.interaction_validity.value_counts().to_string())

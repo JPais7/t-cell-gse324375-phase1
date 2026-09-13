@@ -47,7 +47,10 @@ def score(row,values):
  v=np.asarray(list(values.values()),float)
  if len(v)<2:return np.nan
  consistency=max((v>0).mean(),(v<0).mean()); repl=min(len(v)/10,1)*consistency
- return .25*repl+.20*row.effect_component+.10*row.statistical_component+.15*row.multilayer_component+.10*row.temporal_component+.10*row.independence_component+.10*float(row.mechanistically_supported)
+ constants=[row.effect_component,row.statistical_component,row.RNA_component,row.ADT_component,row.state_component,row.temporal_component,row.interaction_component,row.stability_component,row.null_model_component,row.biological_validity_component,row.mechanistic_evidence_coherence,row.independence_component,row.experimental_testability_component]
+ value=float(np.mean([repl]+constants))
+ if getattr(row,"external_perturbation_support","NOT_ASSESSED")=="SUPPORTED": value=float(np.mean([repl]+constants+[row.external_perturbation_component]))
+ return value
 
 universe=sorted(set().union(*[set(v) for v in per_candidate.values()])); rows=[]; folds=[]; rng=np.random.default_rng(SEED); nullrows=[]
 base=priority.set_index("candidate")
@@ -67,7 +70,7 @@ for focal in base.index:
 for c,row in base.iterrows():
  vals=per_candidate.get(c,{}); rr=np.asarray(rank_records[c]); ss=np.asarray(score_records[c]); n=len(vals)
  vv=np.asarray(list(vals.values()),float); support=max(int((vv>0).sum()),int((vv<0).sum())) if len(vv) else 0
- rows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"n_mice":n,"n_mice_supporting":support,"n_mice_opposing":n-support,"direction_consistency":support/n if n else np.nan,"LOOCV_runs":len(rr),"LOOCV_failed_runs":fail[c],"LOOCV_top1_runs":int((rr<=1).sum()),"LOOCV_top3_runs":int((rr<=3).sum()),"LOOCV_top10_runs":int((rr<=10).sum()),"LOOCV_top1_fraction":float((rr<=1).mean()) if len(rr) else np.nan,"LOOCV_top10_fraction":float((rr<=10).mean()) if len(rr) else np.nan,"LOOCV_top3_fraction":float((rr<=3).mean()) if len(rr) else np.nan,"LOOCV_rank_median":float(np.median(rr)) if len(rr) else np.nan,"LOOCV_rank_mean":float(np.mean(rr)) if len(rr) else np.nan,"LOOCV_rank_min":float(np.min(rr)) if len(rr) else np.nan,"LOOCV_rank_max":float(np.max(rr)) if len(rr) else np.nan,"LOOCV_rank_IQR":float(np.subtract(*np.percentile(rr,[75,25]))) if len(rr) else np.nan,"LOOCV_score_median":float(np.median(ss)) if len(ss) else np.nan,"LOOCV_score_min":float(np.min(ss)) if len(ss) else np.nan,"LOOCV_score_max":float(np.max(ss)) if len(ss) else np.nan,"LOOCV_failure_reason":"insufficient remaining mice" if fail[c] else ""})
+ rows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"n_mice":n,"n_mice_supporting":support,"n_mice_opposing":n-support,"direction_consistency":support/n if n else np.nan,"mouse_effect_median":float(np.median(vv)) if n else np.nan,"mouse_effect_mean":float(np.mean(vv)) if n else np.nan,"mouse_effect_IQR":float(np.subtract(*np.percentile(vv,[75,25]))) if n else np.nan,"mouse_effect_sign":"positive" if n and np.median(vv)>0 else ("negative" if n and np.median(vv)<0 else "undetermined"),"LOOCV_runs":len(rr),"LOOCV_failed_runs":fail[c],"LOOCV_top1_runs":int((rr<=1).sum()),"LOOCV_top3_runs":int((rr<=3).sum()),"LOOCV_top10_runs":int((rr<=10).sum()),"LOOCV_top1_fraction":float((rr<=1).mean()) if len(rr) else np.nan,"LOOCV_top10_fraction":float((rr<=10).mean()) if len(rr) else np.nan,"LOOCV_top3_fraction":float((rr<=3).mean()) if len(rr) else np.nan,"LOOCV_rank_median":float(np.median(rr)) if len(rr) else np.nan,"LOOCV_rank_mean":float(np.mean(rr)) if len(rr) else np.nan,"LOOCV_rank_min":float(np.min(rr)) if len(rr) else np.nan,"LOOCV_rank_max":float(np.max(rr)) if len(rr) else np.nan,"LOOCV_rank_IQR":float(np.subtract(*np.percentile(rr,[75,25]))) if len(rr) else np.nan,"LOOCV_score_median":float(np.median(ss)) if len(ss) else np.nan,"LOOCV_score_min":float(np.min(ss)) if len(ss) else np.nan,"LOOCV_score_max":float(np.max(ss)) if len(ss) else np.nan,"LOOCV_failure_reason":"insufficient remaining mice" if fail[c] else ""})
  v=np.asarray(list(vals.values()),float); observed=score(row,vals)
  if len(v)>=2:
   ns=[]

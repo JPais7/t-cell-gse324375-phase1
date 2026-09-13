@@ -9,17 +9,17 @@ import numpy as np
 import pandas as pd
 
 ROOT=Path(__file__).resolve().parents[1]; P=ROOT/"results/phase2"
-expected=[P/x for x in ["candidate_evidence_matrix.tsv","candidates_for_perturbation_validation.tsv","top_extracellular.tsv","top_intrinsic.tsv","top_multicellular.tsv","loocv_candidate_stability.tsv","loocv_fold_details.tsv","permutation_null_results.tsv","ranking_sensitivity.tsv","ranking_changes_from_previous.tsv","external_perturbation_evidence.tsv","interaction_biological_audit.tsv","interaction_biological_audit.md","top20_biological_audit.tsv","TOP3_candidates.md","PHASE1_FINAL_REPORT.md"]]+[ROOT/"results/audit/current_pipeline_audit.md"]
+expected=[P/x for x in ["candidate_evidence_matrix.tsv","candidates_for_perturbation_validation.tsv","top_extracellular.tsv","top_intrinsic.tsv","top_multicellular.tsv","loocv_candidate_stability.tsv","loocv_fold_details.tsv","permutation_null_results.tsv","ranking_sensitivity.tsv","ranking_changes_from_previous.tsv","external_perturbation_evidence.tsv","interaction_entity_annotation.tsv","interaction_biological_audit.tsv","interaction_biological_audit.md","top20_biological_audit.tsv","phase2_readiness.tsv","TOP3_candidates.md","PHASE1_FINAL_REPORT.md"]]+[ROOT/"results/audit/phase1_5_current_pipeline_audit.md"]
 missing=[str(x) for x in expected if not x.exists()]
 if missing: raise SystemExit("FAIL missing outputs: "+"; ".join(missing))
 x=pd.read_csv(P/"candidate_evidence_matrix.tsv",sep="\t"); top=pd.read_csv(P/"candidates_for_perturbation_validation.tsv",sep="\t")
-required=["candidate","candidate_family_id","candidate_type","evidence_score","power_flag","causality_tier","RNA_evidence","ADT_evidence","temporal_support","independence_from_curated_score","LOOCV_stability","empirical_p","null_percentile"]
+required=["candidate","candidate_family_id","mechanistic_family_id","candidate_type","entity_type","mechanism_level","evidence_score","power_flag","causality_tier","RNA_evidence","ADT_evidence","temporal_support","independence_from_curated_score","LOOCV_stability","empirical_p","empirical_FDR","null_percentile","biological_validity_component","mechanistic_evidence_coherence","experimental_testability_component"]
 errs=[]
 for c in required:
  if c not in x.columns: errs.append("missing column "+c)
 if top.evidence_score.isna().any(): errs.append("TOP candidate missing evidence_score")
 if top.power_flag.isna().any(): errs.append("TOP candidate missing power_flag")
-if (top.causality_tier>3).any(): errs.append("causality tier exceeds Phase 1 limit")
+if (top.causality_tier>=4).any() or (x.causality_tier>=4).any(): errs.append("Tier 4 appears in Phase 1.5")
 if top.candidate_family_id.nunique()<len(top) and top.candidate_family_id.duplicated().any(): errs.append("duplicate candidate family in balanced shortlist")
 if top.head(3).mechanistic_family_id.nunique()<len(top.head(3)): errs.append("TOP 3 mechanistic families are redundant")
 if x.evidence_score.isna().any() or (~np.isfinite(pd.to_numeric(x.evidence_score,errors="coerce"))).any(): errs.append("invalid evidence score")
@@ -39,14 +39,20 @@ eg=set(pd.read_csv(P/"external_perturbation_evidence.tsv",sep="\t").query("exter
 if ((top.causality_tier>=3)&~tier3_match).any(): errs.append("Tier 3 without real external perturbation")
 if "valid_for_mechanistic_ranking" in x and (~x.loc[x.candidate.isin(top.candidate),"valid_for_mechanistic_ranking"].fillna(False)).any(): errs.append("biologically invalid interaction entered TOP candidates")
 bio=pd.read_csv(P/"interaction_biological_audit.tsv",sep="\t")
-bad=bio.ligand_biological_class.isin(["INTRACELLULAR_NOT_LIGAND","METABOLIC_ENZYME","TRANSCRIPTION_FACTOR","PATHWAY_COMPONENT"])
-if (bio.loc[bad,"interaction_validity"]=="VALID_FOR_HYPOTHESIS").any(): errs.append("invalid ligand classified as valid LR")
+bad=bio.ligand_entity_type.str.contains("intracellular|metabolic|transcription factor",case=False,na=False)
+if bio.loc[bad,"interaction_validity"].isin(["VALID_LR","MEMBRANE_CONTACT","SHEDDING_PROCESSING"]).any(): errs.append("intracellular/metabolic ligand retained as valid LR")
 sens=pd.read_csv(P/"ranking_sensitivity.tsv",sep="\t")
-needed={"replication","effect","FDR/statistics","RNA","ADT","state","interaction","temporal","LOOCV","permutation_null","mechanistic_coherence","external_perturbation","independence"}
+needed={"replication","effect","FDR/statistics","RNA","ADT","data_driven_state","interaction","temporal","LOOCV","permutation_null","biological_validity","mechanistic_coherence","external_perturbation","independence"}
 if not needed.issubset(set(sens.omitted_component)): errs.append("ranking sensitivity missing dimensions")
 if not {"rank_without_component","score_change"}.issubset(sens.columns): errs.append("ranking sensitivity lacks rank/score changes")
+if top[["suggested_perturbation","expected_readout","negative_control","specificity_control"]].isna().any().any(): errs.append("final candidate has no interpretable experimental test")
+ready=pd.read_csv(P/"phase2_readiness.tsv",sep="\t"); go=ready.phase2_decision.eq("GO")
+if ((go)&(~ready.biological_status.eq("PASS")|~ready.statistical_status.eq("PASS")|~ready.experimental_status.eq("PASS")|~ready.LOOCV_status.eq("PASS")|~ready.null_status.eq("PASS"))).any(): errs.append("Phase 2 GO despite failed critical gate")
+if set(top.candidate)!=set(ready.loc[go,"candidate"]): errs.append("shortlist and Phase 2 GO decisions disagree")
+for script,output in [(ROOT/"scripts/20_final_candidate_ranking.py",P/"candidate_evidence_matrix.tsv"),(ROOT/"scripts/22_true_robustness.py",P/"loocv_candidate_stability.tsv"),(ROOT/"scripts/23_interaction_biological_audit.py",P/"interaction_biological_audit.tsv"),(ROOT/"scripts/24_interaction_entity_annotation.py",P/"interaction_entity_annotation.tsv")]:
+ if output.stat().st_mtime<script.stat().st_mtime: errs.append(f"stale output older than generator: {output.name}")
 if errs: raise SystemExit("FAIL\n"+"\n".join(errs))
-print("PASS: outputs present; columns complete; finite scores; no causal overclaim; classes represented; temporal separate from causality.")
+print("PASS: Phase 1.5 outputs are current, finite, biologically gated, mouse-robust, sensitivity-complete and experimentally interpretable.")
 print(f"Candidates={len(x):,}; shortlist={len(top)}; families={x.candidate_family_id.nunique():,}")
-manifest=pd.DataFrame([{"commit_sha":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),"run_utc":datetime.now(timezone.utc).isoformat(),"python":sys.version.split()[0],"random_seed":17,"n_candidates":len(x),"n_mice":int(lo.n_mice.max()),"n_permutations":int(nu.n_permutations.max()),"LOOCV_candidates":len(lo),"external_datasets":"GSE289772 (contextual); GSE314342 (not assessed)","pipeline_version":"Phase1 biological-audit v2"}])
+manifest=pd.DataFrame([{"commit_sha":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),"run_utc":datetime.now(timezone.utc).isoformat(),"python":sys.version.split()[0],"random_seed":17,"n_candidates":len(x),"n_mice":int(lo.n_mice.max()),"n_permutations":int(nu.n_permutations.max()),"LOOCV_candidates":len(lo),"input_datasets":"GSE324375","external_datasets":"GSE289772 (contextual); GSE314342 (not assessed)","pipeline_version":"Phase1.5 UniProt biological-audit v3"}])
 manifest.to_csv(ROOT/"results/audit/phase1_run_manifest.tsv",sep="\t",index=False)
