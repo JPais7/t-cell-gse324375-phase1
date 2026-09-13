@@ -26,10 +26,17 @@ if x.evidence_score.isna().any() or (~np.isfinite(pd.to_numeric(x.evidence_score
 # Temporal evidence may coexist with Tier 2, but cannot itself create Tier 3.
 if ((x.causality_tier>=3)&~x.external_perturbation_support.eq("SUPPORTED")).any(): errs.append("causal tier incompatible with external evidence")
 if (x.potentially_novel_hypothesis & ~x.independence_from_curated_score).any(): errs.append("novelty/independence contradiction")
-lo=pd.read_csv(P/"loocv_candidate_stability.tsv",sep="\t"); nu=pd.read_csv(P/"permutation_null_results.tsv",sep="\t")
+lo=pd.read_csv(P/"loocv_candidate_stability.tsv",sep="\t"); f=pd.read_csv(P/"loocv_fold_details.tsv",sep="\t"); nu=pd.read_csv(P/"permutation_null_results.tsv",sep="\t")
 effects=pd.read_csv(P/"candidate_mouse_effects.tsv",sep="\t")
 if effects.empty or not {"candidate","mouse_id","effect_value","expected_direction","effect_supports_hypothesis"}.issubset(effects.columns): errs.append("missing single-source candidate mouse effects")
 if not {"LOOCV_rank_min","LOOCV_rank_max","LOOCV_score_min","LOOCV_score_max"}.issubset(lo.columns): errs.append("LOOCV is not a true rank recalculation")
+fold_required={"candidate","removed_mouse","n_mice_remaining","n_supporting_remaining","n_opposing_remaining","direction_consistency_remaining","median_effect_remaining","fold_pre_robustness_score","fold_rank","n_competing_candidates","eligible_after_removal","failure_reason"}
+if not fold_required.issubset(f.columns): errs.append("LOOCV fold details missing fold-dependent fields")
+else:
+ effect_sets=effects.groupby("candidate").mouse_id.apply(set).to_dict()
+ for fr in f.itertuples(index=False):
+  expected_remaining=len(effect_sets.get(fr.candidate,set())- {str(fr.removed_mouse)})
+  if fr.eligible_after_removal and fr.n_mice_remaining!=expected_remaining: errs.append("LOOCV fold retained removed mouse or wrong remaining count"); break
 if ((lo.LOOCV_runs>0)&lo.LOOCV_rank_min.isna()).any(): errs.append("LOOCV run has no recalculated rank")
 if ((lo.LOOCV_runs+lo.LOOCV_failed_runs)!=lo.n_mice).any(): errs.append("LOOCV folds do not match informative mice")
 if "empirical_FDR" not in nu.columns: errs.append("permutation null missing empirical FDR")
@@ -58,6 +65,8 @@ if "candidate_evidence_pre_audit.tsv" not in source23 or "candidate_evidence_mat
 if "candidate_evidence_pre_audit.tsv" not in source22 or "candidate_evidence_matrix.tsv" in source22: errs.append("robustness has circular final-matrix dependency")
 if "pd.read_csv(OUT/\"candidate_evidence_matrix.tsv\"" in source22 or "pd.read_csv(OUT/\"loocv_candidate_stability.tsv\"" in source22 or "pd.read_csv(OUT/\"permutation_null_results.tsv\"" in source22: errs.append("robustness reads prior robustness outputs")
 if not (ROOT/"scripts/run_phase1_5b_clean.sh").exists(): errs.append("missing clean-run workflow")
+pre=pd.read_csv(P/"candidate_evidence_pre_audit.tsv",sep="\t",nrows=1)
+if set(pre.columns)&{"LOOCV_stability","empirical_p","empirical_FDR","null_percentile","evidence_score","evidence_gate"}: errs.append("pre-audit table contains post-robustness/final-ranking fields")
 if errs: raise SystemExit("FAIL\n"+"\n".join(errs))
 print("PASS: Phase 1.5 outputs are current, finite, biologically gated, mouse-robust, sensitivity-complete and experimentally interpretable.")
 print(f"Candidates={len(x):,}; shortlist={len(top)}; families={x.candidate_family_id.nunique():,}")
