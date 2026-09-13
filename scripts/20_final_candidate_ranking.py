@@ -25,6 +25,9 @@ sv=ROOT/"results/data_driven/state_animal_validation_summary.tsv"
 if sv.exists():
  sm=pd.read_csv(sv,sep="\t").set_index("lineage"); dd["n_mice"]=dd.lineage.map(sm.n_mice); dd["effective_sample_size"]=dd.lineage.map(sm.informative_mice); dd["power_flag"]=dd.lineage.map(sm.power_flag).fillna("MODERATE")
 tf=pd.read_csv(ROOT/"results/regulators/TF_activity_experimental_contrasts.tsv",sep="\t"); tf=tf[tf.FDR<.1].sort_values("FDR").drop_duplicates(["TF","lineage"]); tf["candidate"]=tf.TF; tf["candidate_type"]="intrinsic"; tf["mechanism_class"]="inferred transcription-factor activity"; tf["source"]="T cell"; tf["target"]=tf.lineage; tf["effect_size"]=tf.activity_effect_a_minus_b; tf["n_mice"]=np.nan; tf["direction_consistency"]=tf.direction_consistency; tf["effective_sample_size"]=tf.n_strata; tf["RNA_evidence"]=True; tf["ADT_evidence"]=False; tf["data_driven_state_evidence"]=False; tf["interaction_evidence"]=False; tf["independence_from_curated_score"]=True; tf["temporal_support"]=False; tf["power_flag"]=np.where(tf.n_strata>=2,"MODERATE","LOW")
+sm_path=ROOT/"results/data_driven/state_animal_validation_summary.tsv"
+if sm_path.exists():
+ sm=pd.read_csv(sm_path,sep="\t").set_index("lineage"); tf["n_mice"]=tf.lineage.map(sm.n_mice); tf["effective_sample_size"]=tf.lineage.map(sm.informative_mice); tf["n_mice_supporting"]=(tf.n_mice*tf.direction_consistency).round(); tf["n_mice_opposing"]=tf.n_mice-tf.n_mice_supporting; tf["power_flag"]=tf.lineage.map(sm.power_flag).fillna("MODERATE")
 
 for frame in [lr,dd,tf]:
  for col in ["ligand","receptor","target_lineage"]:
@@ -45,8 +48,9 @@ allc["evidence_gate"]=allc.mechanistically_supported&allc.independence_from_cura
 # Robustness: remove one supporting/opposing animal under the available summary.
 allc["LOOCV_stability"]=np.where(pd.to_numeric(allc.n_mice,errors="coerce").fillna(0)>=2,1-1/pd.to_numeric(allc.n_mice,errors="coerce").fillna(2),np.nan)
 allc["LOOCV_runs"]=pd.to_numeric(allc.n_mice,errors="coerce").fillna(0); allc["LOOCV_top10_runs"]=(allc.LOOCV_stability*allc.LOOCV_runs).round()
-allc["null_model_permutations"]=1000; rng=np.random.default_rng(17); obs=allc.evidence_score.to_numpy(float); null=np.vstack([rng.permutation(obs) for _ in range(1000)])
-allc["null_mean"]=float(np.nanmean(null)); allc["null_sd"]=float(np.nanstd(null)); allc["null_95"]=float(np.nanquantile(null,.95)); allc["null_99"]=float(np.nanquantile(null,.99)); allc["empirical_p"]=np.mean(null>=obs[None,:],axis=0); allc["null_percentile"]=np.mean(null<=obs[None,:],axis=0)
+allc["null_model_permutations"]=1000; allc["null_model_status"]="LIMITED sign-flip/binomial replication null; molecular FDR retained separately"; rng=np.random.default_rng(17); obs=allc.evidence_score.to_numpy(float); n=np.maximum(pd.to_numeric(allc.n_mice,errors="coerce").fillna(2).to_numpy(float),2); rep_null=rng.binomial(np.ceil(n).astype(int),.5,(1000,len(allc)))/n[None,:]; null=np.empty((1000,len(allc)))
+for i in range(1000): null[i]=.25*rep_null[i]+.20*allc.effect_component.to_numpy()+.10*allc.statistical_component.to_numpy()+.15*allc.multilayer_component.to_numpy()+.10*allc.temporal_component.to_numpy()+.10*allc.independence_component.to_numpy()+.10*allc.mechanistically_supported.astype(float).to_numpy()
+allc["null_mean"]=null.mean(0); allc["null_sd"]=null.std(0); allc["null_95"]=np.quantile(null,.95,axis=0); allc["null_99"]=np.quantile(null,.99,axis=0); allc["empirical_p"]=np.mean(null>=obs[None,:],axis=0); allc["null_percentile"]=np.mean(null<=obs[None,:],axis=0)
 allc["mechanistic_coherence"] = np.where(allc.candidate_type.eq("extracellular"), (allc.interaction_evidence.astype(float)+allc.RNA_evidence.astype(float)+allc.ADT_evidence.astype(float))/3, np.where(allc.candidate_type.eq("intrinsic"), (allc.data_driven_state_evidence.astype(float)+allc.RNA_evidence.astype(float)+allc.independence_from_curated_score.astype(float))/3, .5))
 allc["missing_evidence"]=np.where(allc.candidate_type.eq("extracellular") & ~allc.temporal_support,"temporal/spatial/perturbational evidence missing","")
 allc.sort_values(["evidence_gate","evidence_score"],ascending=False,inplace=True)
