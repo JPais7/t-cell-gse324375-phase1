@@ -1,14 +1,10 @@
-candidate	new_rank	old_rank	rank_change	reason_for_change
-Atf6		5.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Fli1		6.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Jund	6.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Maff	3.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-NK → Tnfsf4 → Tnfrsf4 → CD8	1.0	8.0	7.0	true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Nfkb2	4.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Relb	5.0			true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-Stat4	2.0	4.0	2.0	true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-T_cell → Cd80 → Ctla4 → CD4		9.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-T_cell → Pkm → Cd44 → CD8		7.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-fibroblast → Adam10 → Cd44 → CD8		1.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-fibroblast → Col1a2 → Cd44 → CD4		3.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
-neutrophil → Pdcd1lg2 → Pdcd1 → CD4		2.0		true mouse-removal LOOCV, sign-permutation null, family collapse, coherence and external evidence integration
+candidate	new_rank	new_score	interaction_validity	biological_reclassification	previous_rank	rank_change	reason_for_rank_change
+Atf6					5		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+Fli1					6		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+NK → Tnfsf4 → Tnfrsf4 → CD8					8		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+Stat4					4		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+T_cell → Cd80 → Ctla4 → CD4					9		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+T_cell → Pkm → Cd44 → CD8					7		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+fibroblast → Adam10 → Cd44 → CD8					1		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+fibroblast → Col1a2 → Cd44 → CD4					3		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking
+neutrophil → Pdcd1lg2 → Pdcd1 → CD4					2		UniProt entity validation, true mouse LOOCV, sign-permutation null, molecular-axis family collapse and decomposable re-ranking

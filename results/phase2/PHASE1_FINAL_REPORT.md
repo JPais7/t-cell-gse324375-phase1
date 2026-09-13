@@ -1,51 +1,63 @@
-# Phase 1 final report
+# Phase 1.5 final report
 
 ## 1. Executive summary
-GSE324375 supports animal-aware, associative hypotheses for intratumoral T-cell activation. No result from this dataset alone is causal.
+No candidate passes the closed Phase 2 gate. The leading statistical/biological hypothesis, **NK → Tnfsf4 → Tnfrsf4 → CD8**, is HOLD because RNA and ADT directions conflict. This is an association, not a causal conclusion.
 
-## 2–4. Dataset, biological replicate and QC
-The HTO-demultiplexed mouse is the inferential unit. Cell counts describe sampling depth, not replication. Reversible QC, doublet calls and RNA/ADT matrices are retained.
+## 2. Dataset and inferential unit
+GSE324375 is analysed with the HTO-demultiplexed mouse as the inferential unit; cells measure sampling depth, not independent replication.
 
-## 5–6. Data-driven state discovery and animal validation
-Unsupervised states were discovered after excluding curated activation features. The activation-like label is an external biological interpretation. State proportions and activation summaries are reported per mouse.
+## 3. Activation/state discovery
+The activation-like state was discovered without curated activation genes as clustering features. This provides feature independence, not external-dataset independence.
 
-## 7–8. Candidate discovery and family collapsing
-Candidates are separated into extracellular, intrinsic and multicellular entities. Interaction families share source and ligand; intrinsic families retain the regulator identity. No additional pathway family is invented without evidence.
+## 4. Animal-level replication
+TOP1 uses 43 informative mice: 31 supporting and 12 opposing; direction consistency=0.721; median mouse effect=-0.0001864; IQR=0.001879.
 
-## 9–11. Statistical validation, true LOOCV and null model
-Priority candidates undergo actual mouse removal, score recalculation and reranking. LOOCV stability is the fraction of removal runs remaining in the top 10. The null uses within-candidate mouse-effect sign permutations (1,000; seed 17); empirical FDR remains separate from molecular FDR.
+## 5. Candidate discovery
+Extracellular, multicellular, intrinsic-expression, inferred-TF and metabolic hypotheses remain explicitly distinct. No class balance or novelty bonus is imposed.
 
-## 12–14. RNA/ADT, external perturbation and mechanistic coherence
-RNA and ADT are independent components. External perturbation is counted only for verified interventions and context is retained. Each mechanistic chain records supported, partial, missing or non-applicable steps.
+## 6. Biological entity validation
+UniProtKB mouse annotations support TNFSF4 as a ligand and TNFRSF4 as its receptor. PKM→CD44 is invalid as conventional LR; ADAM10/17 require a documented substrate; ITGAV is not interpreted as a soluble ligand; THY1 is contact/adhesion.
 
-## 15–17. Final ranking and causality tiers
-The score averages replication, effect, molecular statistics, RNA, ADT, state, temporal, interaction, LOOCV, null, coherence and curated-score independence. Verified external perturbation is added without penalizing unassessed candidates. Tier 1 is observational, Tier 2 multi-layer, Tier 3 external perturbation, and Tier 4 direct causality in the relevant system.
+## 7. Statistical robustness
+The decomposable score separates replication, effect, statistics, RNA, ADT, state, interaction, temporal, LOOCV, null, biological validity, chain evidence, independence and testability. FDR is one non-dominant component.
 
-## 18. Phase 2 experiments
-Test necessity, sufficiency and rescue using candidate-specific source/T-cell perturbations, non-targeting controls, specificity controls and pre-specified activation, effector and killing readouts.
+## 8. True LOOCV
+TOP1 remains top-10 in 100.0% of candidate-specific removal folds. Every fold removes one informative mouse and recalculates score, eligibility and competitive rank.
 
-## 19–20. Limitations and reproducibility
-No spatial contact or same-animal longitudinal trajectory is available. Several contrasts are underpowered. Random seed is 17; the ranking records all components and robustness outputs.
+## 9. Permutation null
+Within-candidate sign permutation preserves each mouse-effect magnitude while randomizing direction (1,000 permutations; seed 17). TOP1 empirical p=0.003996, empirical FDR=0.0149. This is not a biological or global-pathway null.
 
-## 21. Falsification
-The leading hypothesis is falsified if verified on-target perturbation and rescue do not change the pre-specified T-cell activation/effector phenotype in the expected direction.
+## 10. RNA/ADT evidence
+TOP1 RNA=True; ADT=True; state=False. These modalities support association, not causality.
 
-## TOP 10
+## 11. External perturbation evidence
+TOP1: NOT_ASSESSED. No independent system-matched perturbation is currently integrated. GSE289772 is contextual pharmacological evidence for intrinsic PKM2 biology only.
 
-910. NK → Tnfsf4 → Tnfrsf4 → CD8 (multicellular; score=0.739; power=HIGH)
-64971. Stat4 (intrinsic; score=0.601; power=MODERATE)
-65002. Maff (intrinsic; score=0.569; power=MODERATE)
-64979. Nfkb2 (intrinsic; score=0.554; power=MODERATE)
-64995. Relb (intrinsic; score=0.548; power=MODERATE)
-65030. Jund (intrinsic; score=0.545; power=MODERATE)
+## 12. Mechanistic chain
+Source/signal=SUPPORTED; receptor=SUPPORTED; T-cell state=PARTIALLY_SUPPORTED; transcriptional program=SUPPORTED; effector response=PARTIALLY_SUPPORTED; myeloid response=MISSING; tumor killing=MISSING. Chain evidence coherence=0.571. Missing downstream steps are not filled with prior-paper knowledge.
 
-## Final decision fields
-A. Strongest mechanistic hypothesis: NK → Tnfsf4 → Tnfrsf4 → CD8.
-B. Strongest independent intrinsic hypothesis: Stat4.
-C. Strongest independent multicellular/extracellular hypothesis: NK → Tnfsf4 → Tnfrsf4 → CD8.
-D. Confidence: moderate; discovery-stage.
-E. Evidence gaps: spatial, longitudinal and system-matched perturbation.
-F. First experiment: necessity test for the leading mechanism.
-G. Second experiment: sufficiency plus rescue.
-H. Strongest falsifier: no effect after verified perturbation and rescue.
-I. Unknown: causal direction, contact, dose and therapeutic relevance.
+## 13. Final ranking
+One candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT rather than being promoted to fill a list.
+
+## 14. TOP3
+1. NK → Tnfsf4 → Tnfrsf4 → CD8: class=multicellular; effect=0.2881; FDR=0.06182; mice=43; consistency=0.721; LOOCV=1.000; empirical p/FDR=0.003996/0.0149; validity=VALID_LR; external=NOT_ASSESSED; tier=2; decision=HOLD.
+2. NOT AVAILABLE — did not pass all closed gates.
+3. NOT AVAILABLE — did not pass all closed gates.
+
+## 15. Why the candidate beat alternatives
+It combines a biologically defensible TNFSF4–TNFRSF4 direction, RNA+ADT evidence, high animal replication, candidate-specific LOOCV and an interpretable null. Intrinsic TF hypotheses fell below the revised LOOCV gate; invalid/unknown LR interpretations were excluded.
+
+## 16. Experimental validation
+Necessity: independent TNFSF4 loss/blockade in NK cells and TNFRSF4 CRISPRi in CD8 cells. Sufficiency: physiological cross-linked TNFSF4 or TNFSF4-high NK cells. Rescue: restore TNFSF4 or use OX40 agonism, requiring TNFRSF4. Measure CD69/CD137, state program, IFNG/TNF, viability, proliferation, cytotoxicity and live tumor killing.
+
+## 17. Falsifiers
+Reject if verified independent perturbations have no concordant target-specific effect, if rescue fails, or if effects disappear after controlling viable cell counts, proliferation and generic stress.
+
+## 18. Limitations
+Cell abundance, stress, proliferation, batch, treatment and library composition remain possible residual explanations. The animal-level design and stratification reduce but cannot eliminate them. Spatial contact, longitudinal same-animal data and direct perturbation are missing.
+
+## 19. Reproducibility
+Numbered scripts generate the annotation, audit, LOOCV, null, ranking, readiness and QC outputs. UniProtKB annotations are cached; seed=17; permutations=1,000.
+
+## 20. Final decision
+Q1 biological validity: YES. Q2 mouse-removal survival: YES. Q3 mouse-level null: YES. Q4 molecular interpretation: defensible LR hypothesis. Q5 direction: NOT YET—RNA/ADT discordant. Q6 independent modalities: measured but discordant. Q7 independent perturbation: NOT_ASSESSED. Q8 testable: YES. Q9 clear falsifier: YES. Q10 residual confounding: possible. Do not begin Phase 2 until direction is resolved.
