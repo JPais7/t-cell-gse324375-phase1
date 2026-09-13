@@ -21,3 +21,5 @@ if lo.exists():
     l['n_mice']=l[c]; break
   l=l.drop(columns=[c for c in ('n_mice_x','n_mice_y') if c in l.columns])
   l.to_csv(lo,sep='\t',index=False)
+ else:
+  l.to_csv(lo,sep='\t',index=False)
