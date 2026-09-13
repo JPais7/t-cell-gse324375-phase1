@@ -1,17 +1,9 @@
 candidate	model_id	formula	n_mice	candidate_axis_beta	candidate_axis_se	candidate_axis_ci_low	candidate_axis_ci_high	candidate_axis_p	r2	adjusted_r2	status	reason
 NK → Spp1 → S1pr1 → CD8	COMPOSITION_ADJUSTED	endpoint ~ candidate_axis + source_fraction + target_fraction	46	-0.2358440378779734	0.05391042210425525	-0.3446396743177899	-0.12704840143815688	7.871193416861273e-05	0.4623394540039618	0.42393512928995913	ESTIMABLE	
-NK → Spp1 → S1pr1 → CD8	TREATMENT_ADJUSTED	endpoint ~ candidate_axis + C(condition)	46								NOT_ESTIMABLE	"Error evaluating factor: TypeError: 'list' object is not callable
-    endpoint ~ candidate_axis + C(condition)
-                                ^^^^^^^^^^^^"
-NK → Spp1 → S1pr1 → CD8	FULL_ADJUSTED	endpoint ~ candidate_axis + target_fraction + C(condition)	46								NOT_ESTIMABLE	"Error evaluating factor: TypeError: 'list' object is not callable
-    endpoint ~ candidate_axis + target_fraction + C(condition)
-                                                  ^^^^^^^^^^^^"
+NK → Spp1 → S1pr1 → CD8	TREATMENT_ADJUSTED	endpoint ~ candidate_axis + C(condition)	46	-0.1810145019498729	0.05066591585093057	-0.2833363948157623	-0.0786926090839835	0.0009205715760638165	0.5439202929426677	0.4994247117663426	ESTIMABLE	
+NK → Spp1 → S1pr1 → CD8	FULL_ADJUSTED	endpoint ~ candidate_axis + target_fraction + C(condition)	46	-0.17714123055077013	0.04778601244241601	-0.2737203642990065	-0.08056209680253379	0.0006354211808619205	0.6046135903010305	0.5551902890886593	ESTIMABLE	
 NK → Spp1 → S1pr1 → CD8	GENERIC_ACTIVATION_ADJUSTED	endpoint ~ candidate_axis + CD8_interferon_response	46	-0.28178221664307	0.0405400878082656	-0.36353909548201024	-0.20002533780412976	1.5166644935383303e-08	0.5717645736406767	0.5518466468332662	ESTIMABLE	
 T_cell → Cd28 → Cd86 → CD8	COMPOSITION_ADJUSTED	endpoint ~ candidate_axis + source_fraction + target_fraction	47	-0.19513039405936866	0.06045069388636507	-0.3170408368579102	-0.07321995126082712	0.0023885350686686717	0.2002968075078848	0.14450356152006294	ESTIMABLE	
-T_cell → Cd28 → Cd86 → CD8	TREATMENT_ADJUSTED	endpoint ~ candidate_axis + C(condition)	47								NOT_ESTIMABLE	"Error evaluating factor: TypeError: 'list' object is not callable
-    endpoint ~ candidate_axis + C(condition)
-                                ^^^^^^^^^^^^"
-T_cell → Cd28 → Cd86 → CD8	FULL_ADJUSTED	endpoint ~ candidate_axis + target_fraction + C(condition)	47								NOT_ESTIMABLE	"Error evaluating factor: TypeError: 'list' object is not callable
-    endpoint ~ candidate_axis + target_fraction + C(condition)
-                                                  ^^^^^^^^^^^^"
+T_cell → Cd28 → Cd86 → CD8	TREATMENT_ADJUSTED	endpoint ~ candidate_axis + C(condition)	47	-0.04017427791480825	0.06112010477285147	-0.16351964303124608	0.08317108720162958	0.514573863101191	0.4036655913348056	0.34687183812859657	ESTIMABLE	
+T_cell → Cd28 → Cd86 → CD8	FULL_ADJUSTED	endpoint ~ candidate_axis + target_fraction + C(condition)	47	-0.05684927294321054	0.058212924355331395	-0.1744126586880069	0.06071411280158583	0.3345069023208191	0.47921109049458266	0.4157002478719707	ESTIMABLE	
 T_cell → Cd28 → Cd86 → CD8	GENERIC_ACTIVATION_ADJUSTED	endpoint ~ candidate_axis + CD8_interferon_response	47	-0.2050968289366198	0.05154459172943864	-0.30897812774607264	-0.10121553012716696	0.00025500013527299714	0.3312095645184989	0.3008099992693398	ESTIMABLE	
