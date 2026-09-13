@@ -5,9 +5,12 @@ from scipy import sparse
 R=Path(__file__).resolve().parents[2]; O=R/'results/phase2_validation'; O.mkdir(exist_ok=True)
 C=[('NK → Spp1 → S1pr1 → CD8','NK','Spp1','CD8',['S1pr1']),('T_cell → Cd28 → Cd86 → CD8','T_cell','Cd28','CD8',['Cd86']),('T_cell → Lamc1 → Itga2_Itgb1 → CD4','T_cell','Lamc1','CD4',['Itga2','Itgb1'])]
 atlas=ad.read_h5ad(R/'results/atlas/GSE324375.atlas_v1.h5ad',backed='r'); tc=ad.read_h5ad(R/'results/tcells/GSE324375.Tcells.refined_v1.h5ad',backed='r')
+ATLAS_GENE_IDX={g:atlas.var_names.get_loc(g) for g in ['Spp1','Cd28','Cd86','Lamc1'] if g in atlas.var_names}
+TC_GENE_IDX={g:tc.var_names.get_loc(g) for g in ['S1pr1','Cd28','Cd86','Itga2','Itgb1','Ifng','Tnf'] if g in tc.var_names}
 def vec(a,g,layer=None):
  if g not in a.var_names:return None
- x=a[:,g].layers[layer] if layer else a[:,g].X
+ idx=(ATLAS_GENE_IDX if a is atlas else TC_GENE_IDX).get(g)
+ x=a[:,idx].layers[layer] if layer else a[:,idx].X
  return np.asarray(x.toarray() if sparse.issparse(x) else x).ravel()
 def one(a,mask,g):
  v=vec(a,g); ct=vec(a,g,'counts') if 'counts' in a.layers else None
