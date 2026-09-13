@@ -100,5 +100,5 @@ for c,row in base.iterrows():
  else: nullrows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"null_test_type":"NOT_APPLICABLE","expected_direction":expected,"observed_statistic":observed,"observed_score":observed,"null_status":"NOT_APPLICABLE","null_model_type":"NOT_APPLICABLE","n_permutations":0,"random_seed":SEED})
 lo=pd.DataFrame(rows); nu=pd.DataFrame(nullrows); ok=nu.empirical_p.notna(); nu["empirical_FDR"]=np.nan
 if ok.any(): nu.loc[ok,"empirical_FDR"]=multipletests(nu.loc[ok,"empirical_p"],method="fdr_bh")[1]
-lo.to_csv(OUT/"loocv_candidate_stability.tsv",sep="\t",index=False); pd.DataFrame(folds).to_csv(OUT/"loocv_fold_details.tsv",sep="\t",index=False); nu.rename(columns={"null_95":"null_p95","null_99":"null_p99"}).to_csv(OUT/"permutation_null_results.tsv",sep="\t",index=False)
+lo.to_csv(OUT/"loocv_candidate_stability.tsv",sep="\t",index=False); pd.DataFrame(folds).to_csv(OUT/"loocv_fold_details.tsv",sep="\t",index=False); nu.drop(columns=[c for c in ["null_95","null_99"] if c in nu],errors="ignore").rename(columns={"null_95":"null_p95","null_99":"null_p99"}).to_csv(OUT/"permutation_null_results.tsv",sep="\t",index=False)
 print(f"Priority candidates={len(priority)}; mouse universe={len(universe)}; true LOOCV rows={len(lo)}; permutation rows={len(nu)}")
