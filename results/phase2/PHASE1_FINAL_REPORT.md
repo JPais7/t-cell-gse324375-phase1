@@ -1,7 +1,7 @@
 # Phase 1.5 final report
 
 ## 1. Executive summary
-No candidate passes the closed Phase 2 gate. The leading statistical/biological hypothesis, **NK → Tnfsf4 → Tnfrsf4 → CD8**, is HOLD because RNA and ADT directions conflict. This is an association, not a causal conclusion.
+No candidate passes the closed Phase 2 gate. The leading statistical/biological hypothesis, **Eif2ak3**, is HOLD because RNA and ADT directions conflict. This is an association, not a causal conclusion.
 
 ## 2. Dataset and inferential unit
 GSE324375 is analysed with the HTO-demultiplexed mouse as the inferential unit; cells measure sampling depth, not independent replication.
@@ -10,7 +10,7 @@ GSE324375 is analysed with the HTO-demultiplexed mouse as the inferential unit; 
 The activation-like state was discovered without curated activation genes as clustering features. This provides feature independence, not external-dataset independence.
 
 ## 4. Animal-level replication
-TOP1 uses 43 informative mice: 11 supporting and 31 opposing; direction consistency=0.256; median mouse effect=-0.0001864; IQR=0.001879.
+TOP1 uses 42 informative mice: 0 supporting and 0 opposing; direction consistency=nan; median mouse effect=-0.5267; IQR=0.9302.
 
 ## 5. Candidate discovery
 Extracellular, multicellular, intrinsic-expression, inferred-TF and metabolic hypotheses remain explicitly distinct. No class balance or novelty bonus is imposed.
@@ -25,22 +25,22 @@ The decomposable score separates replication, effect, statistics, RNA, ADT, stat
 TOP1 remains top-10 in 100.0% of candidate-specific removal folds. Every fold removes one informative mouse and recalculates score, eligibility and competitive rank.
 
 ## 9. Permutation null
-Within-candidate sign permutation preserves each mouse-effect magnitude while randomizing direction (1,000 permutations; seed 17). TOP1 empirical p=0.999, empirical FDR=1. This is not a biological or global-pathway null.
+Within-candidate sign permutation preserves each mouse-effect magnitude while randomizing direction (1,000 permutations; seed 17). TOP1 empirical p=0.000999, empirical FDR=0.005162. This is not a biological or global-pathway null.
 
 ## 10. RNA/ADT evidence
-TOP1 RNA=True; ADT=True; state=False. These modalities support association, not causality.
+TOP1 RNA=True; ADT=True; state=True. These modalities support association, not causality.
 
 ## 11. External perturbation evidence
 TOP1: NOT_ASSESSED. No independent system-matched perturbation is currently integrated. GSE289772 is contextual pharmacological evidence for intrinsic PKM2 biology only.
 
 ## 12. Mechanistic chain
-Source/signal=SUPPORTED; receptor=SUPPORTED; T-cell state=PARTIALLY_SUPPORTED; transcriptional program=SUPPORTED; effector response=PARTIALLY_SUPPORTED; myeloid response=MISSING; tumor killing=MISSING. Chain evidence coherence=0.571. Missing downstream steps are not filled with prior-paper knowledge.
+Source/signal=NOT_APPLICABLE; receptor=NOT_APPLICABLE; T-cell state=SUPPORTED; transcriptional program=SUPPORTED; effector response=PARTIALLY_SUPPORTED; myeloid response=MISSING; tumor killing=MISSING. Chain evidence coherence=0.500. Missing downstream steps are not filled with prior-paper knowledge.
 
 ## 13. Final ranking
 No candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT rather than being promoted to fill a list.
 
 ## 14. TOP3
-1. NK → Tnfsf4 → Tnfrsf4 → CD8: class=multicellular; effect=0.2881; FDR=0.06182; mice=43; consistency=0.256; LOOCV=1.000; empirical p/FDR=0.999/1; validity=VALID_LR; external=NOT_ASSESSED; tier=2; decision=HOLD.
+1. Eif2ak3: class=intrinsic; effect=nan; FDR=9.334e-30; mice=42; consistency=nan; LOOCV=1.000; empirical p/FDR=0.000999/0.005162; validity=nan; external=NOT_ASSESSED; tier=2; decision=HOLD.
 2. NOT AVAILABLE — did not pass all closed gates.
 3. NOT AVAILABLE — did not pass all closed gates.
 
