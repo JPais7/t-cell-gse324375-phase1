@@ -3,6 +3,7 @@ from pathlib import Path
 import numpy as np,pandas as pd
 from scipy.stats import spearmanr,pearsonr
 from statsmodels.api import OLS,add_constant
+import statsmodels.formula.api as smf
 from statsmodels.stats.multitest import multipletests
 R=Path(__file__).resolve().parents[2]; O=R/'results/phase2_validation'; seed=17; rng=np.random.default_rng(seed)
 F=pd.read_csv(O/'top3_mouse_features.tsv',sep='\t'); Q=pd.read_csv(O/'top3_mouse_feature_qc.tsv',sep='\t'); C=['NK → Spp1 → S1pr1 → CD8','T_cell → Cd28 → Cd86 → CD8'];
@@ -33,4 +34,23 @@ for c,g in D.groupby('candidate'):
  cond.append({'candidate':c,'analysis_type':'OVERALL','condition_or_model':'all','n_mice':len(x),'rho':spearmanr(x,y).statistic,'p':spearmanr(x,y).pvalue,'direction':'positive' if raw>0 else 'negative','status':'DESCRIPTIVE','notes':''})
  conf.append({'candidate':c,'confounder_type':'composition','test_or_model':'not precomputed','status':'NOT_ESTIMABLE','notes':'Covariate unavailable'})
 pd.DataFrame(adj).to_csv(O/'top3_adjusted_models.tsv',sep='\t',index=False); pd.DataFrame(cond).to_csv(O/'top3_condition_robustness.tsv',sep='\t',index=False); pd.DataFrame(conf).to_csv(O/'top3_confounding_checks.tsv',sep='\t',index=False); pd.DataFrame(lomo).to_csv(O/'top3_leave_one_mouse_out.tsv',sep='\t',index=False); pd.DataFrame(summ).to_csv(O/'top3_lomo_summary.tsv',sep='\t',index=False)
+# Expanded prespecified adjustment, robustness and permutation analyses.
+models=[]; conf2=[]; cond2=[]
+for c,g in D.groupby('candidate'):
+ g=g.copy(); g['endpoint']=pd.to_numeric(g.CD8_activation_consensus,errors='coerce'); g=g.dropna(subset=['candidate_axis','endpoint','source_fraction','target_fraction'])
+ specs=[('COMPOSITION_ADJUSTED','endpoint ~ candidate_axis + source_fraction + target_fraction'),('TREATMENT_ADJUSTED','endpoint ~ candidate_axis + C(condition)'),('FULL_ADJUSTED','endpoint ~ candidate_axis + target_fraction + C(condition)'),('GENERIC_ACTIVATION_ADJUSTED','endpoint ~ candidate_axis + CD8_interferon_response')]
+ raw=float(A.loc[A.candidate.eq(c),'ols_beta'].iloc[0])
+ for mid,formula in specs:
+  try:
+   fit=smf.ols(formula,g).fit(); beta=float(fit.params.get('candidate_axis',np.nan)); ci=np.asarray(fit.conf_int().loc['candidate_axis']); models.append({'candidate':c,'model_id':mid,'formula':formula,'n_mice':int(fit.nobs),'candidate_axis_beta':beta,'candidate_axis_se':float(fit.bse.get('candidate_axis',np.nan)),'candidate_axis_ci_low':ci[0],'candidate_axis_ci_high':ci[1],'candidate_axis_p':float(fit.pvalues.get('candidate_axis',np.nan)),'r2':fit.rsquared,'adjusted_r2':fit.rsquared_adj,'status':'ESTIMABLE','reason':''})
+   retention=abs(beta/raw) if raw else np.nan; same=np.sign(beta)==np.sign(raw); typ='composition' if mid.startswith('COMPOSITION') else 'generic_activation' if mid.startswith('GENERIC') else 'treatment'
+   conf2.append({'candidate':c,'confounder_type':typ,'test_or_model':formula,'raw_effect':raw,'adjusted_effect':beta,'effect_retention':retention,'raw_p':float(A.loc[A.candidate.eq(c),'spearman_p'].iloc[0]),'adjusted_p':float(fit.pvalues.get('candidate_axis',np.nan)),'direction_retained':same,'status':'PASS' if same and retention>=.7 else 'PARTIAL' if same and retention>=.3 else 'FAIL','notes':''})
+  except Exception as e: models.append({'candidate':c,'model_id':mid,'formula':formula,'n_mice':len(g),'status':'NOT_ESTIMABLE','reason':str(e)})
+ for cond_name,sg in g.groupby('condition'):
+  if len(sg)>=6:
+   rr=spearmanr(sg.candidate_axis,sg.endpoint); cond2.append({'candidate':c,'analysis_type':'WITHIN_CONDITION','condition_or_model':cond_name,'n_mice':len(sg),'rho':rr.statistic,'p':rr.pvalue,'direction':'positive' if rr.statistic>0 else 'negative','status':'ESTIMABLE','notes':''})
+ # deterministic permutation null
+ obs=abs(spearmanr(g.candidate_axis,g.endpoint).statistic); null=[abs(spearmanr(rng.permutation(g.candidate_axis.to_numpy()),g.endpoint).statistic) for _ in range(1000)]
+ conf2.append({'candidate':c,'confounder_type':'permutation_null','test_or_model':'1000 permutations, seed=17','raw_effect':obs,'adjusted_effect':np.nan,'effect_retention':np.nan,'raw_p':float(A.loc[A.candidate.eq(c),'spearman_p'].iloc[0]),'adjusted_p':(1+sum(v>=obs for v in null))/1001,'direction_retained':np.nan,'status':'ESTIMABLE','notes':''})
+pd.DataFrame(models).to_csv(O/'top3_adjusted_models.tsv',sep='\t',index=False); pd.DataFrame(conf2).to_csv(O/'top3_confounding_checks.tsv',sep='\t',index=False); pd.DataFrame(cond+cond2).to_csv(O/'top3_condition_robustness.tsv',sep='\t',index=False)
 print(f'Phase 2A statistical validation complete for {len(C)} candidates')

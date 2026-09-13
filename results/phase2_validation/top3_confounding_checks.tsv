@@ -1,3 +1,7 @@
-candidate	confounder_type	test_or_model	status	notes
-NK → Spp1 → S1pr1 → CD8	composition	not precomputed	NOT_ESTIMABLE	Covariate unavailable
-T_cell → Cd28 → Cd86 → CD8	composition	not precomputed	NOT_ESTIMABLE	Covariate unavailable
+candidate	confounder_type	test_or_model	raw_effect	adjusted_effect	effect_retention	raw_p	adjusted_p	direction_retained	status	notes
+NK → Spp1 → S1pr1 → CD8	composition	endpoint ~ candidate_axis + source_fraction + target_fraction	-0.26545515075529635	-0.2358440378779734	0.8884515414635172	1.7554852298995636e-05	7.871193416861273e-05	True	PASS	
+NK → Spp1 → S1pr1 → CD8	generic_activation	endpoint ~ candidate_axis + CD8_interferon_response	-0.26545515075529635	-0.28178221664307	1.061505929876736	1.7554852298995636e-05	1.5166644935383303e-08	True	PASS	
+NK → Spp1 → S1pr1 → CD8	permutation_null	1000 permutations, seed=17	0.5876657415972865			1.7554852298995636e-05	0.000999000999000999		ESTIMABLE	
+T_cell → Cd28 → Cd86 → CD8	composition	endpoint ~ candidate_axis + source_fraction + target_fraction	-0.1755310221040257	-0.19513039405936866	1.1116575960215607	0.011269741887882276	0.0023885350686686717	True	PASS	
+T_cell → Cd28 → Cd86 → CD8	generic_activation	endpoint ~ candidate_axis + CD8_interferon_response	-0.1755310221040257	-0.2050968289366198	1.1684363622919736	0.011269741887882276	0.00025500013527299714	True	PASS	
+T_cell → Cd28 → Cd86 → CD8	permutation_null	1000 permutations, seed=17	0.36655874190564297			0.011269741887882276	0.00999000999000999		ESTIMABLE	
