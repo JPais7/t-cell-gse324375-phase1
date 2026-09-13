@@ -27,11 +27,13 @@ def safe_zscore(s):
  o.loc[v]=(s.loc[v]-s.loc[v].mean())/s.loc[v].std(ddof=0); return o
 atlas_mouse=atlas.obs.mouse_id.astype(str).to_numpy(); atlas_type=atlas.obs.provisional_cell_type.astype(str).to_numpy(); tc_mouse=tc.obs.mouse_id.astype(str).to_numpy(); tc_lineage=tc.obs.t_lineage_provisional.astype(str).to_numpy()
 atlas_masks={m:atlas_mouse==m for m in np.unique(atlas_mouse)}; tc_masks={m:tc_mouse==m for m in np.unique(tc_mouse)}
+atlas_type_masks={t:{m:(atlas_masks[m] & (atlas_type==t)) for m in atlas_masks} for t in np.unique(atlas_type)}
+tc_lineage_masks={t:{m:(tc_masks[m] & (tc_lineage==t)) for m in tc_masks} for t in np.unique(tc_lineage)}
 meta=atlas.obs.groupby(atlas.obs.mouse_id.astype(str)).agg(condition=('treatment',lambda x:';'.join(sorted(x.dropna().astype(str).unique()))),time=('time_hours',lambda x:';'.join(sorted(x.dropna().astype(str).unique()))),checkpoint_blockade=('checkpoint_blockade',lambda x:';'.join(sorted(x.dropna().astype(str).unique()))),library_or_batch=('library',lambda x:';'.join(sorted(x.dropna().astype(str).unique()))) )
 rows=[]
 for cand,source,sg,target,rgs in C:
  for m in sorted(meta.index):
-  am=atlas_masks[m]; sm=am & (atlas_type==source); tm=tc_masks.get(m,np.zeros(len(tc_mouse),dtype=bool)) & (tc_lineage==target); source_stats=one(atlas,sm,sg); rec=[]
+  am=atlas_masks[m]; sm=atlas_type_masks.get(source,{}).get(m,np.zeros(len(atlas_mouse),dtype=bool)); tm=tc_lineage_masks.get(target,{}).get(m,np.zeros(len(tc_mouse),dtype=bool)); source_stats=one(atlas,sm,sg); rec=[]
   for rg in rgs: rec.append(one(tc,tm,rg))
   row={'candidate':cand,'mouse_id':m,**meta.loc[m].to_dict(),'source_population':source,'target_population':target,'source_n_cells':int(sm.sum()),'target_n_cells':int(tm.sum()),'total_relevant_cells':int(am.sum()),'source_fraction':float(sm.sum()/am.sum()) if am.sum() else np.nan,'target_fraction':float(tm.sum()/max(1,int(tc.obs.mouse_id.astype(str).eq(m).sum()))),'source_feature_status':feature_status(int(sm.sum())),'target_feature_status':feature_status(int(tm.sum()))}
   for n,v in zip(['mean','fraction_positive','sum','pseudobulk'],source_stats):row[f'{source}_{sg}_{n}']=v
