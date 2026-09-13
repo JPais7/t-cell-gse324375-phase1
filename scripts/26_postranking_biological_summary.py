@@ -2,6 +2,11 @@
 """Create presentation-only top-20 biological audit after final ranking."""
 from pathlib import Path
 import pandas as pd
+import numpy as np
+def fmt(v,digits=3):
+ if pd.isna(v): return 'NOT AVAILABLE'
+ if isinstance(v,(float,np.floating)): return str(int(round(v))) if digits==0 else f'{v:.{digits}f}'
+ return str(v)
 root=Path(__file__).resolve().parents[1]; out=root/'results/phase2'; src=out/'candidate_evidence_matrix.tsv'; bio=out/'interaction_biological_audit.tsv'
 if src.exists() and bio.exists():
  frame=pd.read_csv(src,sep='\t',low_memory=False); score_col='final_score' if 'final_score' in frame else 'evidence_score'; top=frame.sort_values(score_col,ascending=False).head(20)[['candidate']]
@@ -41,5 +46,7 @@ if src.exists() and ready_path.exists():
  for c in [c for c in ranking.columns if c.startswith('chain_')]: lines.append(f"{c.replace('chain_','').replace('_',' ').title()}: {top[c]}.")
  if not [c for c in ranking.columns if c.startswith('chain_')]: lines.append('Mechanistic-chain evidence: NOT AVAILABLE.')
  lines += ['', '## 11. Leading HOLD hypotheses',''] + [f"{i}. {row.candidate} — class={row.candidate_type}; score={row.evidence_score:.4f}; decision=HOLD." for i,(_,row) in enumerate(holds.iterrows(),1)] + ['', '## 12. Why the leading candidate remains HOLD','', f"Decision reason: {ready.loc[ready.candidate.eq(lh),'decision_reason'].iloc[0] if (ready.candidate==lh).any() else 'NOT AVAILABLE'}.",'', '## 13. Experimental validation','', 'Use candidate-class-specific perturbation, matched controls, rescue where feasible, and measure activation, viability, abundance and tumor-cell killing.','', '## 14. Falsifiers','', '- No reproducible phenotype after independent perturbation.','- Rescue fails.','- Effect is explained by viability or abundance.','', '## 15. Limitations','', 'The analysis is associative; residual confounding and lack of system-matched perturbation remain.']
- report.write_text('\n'.join(lines)+'\n')
+ text='\n'.join(lines)+'\n'
+ for bad in ('nan','NaN','None'): text=text.replace(bad,'NOT AVAILABLE')
+ report.write_text(text)
  (out/'TOP3_candidates.md').write_text('\n'.join(['# TOP 3 candidates','',f'Leading GO: {lg}',f'Leading HOLD: {lh}','']+[f"{i}. {row.candidate} — class={row.candidate_type}; score={row.evidence_score:.4f}; decision=HOLD." for i,(_,row) in enumerate(holds.iterrows(),1)]+[f'{i}. NOT AVAILABLE — no additional candidate selected.' for i in range(len(holds)+1,4)])+'\n')

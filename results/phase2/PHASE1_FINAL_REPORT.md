@@ -36,7 +36,7 @@ Entity type: multicellular_association.
 Mechanism class: source-cell ↔ T-cell program / feedback.
 Interaction validity: VALID_LR.
 Valid for mechanistic ranking: True.
-Biological reinterpretation: nan.
+Biological reinterpretation: NOT AVAILABLE.
 
 ## 10. Mechanistic chain
 
