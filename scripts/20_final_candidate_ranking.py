@@ -65,7 +65,11 @@ allc["ADT_direction"]=np.select([allc.get("ligand_rho_ADT",pd.Series(np.nan,inde
 allc["RNA_ADT_direction_concordant"]=np.where(allc.RNA_evidence&allc.ADT_evidence,allc.RNA_direction.eq(allc.ADT_direction),False)
 allc["expected_direction"]=np.where(allc.candidate.eq("NK → Tnfsf4 → Tnfrsf4 → CD8"),"POSITIVE_ACTIVATION","UNRESOLVED")
 pre_cols=[c for c in ["candidate","candidate_family_id","candidate_family_label","mechanistic_family_id","family_rule","family_evidence","family_confidence","candidate_type","entity_type","mechanism_level","source","target","ligand","receptor","target_lineage","mechanism_class","effect_size","FDR","n_mice","n_mice_supporting","n_mice_opposing","direction_consistency","n_cells","effective_sample_size","RNA_evidence","ADT_evidence","data_driven_state_evidence","temporal_support","interaction_evidence","independence_from_curated_score","power_flag","RNA_direction","ADT_direction","RNA_ADT_direction_concordant","expected_direction","suggested_perturbation","expected_readout","negative_control","specificity_control"] if c in allc.columns]
-allc[pre_cols].to_csv(OUT/"candidate_evidence_pre_audit.tsv",sep="\t",index=False)
+if not (OUT/"candidate_evidence_pre_audit.tsv").exists():
+ allc[pre_cols].to_csv(OUT/"candidate_evidence_pre_audit.tsv",sep="\t",index=False)
+if __import__('os').environ.get('PHASE1_BUILD_PRE_ONLY') == '1':
+ print(f'Built candidate evidence pre-audit: {len(allc)} candidates')
+ raise SystemExit(0)
 lo_path=OUT/"loocv_candidate_stability.tsv"; nu_path=OUT/"permutation_null_results.tsv"
 if lo_path.exists():
  lo0=pd.read_csv(lo_path,sep="\t"); wanted=[c for c in ["candidate","n_mice","n_mice_supporting","n_mice_opposing","direction_consistency","mouse_effect_median","mouse_effect_mean","mouse_effect_IQR","mouse_effect_sign","LOOCV_top10_fraction","LOOCV_rank_median","LOOCV_rank_min","LOOCV_rank_max"] if c in lo0]; lo=lo0[wanted].rename(columns={"n_mice":"n_mice_true","n_mice_supporting":"n_mice_supporting_true","n_mice_opposing":"n_mice_opposing_true","direction_consistency":"direction_consistency_true"}); allc=allc.merge(lo,on="candidate",how="left"); valid=allc.n_mice_true.notna(); allc.loc[valid,"n_mice"]=allc.loc[valid,"n_mice_true"]
