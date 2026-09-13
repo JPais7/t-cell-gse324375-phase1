@@ -1,274 +1,222 @@
 candidate	statistical_status	biological_status	mechanistic_status	experimental_status	LOOCV_status	null_status	external_evidence_status	phase2_decision	decision_reason
-NK → Tnfsf4 → Tnfrsf4 → CD8	PASS	PASS	HOLD	PASS	PASS	PASS	NOT_ASSESSED	HOLD	HOLD: molecular axis valid but RNA/ADT direction is discordant
-Atf3	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Bcl2l1	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Bcl2l1	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Birc3	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Birc3	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cpm	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dusp1	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dusp1	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Furin	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gadd45b	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm12840	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gata3	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-NK → Tnfsf4 → Traf2 → CD8	PASS	FAIL	HOLD	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Pkm → Cd44 → CD8	PASS	FAIL	HOLD	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Il15 → Il15ra_Il2rb_Il2rg → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Il15 → Il2ra → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Spp1 → Itga4_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Spp1 → Ptger4 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Spp1 → Itgav_Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Spp1 → Cd44 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Spp1 → Itgav_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Spp1 → S1pr1 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-monocyte_macrophage → Cd80 → Cd28 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Itga9_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Itgav_Itgb8 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Itga2_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Dusp2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Eif2ak3	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Lamc1 → Itga3_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Itga1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Pdcd1lg2 → Pdcd1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Itga6_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Cd80 → Cd28 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Dag1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Ccr10 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Ccl4 → Ccr5 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Thy1 → Itgav_Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Thy1 → Itgax_Itgb2 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Ccl4 → Ccr8 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Abtb2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Acsbg1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Adgre5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Adgre5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Aff1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Aff1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Aff3	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Alcam	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Apaf1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Arhgap18	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Arhgap31	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Atf3	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Atp10a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Bach2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Bhlhe40	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Bhlhe40	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Birc5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Birc5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Btg2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Btg2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccl1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccl9	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccr2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccr2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cdh23	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cdh23	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cdk6	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Clcn5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cmah	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Coro2a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Coro2a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Crabp2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dennd4c	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dennd4c	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dpp4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dusp10	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dusp5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Eea1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Elovl5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fam49a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fam69a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fam69a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Furin	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gadd45b	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm26740	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm30054	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm4070	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Irf8	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Capg	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccr7	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cdk19	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cdk19	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cxcr4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fbxl20	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Crem	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ctla4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ece1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm11290	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-9930111J21Rik2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-9930111J21Rik2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ctse	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ctse	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm2682	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Baz2b	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ero1l	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fgl2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fgl2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Stat5a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Stat5a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm2245	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-1700025G04Rik	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-1700025G04Rik	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gab3	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Eya2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Lamc1 → Itga7_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Ccl11 → Ccr5 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Cenpa	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fchsd2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Pdcd1lg2 → Rgmb → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-A430078G23Rik	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Ccl11 → Ccr3 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb1 → Acvrl1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Oprm1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb1 → Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Ccl11 → Dpp4 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Ccl11 → Ccr2 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Ccl11 → Cxcr3 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb1 → Tgfbr1_Tgfbr2 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb1 → Itgb3 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Spp1 → Ccr8 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Vim → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb1 → Itgb8 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb1 → Cxcr4 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Arhgef18	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Tgfb1 → Tgfbr3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb1 → Acvr1_Tgfbr2 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Gm12840	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-NK → Ccl4 → Cnr2 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Hspg2 → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Fam3c → Pdcd1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tnfsf4 → Tnfrsf4 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Tgfb3 → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Ccr9 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → Sema3e → Plxnd1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Mtnr1a → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Col6a2 → Itga1_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Ackr4 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Adra2a → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Grm7 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Ackr2 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Col6a2 → Cd44 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Hspg2 → Itga2 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Timp2 → Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Timp2 → Itga3 → CD4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ang → Plxnb2 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ang → Egfr → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Timp2 → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Ogfr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+NK → Tnfsf4 → Tnfrsf4 → CD8	FAIL	PASS	HOLD	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ctla4	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ctse	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ctse	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cxcr4	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp5	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ece1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Eea1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Eif2ak3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Elovl5	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ero1l	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Eya2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fam49a	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fam69a	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fam69a	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fbxl20	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fchsd2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fgl2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fgl2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Furin	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gab3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mctp2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mcu	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mdfic	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mfsd6	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mir155hg	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mir155hg	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mxd1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mxd4	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mxi1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Myo10	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Myo1f	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+N4bp1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+N4bp1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ncoa7	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfat5	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfat5	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfatc2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfkbia	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfkbid	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfkbid	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfkbiz	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfkbiz	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nlk	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nlk	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nrip1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Osbpl3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Osbpl3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Pacs1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Parp14	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Spata6	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Spry1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Spry1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Srgap3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+St3gal1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+St3gal1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Trps1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Trps1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Tsc22d3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Tsc22d3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Txnip	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Txnip	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ubash3b	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ugcg	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ugcg	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Cd80 → Cd28 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Tnfsf4 → Traf2 → CD8	FAIL	FAIL	HOLD	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Penk → Oprm1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Pkm → Cd44 → CD8	FAIL	FAIL	HOLD	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Il15 → Il2ra → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Il15 → Il15ra_Il2rb_Il2rg → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Fam3c → Pdcd1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Pdcd1lg2 → Pdcd1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Spp1 → Cd44 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Spp1 → Itga4_Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Spp1 → Ptger4 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Spp1 → Itgav_Itgb3 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Spp1 → Itgav_Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+monocyte_macrophage → Cd80 → Cd28 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Ccl4 → Ccr5 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Ccl4 → Ccr8 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Cd28 → Cd80 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Cd28 → Cd86 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Spp1 → S1pr1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+melanoma → App → Rpsa → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → App → Cd74 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → App → Notch2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → App → Lrp10 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → App → Lrp6 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Cd28 → Cd80 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Cd28 → Cd86 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Fam3c → Lifr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Fam3c → Glra2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → Sema3e → Nrp1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Fam3c → Ffar2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Adra2a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Lamc1 → Itgav_Itgb8 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Lamc1 → Cd44 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Lamc1 → Itga1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Lamc1 → Itga6_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Lamc1 → Itga3_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Lamc1 → Itga9_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Il10 → Cd27 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Lamc1 → Itga2_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Cd80 → Cd28 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Pdcd1lg2 → Pdcd1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Cd28 → Cd80 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Oprk1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-monocyte_macrophage → Plau → Igf2r → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Hspg2 → Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Oprl1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itgb3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Oprd1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Nrp1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Grm7 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+melanoma → Sema3e → Plxnd1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+NK → Tnfsf4 → Tnfrsf4 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+monocyte_macrophage → Plau → Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+monocyte_macrophage → Plau → Igf2r → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itgav → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Cd44 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Nrp1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itgb3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itga9 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Itgb8 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Itgb3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Cxcr4 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Ccl11 → Cxcr3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Ccl11 → Ccr2 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Ccl11 → Dpp4 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Ccl11 → Ccr5 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Tgfbr1_Tgfbr2 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Ccl11 → Ccr3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Tgfbr3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Acvrl1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+melanoma → Agrn → Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tnfsf4 → Tnfrsf4 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Acvr1_Tgfbr2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Pdcd1lg2 → Pdcd1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Pdcd1lg2 → Rgmb → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Ccr10 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itgav → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Cd44 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itgb3 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Nrp1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Lamc1 → Dag1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Areg → Erbb3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Col6a2 → Itga2_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Pdcd1lg2 → Pdcd1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itgav → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itga9 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Mtnr1a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Penk → Mrgprb2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Pdcd1lg2 → Rgmb → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itgav → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Cd44 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Nrp1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Hspg2 → Dag1 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Adam17 → Itgb1 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Col18a1 → Itga11_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Col18a1 → Itgb3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Itgav → Thy1 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Col18a1 → Itga1_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Satb1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-NK → Tnfsf4 → Tnfrsf4 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Areg → Egfr_Erbb2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Col18a1 → Itga3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Cd80 → Cd28 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Il10 → Cd27 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Ifnk → Ifnar1_Ifnar2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Nrp2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Adam17 → Notch1 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → Nid1 → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Stat4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Atf6	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → H2-Ab1 → Lag3 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Mfap2 → Notch1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Grn → Tnfrsf1b → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Nrp2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Ephb2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Grin2b → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Itga9 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Tyro3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → Nid1 → Itgav → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → Nid1 → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-monocyte_macrophage → Cd80 → Ctla4 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Ephb2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Flt1_Kdr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Egfr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Itgav → Thy1 → CD4	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → Col4a4 → Cd47 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Grin2b → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Egfr → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Flt1_Kdr → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Tyro3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → Agrn → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Cd80 → Ctla4 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Hspg2 → Ptprs → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Ntng2 → Lrrc4 → CD4	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Cd28 → Cd86 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Pdcd1lg2 → Pdcd2 → CD4	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Cd28 → Cd80 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-dendritic → Cd72 → Cd5 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Adam10 → Cd44 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Col1a2 → Itgav_Itgb8 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Col1a2 → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Fli1	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Gpi1 → Amfr → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Col1a2 → Itgb3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Lamc1 → Itga6_Itgb4 → CD4	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Klf4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Hdc → Hrh2 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Col1a2 → Itga1_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-NK → Pkm → Cd44 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-NK → Lgals3bp → Itgb1 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Tgfb1 → Lpp → CD4	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Fam3c → Lamp1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Sertad1 → Ar → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → App → Rpsa → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → App → Cd74 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → App → Notch2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → App → Lrp10 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → App → Lrp6 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Gpi1 → Amfr → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-monocyte_macrophage → Cd38 → Pecam1 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → Mfge8 → Itgav → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-monocyte_macrophage → Plau → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Arf6 → Smap1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Hspg2 → Ptprs → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Col1a2 → Itga3_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Maff	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+NK → Ccl4 → Cnr2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Pdcd1lg2 → Rgmb → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Kitl → Kit → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Kitl → Lrrn3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Irf8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Lamc1 → Itga7_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Kitl → Epor → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Hdc → Hrh4 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Klf4	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Ogfr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+melanoma → Sema3e → Nrp1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Fam3c → Ffar2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Fam3c → Lifr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+NK → Thy1 → Itgav_Itgb3 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Thy1 → Itgax_Itgb2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Ifnk → Ifnar1_Ifnar2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+1700025G04Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+1700025G04Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+9930111J21Rik2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+9930111J21Rik2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+A430078G23Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Abtb2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Acsbg1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Adgre5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Adgre5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Aff1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Aff1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Aff3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Alcam	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Apaf1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Arhgap18	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Arhgap31	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Arhgef18	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Atf3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Atp10a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Bach2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Baz2b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Bcl2l1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Bcl2l1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Bhlhe40	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Bhlhe40	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Birc3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Birc3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Birc5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Birc5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Btg2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Btg2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Capg	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccl1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccl9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccr2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccr2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccr7	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cdh23	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cdh23	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cdk19	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cdk19	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cdk6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cenpa	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Clcn5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cmah	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Coro2a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Coro2a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cpm	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Crabp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Crem	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dennd4c	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dennd4c	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dpp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp5	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Elovl5	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Furin	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gadd45b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gata3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm11290	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm12840	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm2245	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm26740	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm2682	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm30054	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm4070	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm47283	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm47283	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gnaq	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -304,6 +252,7 @@ Il18r1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 Ipcef1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ipcef1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Irf4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Irf8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Itgav	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Itgav	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Itgb3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -328,42 +277,16 @@ Lilr4b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 Lmnb1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Lockd	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mapkapk3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mctp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mcu	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mdfic	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mfsd6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mir155hg	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mir155hg	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mxd1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mxd4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mxi1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Myo10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Myo1f	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-N4bp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-N4bp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ncoa7	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfat5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfat5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfatc2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfkbia	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfkbid	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfkbid	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfkbiz	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfkbiz	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nlk	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nlk	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mxd1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfkbia	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nr3c1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nr4a3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nrip1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nrip1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nsd2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nsd2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nt5dc1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nxpe3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nxpe3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Osbpl3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Osbpl3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Pacs1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Parp14	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pclaf	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pclaf	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pde3b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -408,12 +331,8 @@ Slc7a1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 Sntb1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Sntb2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Snx18	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Spata6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Spry1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Spry1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Srgap3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-St3gal1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-St3gal1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Stat5a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Stat5a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Stx11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Stx11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Supt3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -432,17 +351,8 @@ Tnfrsf18	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological o
 Tnfrsf26	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Tnfrsf4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Tnfsf8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Trps1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Trps1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Tsc22d3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Tsc22d3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ttc39c	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Tuba1b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Txnip	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Txnip	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ubash3b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ugcg	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ugcg	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Wdr44	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Zc3h12d	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Zfp182	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -452,139 +362,166 @@ Znrf1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or s
 Zyg11b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Zyg11b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Rcbtb2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Apaf1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Arhgap18	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dusp5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Elovl5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Crem	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dusp2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Eif2ak3	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Cd44 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Fam3c → Glra2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Ccnb2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ccnb2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ddit4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → App → Ptger2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Lig1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Lig1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Col18a1 → Itga3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Col18a1 → Itgb3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Col18a1 → Itga1_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Col18a1 → Itga11_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 March3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Hdc → Hrh1 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 2410089E03Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 2410089E03Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cenpa	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Hdc → Hrh3 → CD8	PASS	FAIL	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Col1a2 → Cd44 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Col1a2 → Itgb3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Col1a2 → Itga1_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Col1a2 → Itgav_Itgb8 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Areg → Egfr_Erbb2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Vim → Cd44 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Nid1 → Itgav → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Nid1 → Itgb3 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Nid1 → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Mpp7	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb3 → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Fam117b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 St8sia1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Cd200 → Cd200r1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Grm7 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Cd200 → Cd200r1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Hspg2 → Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Cd200 → Cd200r4 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Oprd1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Adra2a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Oprk1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Oprl1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Mtnr1a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Penk → Mrgprb2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Zfp652	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Satb1	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Adam10 → Met → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+NK → Spp1 → Ccr8 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+fibroblast → Col6a2 → Cd44 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Col6a2 → Itga1_Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Timp2 → Itga3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Timp2 → Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Timp2 → Cd44 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Nrp2 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pkp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Trat1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Mfap2 → Notch1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Nrp2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Hspg2 → Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Vegfb → Nrp1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → Col4a4 → Cd44 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → Col4a4 → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+melanoma → Mfge8 → Itgav → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Col4a4 → Cd47 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Col4a4 → Cd44 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Col4a4 → Itgb3 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 neutrophil → Lamb3 → Cd44 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 neutrophil → Lamb3 → Itgav_Itgb8 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 neutrophil → Lamb3 → Itga6_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 neutrophil → Lamb3 → Itga3_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Tyro3 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 neutrophil → Lamb3 → Itga9_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Clspn	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Clspn	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Plau → Plaur → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Tgfb1 → Acvr1_Tgfbr1_Tgfbr2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Abtb2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Acsbg1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Aff3	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Alcam	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Arhgap31	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Atp10a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Bach2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cdk6	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cmah	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dpp4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Dusp10	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Eea1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fam49a	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm26740	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm30054	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm4070	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Irf8	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccr7	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cxcr4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Fbxl20	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ctla4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ctla4	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cxcr4	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Eea1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Eif2ak3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ero1l	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Eya2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fam49a	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fbxl20	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fchsd2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gab3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mctp2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mcu	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mdfic	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mfsd6	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Myo10	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Myo1f	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Nfatc2	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Pacs1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Parp14	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Spata6	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Srgap3	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ubash3b	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dusp16	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb1 → Acvr1b_Tgfbr2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Vegfa → Ephb2 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Camkmt	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm2682	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Baz2b	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ero1l	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Samd4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Egfr → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cenpp	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm2245	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gab3	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Eya2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Cx3cl1 → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Vegfa → Tyro3 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Grin2b → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Itga9 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Vegfb → Adrb2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Il10 → Il10ra_Il10rb → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Cx3cl1 → Itgav → CD8	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Vegfa → Flt1_Kdr → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Ccr9 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Pdcd1lg2 → Rgmb → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Ccl25 → Grm7 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Ackr4 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Ephb2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 NK → Ccl4 → Ccr1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Fchsd2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Crem	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Ccl25 → Adra2a → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Mtnr1a → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Ackr2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Vegfa → Egfr → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Grin2b → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Tnfsf11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Tnfsf11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Ret → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nrp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb1 → Itgb5 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Mgat5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-A430078G23Rik	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb1 → Eng → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Pglyrp1 → Trem1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Mfge8 → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Vegfa → Flt1_Kdr → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Tgfb1 → Vasn → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Dnah8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Igsf10 → Cd200r4 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+fibroblast → Igsf10 → Cd200r4 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Zhx2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Zhx2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Ccl25 → Ccr9 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Ccr9 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Cep85l	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cep85l	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Fam168a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Fam168a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Ccl25 → Grm7 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Ccl25 → Ackr4 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Grm7 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Ccl25 → Ackr4 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Tgfb1 → Egfr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Ccr10 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Ccl25 → Adra2a → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Ccr10 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Ccl25 → Adra2a → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+fibroblast → Col1a2 → Itga3_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb1 → Cav1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Ccl25 → Ackr2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Ccl25 → Mtnr1a → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ccl25 → Ackr2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Ccl25 → Mtnr1a → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Col4a4 → Itga1_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Arhgef18	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Pdcd1lg2 → Pdcd2 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Lama4 → Cd44 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Lama4 → Itga3_Itgb1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb1 → Acvr1c_Tgfbr2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Cit	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cit	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pnpla7	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb1 → Itgav_Itgb6 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Lama4 → Itga6_Itgb1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nusap1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → App → Tnfrsf21 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Hist1h4d	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 NK → Ccl4 → Ccr3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+fibroblast → Col6a2 → Itga2_Itgb1 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 neutrophil → Lamb3 → Itga2_Itgb1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 4930402H24Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Col18a1 → Itga2_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Lama4 → Itgav_Itgb8 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mapkbp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Egr2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 2810474O19Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Arl5a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cnst	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Hspg2 → Itga2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb3 → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Col18a1 → Itga5 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Smad3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -614,28 +551,22 @@ monocyte_macrophage → Cxcl2 → Cxcr2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NO
 Knl1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Knl1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 neutrophil → Lamb3 → Dag1 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ang → Plxnb2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Fam46a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Ang → Egfr → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Tgfb3 → Tgfbr1_Tgfbr2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 monocyte_macrophage → Cxcl2 → Adra2a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 monocyte_macrophage → Cxcl2 → Cxcr1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Vegfa → Gpc1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Cxcl2 → Mtnr1a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Ndrg1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ndrg1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Csf1 → Csf2ra → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Casp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dapk2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Sirpa → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Sirpa → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Adam10 → Tspan14 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Adam10 → Notch1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Adam10 → Tspan5 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Gpc1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mfhas1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Kif4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dusp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dusp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Cpm	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Rnf19a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Foxp3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Csf1 → Csf3r → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -652,12 +583,13 @@ Map3k14	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or
 Errfi1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Il1f9 → Ifnar2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Efna5 → Epha3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+fibroblast → Adam10 → Met → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Col6a3 → Cd44 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Cd80 → Ctla4 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Vegfa → Ret → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Cd80 → Ctla4 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd226	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ncapg2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ncapg2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Hspg2 → Dag1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Cep128	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nebl	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 4933406I18Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -703,6 +635,7 @@ Map2k6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 E130308A19Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Efna5 → Epha1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Efna5 → Epha10 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Adam17 → Itgb1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Vopp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -713,7 +646,6 @@ fibroblast → Col6a2 → Itga3_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_
 Mast4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Agrn → Dag1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 NK → Thy1 → Itgam_Itgb2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Stat5a	PASS	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Slc43a2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm44174	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Hspg2 → Fgfr1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -729,7 +661,9 @@ NK → Dscam → Dcc → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	pla
 Tmem64	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Plau → Itga5 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → App → Dcc → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+NK → Itgav → Thy1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Tgfb3 → Tgfbr3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Satb1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Acss1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Efna5 → Epha8 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 monocyte_macrophage → Plau → Itgb5 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -753,6 +687,7 @@ melanoma → App → Grm7 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOL
 NK → Spp1 → Itga9_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Cd200r1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Col6a2 → Itga11_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Itgav → Thy1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Plau → Vldlr → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 NK → Spp1 → Itgav_Itgb5 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Hist1h4h	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -781,8 +716,9 @@ melanoma → Sema3e → Nrp2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	
 Prss12	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Lyn	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 NK → Spp1 → Itga8_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Gata3	FAIL	PASS	PASS	PASS	PASS	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → App → Vldlr → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Adam17 → Notch1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Grn → Tnfrsf1b → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Hc → C5ar1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Col6a2 → Sdc1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Tank	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -801,16 +737,24 @@ Mkl2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or st
 Cd80	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Larp1b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Hc → Mtnr1a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-fibroblast → Adam10 → Notch2 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Tspan5 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Tspan14 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Notch2 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Notch1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Col6a2 → Itga10_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Frmd4b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → H2-Ab1 → Lag3 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Hist1h2bj	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Hist1h2bj	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Stat4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Atf6	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Fam3c → Lamp1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Il1f9 → Il1rap_Il1rl2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Hspg2 → Lrp2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Manba	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+monocyte_macrophage → Cd80 → Ctla4 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Lamb3 → Itga6_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-T_cell → Col18a1 → Ptprs → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Col18a1 → Ptprs → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Hspa1a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Fbxo32	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Hspg2 → Dag1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -818,30 +762,32 @@ D130040H23Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biologi
 Il6ra	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Areg → Egfr_Erbb2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Ccr5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Satb1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Adam9 → Itgav → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Adam9 → Itga3 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Adam9 → Itgb1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Adam9 → Itga6 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Adam9 → Itgav → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Adam9 → Itga3 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Adam9 → Itgb1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Adam9 → Itga6 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Agrn → Lrp2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Col6a2 → Gp6 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-melanoma → App → Aplp2 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → App → Ncstn → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → App → Aplp2 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → App → Ncstn → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Asap2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Adam17 → Il6ra → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ankrd6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 NK → H2-Eb1 → Lag3 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Lamb3 → Itga2_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Agrn → Lrp4 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Ntng2 → Lrrc4 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Nucb2 → Erap1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Il10 → Cd70 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Adam10 → Il6ra → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → B2m → Cd3d → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → B2m → Cd247 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → B2m → Cd3g → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → B2m → Klrd1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → B2m → Klrc1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → B2m → Tfrc → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Il10 → Cd70 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Hspg2 → Ptprs → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Cd80 → Ctla4 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Il6ra → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → B2m → Cd3d → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → B2m → Cd247 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → B2m → Cd3g → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → B2m → Klrd1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → B2m → Klrc1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → B2m → Tfrc → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Diaph3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Diaph3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Rnf169	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -850,17 +796,22 @@ Hivep1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 Plk3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Car5b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 NK → Tnfsf4 → Traf2 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Pdcd1lg2 → Pdcd2 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Vegfb → Flt1_Kdr → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Ccdc125	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Arhgef10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Fam126a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm43126	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Il18rap	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Tgfb1 → Lpp → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Areg	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Hspg2 → Ptprs → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Hspg2 → Lrp1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Batf	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Heatr5a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → Gnas → Adcy7 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Ret → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Gnas → Adcy7 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Arf6 → Smap1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Rrad	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Igsf10 → Cd200r2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Ccrl2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -887,13 +838,16 @@ fibroblast → Hspg2 → Sdc1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED
 melanoma → Col4a4 → Itga11_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Flnb	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Flnb	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Adam10 → Axl → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Axl → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Col4a4 → Cd93 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Dnajb4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Pdcd1lg2 → Pdcd2 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Col4a4 → Itga9_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Col1a2 → Cd36 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Nrxn2 → Nlgn3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Gm20186	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+dendritic → Cd72 → Cd5 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Sertad1 → Ar → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Hspg2 → Lrp2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Metrnl	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Col4a4 → Sdc1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -918,6 +872,7 @@ fibroblast → Col1a2 → Sdc1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSE
 Myadm	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Col1a2 → Itga2b → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Col6a3 → Itga11_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+T_cell → Lamc1 → Itga6_Itgb4 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Col6a3 → Itga9_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Tubb4b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Tubb4b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -927,7 +882,7 @@ Adam9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or s
 T_cell → Col6a3 → Itga10_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Itgae	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Ecm1 → Itgb4 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Adam10 → Gpnmb → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Adam10 → Gpnmb → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Oprm1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Oprm1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Col6a3 → Gp6 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -936,8 +891,10 @@ fibroblast → Col1a2 → Itga10_Itgb1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT
 melanoma → Col4a4 → Gp6 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Gm26669	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mapre2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Fli1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Ranbp10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Mfge8 → Itgb5 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+NK → Gpi1 → Amfr → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Lmo4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Col18a1 → Gpc1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Igfbp4 → Fzd8 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -947,25 +904,30 @@ melanoma → Mfge8 → Pdgfrb → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED
 Cxcr6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Col18a1 → Gpc4 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Msrb3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Pkm → Cd44 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Pkm → Cd44 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ccr8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Sirpa → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Lamb3 → Dag1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Cd74	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dtx4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gas7	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Igsf10 → Mag → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Hdc → Hrh2 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Col1a2 → Gp6 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Igsf10 → Cd200r2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Crlf2 → Crlf2_Il7r_Tslp → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Ceacam16 → Tectb → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Ceacam16 → Tecta → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Klf4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Vcl → Itgb5 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Klf4	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Gpc1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm26835	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm26835	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Slamf1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Slamf1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm15511	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Pkm → Cd44 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+NK → Lgals3bp → Itgb1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Pdcd1lg2 → Pdcd2 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ccr4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Arl5c	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -976,6 +938,8 @@ monocyte_macrophage → Lamb3 → Itga3_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	F
 Gadd45g	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Adam9 → Itgb5 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cxcl9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Sirpa → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Gpc1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Efcab11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Asap1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Sema4b → Dcbld2 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -986,10 +950,12 @@ Hlf	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or sta
 Yes1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Zbtb11	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 monocyte_macrophage → Lamb3 → Itgav_Itgb8 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-neutrophil → Lamb3 → Cd151 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+monocyte_macrophage → Cd38 → Pecam1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Lamb3 → Cd151 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Lamb3 → Itga7_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Arnt2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Sh3pxd2a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Gpi1 → Amfr → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dclk2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Kif15	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Kif15	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1011,23 +977,28 @@ Hells	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or s
 monocyte_macrophage → Gpi1 → Amfr → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Adk	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pard3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Vegfa → Ret → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Adam17 → Rhbdf2 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 E2f4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Adam17 → Met → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Fbn1 → Itgb1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Fbn1 → Itgb3 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Fbn1 → Itgb1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Fbn1 → Itgb3 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Foxa2	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Serpine1 → Plaur → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → Hsp90aa1 → Itgb3 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-T_cell → Itgb3bp → Itgb3 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Lama4 → Cd44 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Lama4 → Itgav_Itgb8 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Lama4 → Itga6_Itgb1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Lama4 → Itga3_Itgb1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Hsp90aa1 → Itgb3 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+T_cell → Itgb3bp → Itgb3 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Pros1 → Axl → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Fgf13 → Fgfr2 → CD4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Grn → Tnfrsf1a → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-neutrophil → Lamb3 → Itga6_Itgb4 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Lamb3 → Itga6_Itgb4 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Icam1 → Il2ra → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Icam1 → Spn → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Icam1 → Il2rg → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-melanoma → Sorbs1 → Itga1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+melanoma → Sorbs1 → Itga1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Icam1 → Itgal_Itgb2 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Usf1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Itgb3bp → Itgb3 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1041,6 +1012,7 @@ Zc3h8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more 
 Cux1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Tead2	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Fosl2	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Maff	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Myc	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Lyl1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Mafk	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -1053,7 +1025,9 @@ Meis2	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more 
 Tcf7	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Runx3	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Epas1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Irf8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Zeb2	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Hdc → Hrh4 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Bmal1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Tfdp1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Adam10 → Epha3 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1077,22 +1051,29 @@ T_cell → Tnfsf4 → Traf2 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	R
 Kmt2a	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Thap11	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 neutrophil → Arf6 → Pld1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Klf4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Adam10 → Nrcam → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Aig1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Airn	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ankrd28	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Antxr2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Apaf1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Arhgap18	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Atad2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Atad2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Atf3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Bzw2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd8a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cenpa	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cish	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cish	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Crem	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Crtam	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Csrnp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Csrnp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dgat1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dph6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gadd45b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gbp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gfod1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Glrx	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1115,13 +1096,10 @@ Lockd	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or s
 Lta	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mapkapk3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mpzl3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mxd1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Myc	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Myc	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Myo3b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfkbia	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nr4a3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nrip1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pglyrp1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Plac8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Plac8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1157,8 +1135,10 @@ Chka	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or st
 Tmem154	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Adam17 → Itga5 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Gnas → Vipr1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+neutrophil → Hdc → Hrh1 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Adam10 → Cadm1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mbd1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+neutrophil → Hdc → Hrh3 → CD8	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Adam17 → Erbb4 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 NK → Ceacam16 → Tecta → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Arid2	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -1171,6 +1151,7 @@ Pknox1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more
 monocyte_macrophage → Ptgs2 → Cav1 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Adam10 → Tspan10 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Prc1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Satb1	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 monocyte_macrophage → Ptgs2 → Alox5 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dennd5a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dennd5a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1183,23 +1164,33 @@ melanoma → Col4a5 → Cd47 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	
 melanoma → Col4a5 → Cd44 → CD8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Plau → St14 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Adam10 → Tspan15 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Lama4 → Itga9_Itgb1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Lama4 → Itga9_Itgb1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 2610035D17Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 2610035D17Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+A430078G23Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Abcb1a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Abcb1a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Abl2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Abr	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Abtb2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Acsbg1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Aff3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Aig1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Airn	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Akt3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Akt3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Alcam	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Antxr2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Arhgap31	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Arhgef18	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Atg10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Atp10a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Atp8a1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Atp8a1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 B930036N10Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 B930036N10Rik	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Bach2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Baz2b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Bbs9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Bbs9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Bcas3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1209,12 +1200,15 @@ Bcl2l11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or
 Btbd11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Btbd11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Bzw2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccr7	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd101	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd101	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cdk6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cers4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cers4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Chst11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cmah	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Crbn	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Crbn	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Crim1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1232,6 +1226,9 @@ Ddx60	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or s
 Ddx60	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dgat1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Dock9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dpp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Dusp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Elmsan1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Elmsan1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Eml5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1252,12 +1249,18 @@ Gm12185	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or
 Gm12185	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm12216	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm12216	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm12840	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm15283	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm15283	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm20275	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm20275	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm2245	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm26740	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm2682	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm30054	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm33104	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gm33104	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm4070	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gnptab	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gpr55	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gpr55	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1288,6 +1291,7 @@ Il7r	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or st
 Immp2l	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Irak2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Irak2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Irf8	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Isg20	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Isg20	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Itga6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1315,29 +1319,20 @@ Lnx2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or st
 Maf	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mbd5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mbd5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mctp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mcu	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mdfic	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mfsd6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mpzl3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mt1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mt1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mt2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Mt2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Myo10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Myo1f	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Myo3b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Neurl3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Neurl3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Nfatc2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nr3c1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nt5dc1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nt5e	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nt5e	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Pacs1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pag1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pag1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Parp14	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Parp9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Parp9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Pecam1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1394,8 +1389,6 @@ Sntb1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or s
 Sntb2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Snx13	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Snx18	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Spata6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Srgap3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ssbp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ssbp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 St6galnac3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1437,7 +1430,6 @@ Tuba1c	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 Tuba1c	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Txk	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Txk	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ubash3b	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ube2g1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ust	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ust	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -1487,6 +1479,8 @@ T_cell → Pdgfb → Itgav → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HO
 Bmp2k	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Sirpa → Cd47 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Cx3cl1 → Cx3cr1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+fibroblast → Cx3cl1 → Itgav → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+fibroblast → Cx3cl1 → Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Ly6c2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ly6c2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Stat2	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -1510,8 +1504,9 @@ melanoma → Mdk → Sdc4 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOL
 Rtp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Rtp4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Mia → Cdh7 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-fibroblast → Lama4 → Itga2_Itgb1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+fibroblast → Lama4 → Itga2_Itgb1 → CD4	FAIL	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 monocyte_macrophage → Tnfsf8 → Tnfrsf8 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Crem	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 NK → Serpine2 → Lrp1 → CD4	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 melanoma → Nampt → Adora2a → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Angpt1 → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -2503,22 +2498,19 @@ T_cell → Itgb3bp → Itgb5 → CD8	PASS	FAIL	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	
 NK → Ccl2 → Ccr2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 NK → Cd86 → Cd28 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Hbegf → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Ece1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mxd4	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Mxi1	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ncoa7	FAIL	PASS	PASS	PASS	PASS	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Fam214a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Hist1h4d	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccl1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ccl9	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Clcn5	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Crabp2	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 NK → Plau → Itga3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Capg	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 dendritic → H2-M3 → Klrd1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Efnb2 → Pecam1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Cd28 → Cd80 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 monocyte_macrophage → Ccl24 → Ccr3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → H2-M3 → Klrc1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 dendritic → Cx3cl1 → Itgav → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
-Ece1	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Gm11290	FAIL	PASS	PASS	PASS	FAIL	PASS	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 B_cell → Cd28 → Cd80 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 neutrophil → Hgf → Nrp1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → Cxcl12 → Itgav → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -3339,6 +3331,7 @@ T_cell → Spp1 → Ptger4 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HO
 fibroblast → Ccl28 → Ccr3 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Col8a1 → Itga1_Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 B_cell → Col9a3 → Itgav_Itgb8 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Stat5a	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 neutrophil → Lamc1 → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 fibroblast → Igf1 → Itgav_Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 neutrophil → Col4a1 → Cd44 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -4105,6 +4098,7 @@ Prdm10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 dendritic → Spp1 → Itgav_Itgb3 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Lrpap1 → Ldlr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 B_cell → Il6 → Il6ra_Il6st → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
+Satb1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 T_cell → Agrn → Itgb1 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 T_cell → H2-M3 → Cd8b1 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 NK → Lrpap1 → Ldlr → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -6489,6 +6483,7 @@ T_cell → Gip → Adrb2 → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD
 monocyte_macrophage → Cxcl2 → Cxcr2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 NK → Fgf8 → Fgfr2 → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 Gas2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Klf4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 fibroblast → Tnfsf12 → Tnfrsf12a → CD4	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 melanoma → Cxcl13 → Adra2a → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
 dendritic → Omg → Tnfrsf1b → CD8	PASS	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	HOLD	plausible but one or more robustness/mechanistic gates remain incomplete
@@ -26185,9 +26180,15 @@ Ankrd28	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or
 Atg10	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cables1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cables1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Capg	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccl1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Ccl9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cd8a	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Chst11	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Clcn5	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Cpm	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Crabp2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Crtam	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ctps2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Cwc27	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -26196,7 +26197,9 @@ Dock9	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or s
 Dph6	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Eomes	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Eomes	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gata3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gfod1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
+Gm11290	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gnaq	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Gnl3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Ier3	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
@@ -26213,11 +26216,8 @@ Lclat1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or 
 Lhfpl2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Lta	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Maf	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mxd4	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Mxi1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nckap1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nckap1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
-Ncoa7	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nmt2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nmt2	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed
 Nr6a1	FAIL	PASS	PASS	PASS	FAIL	FAIL	NOT_ASSESSED	REJECT	critical biological or statistical gate failed

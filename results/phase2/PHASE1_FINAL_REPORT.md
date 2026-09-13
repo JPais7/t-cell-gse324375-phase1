@@ -10,7 +10,7 @@ GSE324375 is analysed with the HTO-demultiplexed mouse as the inferential unit; 
 The activation-like state was discovered without curated activation genes as clustering features. This provides feature independence, not external-dataset independence.
 
 ## 4. Animal-level replication
-TOP1 uses 43 informative mice: 31 supporting and 12 opposing; direction consistency=0.721; median mouse effect=-0.0001864; IQR=0.001879.
+TOP1 uses 43 informative mice: 11 supporting and 31 opposing; direction consistency=0.256; median mouse effect=-0.0001864; IQR=0.001879.
 
 ## 5. Candidate discovery
 Extracellular, multicellular, intrinsic-expression, inferred-TF and metabolic hypotheses remain explicitly distinct. No class balance or novelty bonus is imposed.
@@ -25,7 +25,7 @@ The decomposable score separates replication, effect, statistics, RNA, ADT, stat
 TOP1 remains top-10 in 100.0% of candidate-specific removal folds. Every fold removes one informative mouse and recalculates score, eligibility and competitive rank.
 
 ## 9. Permutation null
-Within-candidate sign permutation preserves each mouse-effect magnitude while randomizing direction (1,000 permutations; seed 17). TOP1 empirical p=0.003996, empirical FDR=0.0149. This is not a biological or global-pathway null.
+Within-candidate sign permutation preserves each mouse-effect magnitude while randomizing direction (1,000 permutations; seed 17). TOP1 empirical p=0.999, empirical FDR=1. This is not a biological or global-pathway null.
 
 ## 10. RNA/ADT evidence
 TOP1 RNA=True; ADT=True; state=False. These modalities support association, not causality.
@@ -40,7 +40,7 @@ Source/signal=SUPPORTED; receptor=SUPPORTED; T-cell state=PARTIALLY_SUPPORTED; t
 No candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT rather than being promoted to fill a list.
 
 ## 14. TOP3
-1. NK → Tnfsf4 → Tnfrsf4 → CD8: class=multicellular; effect=0.2881; FDR=0.06182; mice=43; consistency=0.721; LOOCV=1.000; empirical p/FDR=0.003996/0.0149; validity=VALID_LR; external=NOT_ASSESSED; tier=2; decision=HOLD.
+1. NK → Tnfsf4 → Tnfrsf4 → CD8: class=multicellular; effect=0.2881; FDR=0.06182; mice=43; consistency=0.256; LOOCV=1.000; empirical p/FDR=0.999/1; validity=VALID_LR; external=NOT_ASSESSED; tier=2; decision=HOLD.
 2. NOT AVAILABLE — did not pass all closed gates.
 3. NOT AVAILABLE — did not pass all closed gates.
 
