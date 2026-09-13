@@ -1,0 +1,10 @@
+candidate	candidate_rank	source_commit
+fibroblast → Adam10 → Cd44 → CD8	1	822a592
+neutrophil → Pdcd1lg2 → Pdcd1 → CD4	2	822a592
+fibroblast → Col1a2 → Cd44 → CD4	3	822a592
+Stat4	4	822a592
+Atf6	5	822a592
+Fli1	6	822a592
+T_cell → Pkm → Cd44 → CD8	7	822a592
+NK → Tnfsf4 → Tnfrsf4 → CD8	8	822a592
+T_cell → Cd80 → Ctla4 → CD4	9	822a592

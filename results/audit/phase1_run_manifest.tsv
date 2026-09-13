@@ -1,0 +1,2 @@
+commit_sha	run_utc	python	random_seed	null_permutations	cells_tcell_refined	animals	datasets	loocv_scope
+822a59243372d06e07bf3ba2cd412ee40ee5c246	2026-09-13T10:59:46.785570+00:00	3.12.13	17	1000	40952	48	GSE324375; GSE289772 external contextual perturbation	top 100 per candidate class; 289 unique candidates

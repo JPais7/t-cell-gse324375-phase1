@@ -21,6 +21,9 @@ The repository is a reproducible numbered pipeline: GEO manifest and QC (`01–0
 - Added explicit animal replication, effect, consistency, modality, state, temporal and power components, plus minimum evidence gates for TOP 3.
 - Added Phase 2 candidate table, TOP 3 rationale and final report.
 - Added candidate-family collapsing, leave-one-mouse-out stability, a 1,000-permutation rank null model, and fail-fast quality control (`scripts/21_phase1_quality_control.py`). The null model is a robustness benchmark for the composite score, not a replacement for molecular FDR.
+- Replaced the mathematical `1−1/n_mice` proxy with actual removal of each mouse for 289 priority candidates (top 100 per class before deduplication), followed by effect/consistency recalculation and reranking. Candidates lacking recoverable animal-level values are explicitly not validated by LOOCV.
+- Replaced the global score-shuffle null with 1,000 within-candidate mouse-effect sign permutations (seed 17), with separate empirical P and BH-FDR. This tests dependence on coherent mouse-level direction; it is not a causal or global pathway null.
+- Added contextual external perturbation evidence. GSE289772 provides mouse CD8 evidence for pharmacologic PKM2 activation; it is a moderate context match, not gene-specific CRISPR evidence. STAT4 and ADAM10 remain `NOT_ASSESSED` for candidate-level perturbational effect.
 
 ## What remains associative
 

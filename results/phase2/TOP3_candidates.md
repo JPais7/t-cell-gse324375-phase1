@@ -1,26 +1,32 @@
 # TOP 3 candidates
 
-## 1. fibroblast → Adam10 → Cd44 → CD8
-
-- Mechanism: cell-cell / extracellular signal; source=fibroblast; target=CD8; family=LR|fibroblast|Adam10.
-- Evidence: ADT-supported; effect=0.321012842388682; FDR=0.0113532028462642; mice=34; power=HIGH; temporal=False; LOOCV=0.9705882352941176; null percentile=1.0.
-- Interpretation: associated with activation, not causal.
-- Necessity/sufficiency: ligand knockdown or receptor CRISPRi with rescue. Falsifier: no pre-specified activation/effector change after on-target perturbation.
-- Weakness: observational and incomplete spatial/modality coverage.
-
-## 2. Stat4
-
-- Mechanism: inferred transcription-factor activity; source=T cell; target=CD8; family=INTRINSIC|Stat4.
-- Evidence: RNA-supported; effect=0.6320756352928133; FDR=3.934714292939858e-06; mice=48; power=MODERATE; temporal=False; LOOCV=0.9791666666666666; null percentile=1.0.
-- Interpretation: associated with activation, not causal.
-- Necessity/sufficiency: gene knockout/CRISPRi and CRISPRa rescue. Falsifier: no pre-specified activation/effector change after on-target perturbation.
-- Weakness: observational and incomplete spatial/modality coverage.
-
-## 3. T_cell → Pkm → Cd44 → CD8
+## 1. T_cell → Pkm → Cd44 → CD8
 
 - Mechanism: source-cell ↔ T-cell program / feedback; source=T_cell; target=CD8; family=MULTI|T_cell|Pkm.
-- Evidence: RNA+ADT-supported; effect=0.4828625014947049; FDR=0.0394332468179697; mice=47; power=HIGH; temporal=False; LOOCV=0.9787234042553191; null percentile=1.0.
-- Interpretation: associated with activation, not causal.
-- Necessity/sufficiency: gene knockout/CRISPRi and CRISPRa rescue. Falsifier: no pre-specified activation/effector change after on-target perturbation.
-- Weakness: observational and incomplete spatial/modality coverage.
+- Evidence: RNA+ADT-supported; score=0.7405348118579979; effect=0.4828625014947049; FDR=0.0394332468179697; mice=47; supporting=47.0; opposing=0.0; power=HIGH.
+- Robustness: LOOCV=1.0; empirical p=0.0039960039960039; empirical FDR=0.0140113051505456; null percentile=0.997; temporal=False; external perturbation=NOT_ASSESSED; causality tier=2.
+- Interpretation: associated with activation and prioritized for perturbational testing, not causal in GSE324375.
+- Necessity/sufficiency/rescue: source-cell perturbation plus T-cell-specific perturbation and rescue. Primary readout: CD69/CD137 and activation-like program; secondary readout: cytokine/cytotoxicity and tumor-cell killing.
+- Falsifier: no pre-specified activation/effector change after verified on-target perturbation and rescue.
+- Weakness: observational, no spatial contact, and incomplete temporal/modality coverage.
+
+## 2. NK → Tnfsf4 → Tnfrsf4 → CD8
+
+- Mechanism: source-cell ↔ T-cell program / feedback; source=NK; target=CD8; family=MULTI|NK|Tnfsf4.
+- Evidence: RNA+ADT-supported; score=0.7389911041198701; effect=0.2881007284583732; FDR=0.061815512699556; mice=43; supporting=43.0; opposing=0.0; power=HIGH.
+- Robustness: LOOCV=1.0; empirical p=0.0029970029970029; empirical FDR=0.0112185112185112; null percentile=1.0; temporal=False; external perturbation=NOT_ASSESSED; causality tier=2.
+- Interpretation: associated with activation and prioritized for perturbational testing, not causal in GSE324375.
+- Necessity/sufficiency/rescue: source-cell perturbation plus T-cell-specific perturbation and rescue. Primary readout: CD69/CD137 and activation-like program; secondary readout: cytokine/cytotoxicity and tumor-cell killing.
+- Falsifier: no pre-specified activation/effector change after verified on-target perturbation and rescue.
+- Weakness: observational, no spatial contact, and incomplete temporal/modality coverage.
+
+## 3. T_cell → Adam17 → Itgb1 → CD8
+
+- Mechanism: source-cell ↔ T-cell program / feedback; source=T_cell; target=CD8; family=MULTI|T_cell|Adam17.
+- Evidence: RNA-supported; score=0.6442116988983263; effect=0.305888821873955; FDR=0.0048373345275281; mice=47; supporting=47.0; opposing=0.0; power=HIGH.
+- Robustness: LOOCV=1.0; empirical p=0.0009990009990009; empirical FDR=0.0054259466024171; null percentile=1.0; temporal=False; external perturbation=NOT_ASSESSED; causality tier=2.
+- Interpretation: associated with activation and prioritized for perturbational testing, not causal in GSE324375.
+- Necessity/sufficiency/rescue: source-cell perturbation plus T-cell-specific perturbation and rescue. Primary readout: CD69/CD137 and activation-like program; secondary readout: cytokine/cytotoxicity and tumor-cell killing.
+- Falsifier: no pre-specified activation/effector change after verified on-target perturbation and rescue.
+- Weakness: observational, no spatial contact, and incomplete temporal/modality coverage.
 
