@@ -1,0 +1,4 @@
+candidate	phase2a_priority	decision_reason
+NK → Spp1 → S1pr1 → CD8	DO_NOT_PRIORITIZE_YET	Targeted validation is associative and does not establish causal priority.
+T_cell → Cd28 → Cd86 → CD8	DO_NOT_PRIORITIZE_YET	Targeted validation is associative and does not establish causal priority.
+T_cell → Lamc1 → Itga2_Itgb1 → CD4	DO_NOT_PRIORITIZE_YET	Targeted validation is associative and does not establish causal priority.
