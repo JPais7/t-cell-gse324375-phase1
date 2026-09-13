@@ -162,7 +162,7 @@ TOP1: {r.external_perturbation_support}. No independent system-matched perturbat
 Source/signal={r.source_signal_step}; receptor={r.receptor_step}; T-cell state={r.tcell_state_step}; transcriptional program={r.transcriptional_program_step}; effector response={r.effector_response_step}; myeloid response={r.myeloid_response_step}; tumor killing={r.tumor_killing_step}. Chain evidence coherence={r.mechanistic_evidence_coherence:.3f}. Missing downstream steps are not filled with prior-paper knowledge.
 
 ## 13. Final ranking
-One candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT rather than being promoted to fill a list.
+No candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT rather than being promoted to fill a list.
 
 ## 14. TOP3
 1. {r.candidate}: class={r.candidate_type}; effect={r.effect_size:.4g}; FDR={r.FDR:.4g}; mice={int(r.n_mice)}; consistency={r.direction_consistency:.3f}; LOOCV={r.LOOCV_stability:.3f}; empirical p/FDR={r.empirical_p:.4g}/{r.empirical_FDR:.4g}; validity={r.interaction_validity}; external={r.external_perturbation_support}; tier={int(r.causality_tier)}; decision={'GO' if len(top) else 'HOLD'}.
@@ -170,7 +170,7 @@ One candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT r
 3. NOT AVAILABLE — did not pass all closed gates.
 
 ## 15. Why the candidate beat alternatives
-It combines a biologically defensible TNFSF4–TNFRSF4 direction, RNA+ADT evidence, high animal replication, candidate-specific LOOCV and an interpretable null. Intrinsic TF hypotheses fell below the revised LOOCV gate; invalid/unknown LR interpretations were excluded.
+The TNFSF4–TNFRSF4 molecular identity is biologically defensible and it combines high animal replication, candidate-specific LOOCV and an interpretable null. It is nevertheless HOLD because RNA and ADT directions disagree. Intrinsic TF hypotheses fell below the revised LOOCV gate; invalid/unknown LR interpretations were excluded.
 
 ## 16. Experimental validation
 Necessity: independent TNFSF4 loss/blockade in NK cells and TNFRSF4 CRISPRi in CD8 cells. Sufficiency: physiological cross-linked TNFSF4 or TNFSF4-high NK cells. Rescue: restore TNFSF4 or use OX40 agonism, requiring TNFRSF4. Measure CD69/CD137, state program, IFNG/TNF, viability, proliferation, cytotoxicity and live tumor killing.
