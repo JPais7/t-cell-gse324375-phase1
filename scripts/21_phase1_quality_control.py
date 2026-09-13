@@ -54,5 +54,6 @@ for script,output in [(ROOT/"scripts/20_final_candidate_ranking.py",P/"candidate
 if errs: raise SystemExit("FAIL\n"+"\n".join(errs))
 print("PASS: Phase 1.5 outputs are current, finite, biologically gated, mouse-robust, sensitivity-complete and experimentally interpretable.")
 print(f"Candidates={len(x):,}; shortlist={len(top)}; families={x.candidate_family_id.nunique():,}")
-manifest=pd.DataFrame([{"commit_sha":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),"run_utc":datetime.now(timezone.utc).isoformat(),"python":sys.version.split()[0],"random_seed":17,"n_candidates":len(x),"n_mice":int(lo.n_mice.max()),"n_permutations":int(nu.n_permutations.max()),"LOOCV_candidates":len(lo),"input_datasets":"GSE324375","external_datasets":"GSE289772 (contextual); GSE314342 (not assessed)","pipeline_version":"Phase1.5 UniProt biological-audit v3"}])
+mouse_universe=pd.read_csv(P/"loocv_fold_details.tsv",sep="\t").removed_mouse.nunique()
+manifest=pd.DataFrame([{"commit_sha":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),"run_utc":datetime.now(timezone.utc).isoformat(),"python":sys.version.split()[0],"random_seed":17,"n_candidates":len(x),"n_mice":int(mouse_universe),"n_permutations":int(nu.n_permutations.max()),"LOOCV_candidates":len(lo),"input_datasets":"GSE324375","external_datasets":"GSE289772 (contextual); GSE314342 (not assessed)","pipeline_version":"Phase1.5 UniProt biological-audit v3"}])
 manifest.to_csv(ROOT/"results/audit/phase1_run_manifest.tsv",sep="\t",index=False)
