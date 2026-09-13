@@ -1,4 +1,3 @@
-candidate	status	reason
-NK → Spp1 → S1pr1 → CD8	NOT ESTIMABLE	Candidate-specific covariates unavailable; no unstable model fitted
-T_cell → Cd28 → Cd86 → CD8	NOT ESTIMABLE	Candidate-specific covariates unavailable; no unstable model fitted
-T_cell → Lamc1 → Itga2_Itgb1 → CD4	NOT ESTIMABLE	Candidate-specific covariates unavailable; no unstable model fitted
+candidate	model_id	formula	n_mice	candidate_axis_beta	candidate_axis_se	candidate_axis_ci_low	candidate_axis_ci_high	candidate_axis_p	r2	adjusted_r2	status	reason
+NK → Spp1 → S1pr1 → CD8	RAW_OLS	endpoint ~ candidate_axis	46	-0.26545515075529635	0.04588856632342521	-0.3579374793612396	-0.1729728221493531	6.984716989480312e-07	0.4319916644271282	0.4190823840731993	ESTIMABLE	
+T_cell → Cd28 → Cd86 → CD8	RAW_OLS	endpoint ~ candidate_axis	47	-0.1755310221040257	0.05539947690801368	-0.28711129628668225	-0.06395074792136918	0.002753882964674223	0.18239998980393146	0.16423110068846336	ESTIMABLE	

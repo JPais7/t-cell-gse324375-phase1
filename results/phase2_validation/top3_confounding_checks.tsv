@@ -1,4 +1,3 @@
-candidate	status	reason
-NK → Spp1 → S1pr1 → CD8	NOT ESTIMABLE	Candidate-specific covariates unavailable; no unstable model fitted
-T_cell → Cd28 → Cd86 → CD8	NOT ESTIMABLE	Candidate-specific covariates unavailable; no unstable model fitted
-T_cell → Lamc1 → Itga2_Itgb1 → CD4	NOT ESTIMABLE	Candidate-specific covariates unavailable; no unstable model fitted
+candidate	confounder_type	test_or_model	status	notes
+NK → Spp1 → S1pr1 → CD8	composition	not precomputed	NOT_ESTIMABLE	Covariate unavailable
+T_cell → Cd28 → Cd86 → CD8	composition	not precomputed	NOT_ESTIMABLE	Covariate unavailable
