@@ -1,0 +1,2 @@
+feature_qc_status	n_rows	n_candidates	n_mice	missing_required_columns	errors	next_step
+PASS	144	3	48			READY_FOR_STATISTICAL_VALIDATION

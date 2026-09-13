@@ -21,6 +21,7 @@ def one(a,mask,g):
  vv=v[mask]; cc=ct[mask] if ct is not None else None; sm=float(cc.sum()) if cc is not None else np.nan; total=float(np.asarray(a[mask].layers['counts'].sum())) if cc is not None else np.nan; pb=np.log1p(1e6*sm/total) if total>0 else np.nan
  return [float(vv.mean()),float((vv>0).mean()),sm,float(pb)]
 def feature_status(n): return 'PASS' if n>=20 else ('LOW_CELL_COUNT' if n>=10 else 'NOT_ESTIMABLE')
+def endpoint_status(n,v): return 'PASS' if np.isfinite(v) and n>=20 else ('LOW_CELL_COUNT' if np.isfinite(v) and n>=10 else 'NOT_ESTIMABLE')
 def safe_zscore(s):
  s=pd.to_numeric(s,errors='coerce'); o=pd.Series(np.nan,index=s.index,dtype=float); v=s.notna()&np.isfinite(s)
  if v.sum()<6 or s.loc[v].std(ddof=0)==0:return o
@@ -41,10 +42,13 @@ for cand,source,sg,target,rgs in C:
    for n,v in zip(['mean','fraction_positive','sum','pseudobulk'],st):row[f'{target}_{rg}_{n}']=v
   for col in ['score_activation_immediate','score_activation_ADT','score_activation_consensus','score_effector_cytokine','score_cytotoxicity','score_proliferation','score_dysfunction','score_interferon_response']:
    row[f'{target}_{col.replace("score_","")}']=float(pd.to_numeric(tc.obs.loc[tm,col],errors='coerce').mean()) if tm.any() else np.nan
-  row['target_Ifng']=np.nan; row['target_Tnf']=np.nan; row['target_receptor_proxy']=np.nan; row['endpoint_status']='PASS' if tm.sum()>=20 else ('LOW_CELL_COUNT' if tm.sum()>=10 else 'NOT_ESTIMABLE'); rows.append(row)
+  ist=one(tc,tm,'Ifng'); tst=one(tc,tm,'Tnf');
+  for n,v in zip(['mean','fraction_positive','sum','pseudobulk'],ist): row[f'{target}_Ifng_{n}']=v
+  for n,v in zip(['mean','fraction_positive','sum','pseudobulk'],tst): row[f'{target}_Tnf_{n}']=v
+  row['target_Ifng']=ist[0]; row['target_Tnf']=tst[0]; row['target_receptor_proxy']=np.nan; row['endpoint_status']=endpoint_status(int(tm.sum()),row.get(f'{target}_activation_consensus',np.nan)); rows.append(row)
 d=pd.DataFrame(rows)
 for cand,source,sg,target,rgs in C:
- q=d.candidate.eq(cand); sc=f'{source}_{sg}_pseudobulk'; rc=[f'{target}_{g}_pseudobulk' for g in rgs]; zs=safe_zscore(d.loc[q,sc]); zr=sum((safe_zscore(d.loc[q,c]) for c in rc))/len(rc); d.loc[q,'axis_source_z']=zs; d.loc[q,'axis_target_z']=zr; d.loc[q,'target_receptor_proxy']=zr; d.loc[q,'candidate_axis']=(zs+zr)/2; d.loc[q,'interaction_proxy']=zs*zr
+ q=d.candidate.eq(cand); sc=f'{source}_{sg}_pseudobulk'; rc=[f'{target}_{g}_pseudobulk' for g in rgs]; zs=safe_zscore(d.loc[q,sc]); zr=sum((safe_zscore(d.loc[q,c]) for c in rc))/len(rc); valid=d.loc[q,'source_feature_status'].ne('NOT_ESTIMABLE')&d.loc[q,'target_feature_status'].ne('NOT_ESTIMABLE')&zs.notna()&zr.notna(); d.loc[q,['axis_source_z','axis_target_z','candidate_axis','interaction_proxy','target_receptor_proxy']]=np.nan; d.loc[q,'axis_source_z']=zs.where(valid); d.loc[q,'axis_target_z']=zr.where(valid); d.loc[q,'target_receptor_proxy']=zr.where(valid); d.loc[q,'candidate_axis']=((zs+zr)/2).where(valid); d.loc[q,'interaction_proxy']=(zs*zr).where(valid)
 assert not d.empty and d[['candidate','mouse_id']].duplicated().sum()==0
 d.to_csv(O/'top3_mouse_features.tsv',sep='\t',index=False)
 pd.DataFrame([{'input_file':'results/atlas/GSE324375.atlas_v1.h5ad','level':'cell','unit':'cell','relevant_columns':'mouse_id,provisional_cell_type,treatment,time_hours,checkpoint_blockade,library','used_for':'NK/T-cell source expression and metadata'},{'input_file':'results/tcells/GSE324375.Tcells.refined_v1.h5ad','level':'cell','unit':'cell','relevant_columns':'mouse_id,t_lineage_provisional,RNA/ADT/consensus scores','used_for':'CD4/CD8 expression and endpoints'}]).to_csv(O/'phase2a_input_schema.tsv',sep='\t',index=False)
