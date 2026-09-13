@@ -1,7 +1,7 @@
 # Phase 1.5 final report
 
 ## 1. Executive summary
-No candidate passes the closed Phase 2 gate. The leading statistical/biological hypothesis, **Eif2ak3**, is HOLD because RNA and ADT directions conflict. This is an association, not a causal conclusion.
+No candidate passes the closed Phase 2 gate. The leading intrinsic hypothesis, **Eif2ak3**, is HOLD because one or more biological, direction, robustness or causal-validation gates remain unresolved. This is an association, not a causal conclusion.
 
 ## 2. Dataset and inferential unit
 GSE324375 is analysed with the HTO-demultiplexed mouse as the inferential unit; cells measure sampling depth, not independent replication.
@@ -45,10 +45,10 @@ No candidate passes all gates. Lower-scoring candidates remain HOLD or REJECT ra
 3. NOT AVAILABLE — did not pass all closed gates.
 
 ## 15. Why the candidate beat alternatives
-The TNFSF4–TNFRSF4 molecular identity is biologically defensible and it combines high animal replication, candidate-specific LOOCV and an interpretable null. It is nevertheless HOLD because RNA and ADT directions disagree. Intrinsic TF hypotheses fell below the revised LOOCV gate; invalid/unknown LR interpretations were excluded.
+The leading candidate is ranked by its candidate-type-specific evidence, animal-level robustness, null calibration and biological validity. It remains observational and should not be interpreted as causal or therapeutically beneficial without perturbation.
 
 ## 16. Experimental validation
-Necessity: independent TNFSF4 loss/blockade in NK cells and TNFRSF4 CRISPRi in CD8 cells. Sufficiency: physiological cross-linked TNFSF4 or TNFSF4-high NK cells. Rescue: restore TNFSF4 or use OX40 agonism, requiring TNFRSF4. Measure CD69/CD137, state program, IFNG/TNF, viability, proliferation, cytotoxicity and live tumor killing.
+Necessity and sufficiency tests must match the candidate class. For intrinsic candidates, use two independent CRISPRi/KO reagents, physiological rescue, activation and functional readouts, plus viability, apoptosis, proliferation and stress controls.
 
 ## 17. Falsifiers
 Reject if verified independent perturbations have no concordant target-specific effect, if rescue fails, or if effects disappear after controlling viable cell counts, proliferation and generic stress.
@@ -60,4 +60,4 @@ Cell abundance, stress, proliferation, batch, treatment and library composition 
 Numbered scripts generate the annotation, audit, LOOCV, null, ranking, readiness and QC outputs. UniProtKB annotations are cached; seed=17; permutations=1,000.
 
 ## 20. Final decision
-Q1 biological validity: YES. Q2 mouse-removal survival: YES. Q3 mouse-level null: YES. Q4 molecular interpretation: defensible LR hypothesis. Q5 direction: NOT YET—RNA/ADT discordant. Q6 independent modalities: measured but discordant. Q7 independent perturbation: NOT_ASSESSED. Q8 testable: YES. Q9 clear falsifier: YES. Q10 residual confounding: possible. Do not begin Phase 2 until direction is resolved.
+Candidate-specific gates remain unresolved; independent perturbational validation is required.
