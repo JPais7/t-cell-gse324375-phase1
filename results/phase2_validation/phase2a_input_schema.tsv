@@ -1,0 +1,3 @@
+input_file	level	unit	relevant_columns	used_for
+results/atlas/GSE324375.atlas_v1.h5ad	cell	cell	mouse_id,provisional_cell_type,treatment,time_hours,checkpoint_blockade,library	NK/T-cell source expression and metadata
+results/tcells/GSE324375.Tcells.refined_v1.h5ad	cell	cell	mouse_id,t_lineage_provisional,RNA/ADT/consensus scores	CD4/CD8 expression and endpoints
