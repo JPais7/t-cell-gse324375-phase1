@@ -1,0 +1,4 @@
+candidate	n_total_mice	n_source_pass	n_source_low_count	n_source_not_estimable	n_target_pass	n_target_low_count	n_target_not_estimable	n_endpoint_pass	n_endpoint_low_count	n_endpoint_not_estimable	n_axis_complete	n_complete_cases	primary_predictor	primary_endpoint	candidate_feature_status
+NK → Spp1 → S1pr1 → CD8	48	43	3	2	47	0	1	47	0	1	46	46	candidate_axis	target_activation_consensus	READY_FOR_STATISTICAL_VALIDATION
+T_cell → Cd28 → Cd86 → CD8	48	47	1	0	47	0	1	47	0	1	47	47	candidate_axis	target_activation_consensus	READY_FOR_STATISTICAL_VALIDATION
+T_cell → Lamc1 → Itga2_Itgb1 → CD4	48	47	1	0	47	1	0	47	1	0	0	0	candidate_axis	target_activation_consensus	NOT_ASSESSABLE
