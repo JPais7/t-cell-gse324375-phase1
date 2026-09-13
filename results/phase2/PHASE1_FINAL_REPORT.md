@@ -25,8 +25,26 @@ Candidate class: multicellular
 Evidence score: 0.5475
 Phase 2 decision: HOLD
 
+## 4. Animal-level replication
+
+Informative-mouse summary: NOT AVAILABLE.
+Reason: the leading candidate is not represented in the predeclared LOOCV/mouse-effect summary universe.
+
+## 5. LOOCV robustness
+
+LOOCV stability: NOT AVAILABLE.
+Reason: candidate-specific folds are unavailable.
+
+## 6. Permutation null
+
+Empirical p-value: NOT AVAILABLE.
+Empirical FDR: NOT AVAILABLE.
+Null percentile: NOT AVAILABLE.
+The null is candidate-specific and does not establish biological causality.
+
 ## 7. Multimodal evidence
 
-RNA evidence: True; ADT evidence: False; state evidence: False.
-
-The association remains observational; independent perturbation is required before Phase 2.
+RNA evidence: True.
+ADT evidence: False.
+Data-driven state evidence: False.
+These modalities support prioritization but do not establish causality.
