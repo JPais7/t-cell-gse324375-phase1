@@ -9,8 +9,16 @@ from scipy.stats import spearmanr
 from statsmodels.stats.multitest import multipletests
 
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/"results/phase2"; SEED=17; NPERM=1000
-ev=pd.read_csv(OUT/"candidate_evidence_matrix.tsv",sep="\t")
-priority=pd.concat([pd.read_csv(OUT/f"top_{c}.tsv",sep="\t").head(100) for c in ["extracellular","intrinsic","multicellular"]],ignore_index=True).drop_duplicates("candidate")
+ev=pd.read_csv(OUT/"candidate_evidence_pre_audit.tsv",sep="\t",low_memory=False)
+bio=pd.read_csv(OUT/"interaction_biological_audit.tsv",sep="\t",low_memory=False)[["candidate","interaction_validity","valid_for_mechanistic_ranking"]].drop_duplicates("candidate")
+ev=ev.merge(bio,on="candidate",how="left"); ev["biological_validity_component"]=np.select([ev.candidate_type.eq("intrinsic"),ev.interaction_validity.eq("VALID_LR"),ev.interaction_validity.isin(["MEMBRANE_CONTACT","SHEDDING_PROCESSING"])],[1.0,1.0,.8],default=0.0)
+ev["mechanistic_evidence_coherence"]=np.where(ev.candidate_type.eq("intrinsic"),ev.RNA_evidence.astype(float),ev.interaction_evidence.astype(float))
+ev["experimental_testability_component"]=1.0
+# Predeclared priority universe: top 100 by pre-robustness evidence per candidate class,
+# constructed before any fold/null result exists.
+ev["pre_robustness_score"]=ev[[c for c in ["effect_size","RNA_evidence","ADT_evidence","data_driven_state_evidence","temporal_support","interaction_evidence","independence_from_curated_score"] if c in ev]].apply(pd.to_numeric,errors="coerce").fillna(0).mean(axis=1)
+ev["effect_component"]=(pd.to_numeric(ev.effect_size,errors="coerce").abs()/pd.to_numeric(ev.effect_size,errors="coerce").abs().quantile(.95)).clip(0,1).fillna(0); ev["statistical_component"]=(-np.log10(pd.to_numeric(ev.FDR,errors="coerce").fillna(1).clip(1e-300,1))/10).clip(0,1)
+priority=pd.concat([ev[ev.candidate_type.eq(c)].sort_values("pre_robustness_score",ascending=False).head(100) for c in ["extracellular","intrinsic","multicellular"]],ignore_index=True).drop_duplicates("candidate")
 
 # Recover per-mouse intrinsic high-low effects from the stored RNA-selector pseudobulks.
 pb=ad.read_h5ad(ROOT/"results/activation/activation_strata_pseudobulk_counts.h5ad")
@@ -43,11 +51,20 @@ for row in priority[priority.candidate_type.ne("intrinsic")].itertuples(index=Fa
    vals={str(m):float(a*b) for m,a,b in zip(common,xr,yr)}
  per_candidate[row.candidate]=vals
 
+# Single source of truth for all animal-level robustness calculations.
+effect_rows=[]
+for row in priority.itertuples(index=False):
+ expected=getattr(row,"expected_direction","UNRESOLVED")
+ for mouse,value in per_candidate.get(row.candidate,{}).items():
+  support=(value>0) if expected=="POSITIVE_ACTIVATION" else ((value<0) if expected=="NEGATIVE_ACTIVATION" else False)
+  effect_rows.append({"candidate":row.candidate,"candidate_type":row.candidate_type,"mouse_id":mouse,"effect_value":value,"effect_definition":"intrinsic high-minus-low RNA log2 expression" if row.candidate_type=="intrinsic" else "within-stratum centered source expression multiplied by centered target activation","expected_direction":expected,"effect_supports_hypothesis":support if expected!="UNRESOLVED" else "UNRESOLVED","condition":None,"time":None,"checkpoint_blockade":None,"n_source_cells":None,"target_lineage":row.target_lineage})
+pd.DataFrame(effect_rows).to_csv(OUT/"candidate_mouse_effects.tsv",sep="\t",index=False)
+
 def score(row,values):
  v=np.asarray(list(values.values()),float)
  if len(v)<2:return np.nan
- consistency=max((v>0).mean(),(v<0).mean()); repl=min(len(v)/10,1)*consistency
- constants=[row.effect_component,row.statistical_component,row.RNA_component,row.ADT_component,row.state_component,row.temporal_component,row.interaction_component,row.stability_component,row.null_model_component,row.biological_validity_component,row.mechanistic_evidence_coherence,row.independence_component,row.experimental_testability_component]
+ expected=getattr(row,"expected_direction","UNRESOLVED"); support=(v>0) if expected=="POSITIVE_ACTIVATION" else ((v<0) if expected=="NEGATIVE_ACTIVATION" else np.zeros(len(v),dtype=bool)); repl=min(len(v)/10,1)*(support.mean() if expected!="UNRESOLVED" else 0.0)
+ constants=[row.effect_component,row.statistical_component,float(row.RNA_evidence),float(row.ADT_evidence),float(row.data_driven_state_evidence),float(row.temporal_support),float(row.interaction_evidence),row.biological_validity_component,row.mechanistic_evidence_coherence,float(row.independence_from_curated_score),row.experimental_testability_component]
  value=float(np.mean([repl]+constants))
  if getattr(row,"external_perturbation_support","NOT_ASSESSED")=="SUPPORTED": value=float(np.mean([repl]+constants+[row.external_perturbation_component]))
  return value
@@ -64,13 +81,13 @@ for focal in base.index:
    if np.isfinite(s): scores[c]=s
   ranks=pd.Series(scores).rank(ascending=False,method="min")
   if focal in scores:
-   rank_records[focal].append(float(ranks[focal])); score_records[focal].append(scores[focal]); folds.append({"candidate":focal,"removed_mouse":mouse,"fold_score":scores[focal],"fold_rank":ranks[focal],"eligible_after_removal":True,"failure_reason":""})
+   rank_records[focal].append(float(ranks[focal])); score_records[focal].append(scores[focal]); focal_vals={m:v for m,v in per_candidate.get(focal,{}).items() if m!=mouse}; fv=np.asarray(list(focal_vals.values()),float); fr=getattr(base.loc[focal],"expected_direction","UNRESOLVED"); fs=int((fv>0).sum()) if fr=="POSITIVE_ACTIVATION" else (int((fv<0).sum()) if fr=="NEGATIVE_ACTIVATION" else 0); fo=int((fv<0).sum()) if fr=="POSITIVE_ACTIVATION" else (int((fv>0).sum()) if fr=="NEGATIVE_ACTIVATION" else 0); folds.append({"candidate":focal,"removed_mouse":mouse,"n_mice_remaining":len(fv),"n_supporting_remaining":fs,"n_opposing_remaining":fo,"direction_consistency_remaining":fs/len(fv) if fr!="UNRESOLVED" and len(fv) else np.nan,"median_effect_remaining":float(np.median(fv)) if len(fv) else np.nan,"fold_pre_robustness_score":scores[focal],"fold_score":scores[focal],"fold_rank":ranks[focal],"n_competing_candidates":len(scores),"eligible_after_removal":True,"failure_reason":""})
   else:
-   fail[focal]+=1; folds.append({"candidate":focal,"removed_mouse":mouse,"fold_score":np.nan,"fold_rank":np.nan,"eligible_after_removal":False,"failure_reason":"insufficient remaining mice"})
+   fail[focal]+=1; folds.append({"candidate":focal,"removed_mouse":mouse,"n_mice_remaining":len(vals)-1,"n_supporting_remaining":np.nan,"n_opposing_remaining":np.nan,"direction_consistency_remaining":np.nan,"median_effect_remaining":np.nan,"fold_pre_robustness_score":np.nan,"fold_score":np.nan,"fold_rank":np.nan,"n_competing_candidates":len(scores),"eligible_after_removal":False,"failure_reason":"insufficient remaining mice"})
 for c,row in base.iterrows():
  vals=per_candidate.get(c,{}); rr=np.asarray(rank_records[c]); ss=np.asarray(score_records[c]); n=len(vals)
- vv=np.asarray(list(vals.values()),float); support=max(int((vv>0).sum()),int((vv<0).sum())) if len(vv) else 0
- rows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"n_mice":n,"n_mice_supporting":support,"n_mice_opposing":n-support,"direction_consistency":support/n if n else np.nan,"mouse_effect_median":float(np.median(vv)) if n else np.nan,"mouse_effect_mean":float(np.mean(vv)) if n else np.nan,"mouse_effect_IQR":float(np.subtract(*np.percentile(vv,[75,25]))) if n else np.nan,"mouse_effect_sign":"positive" if n and np.median(vv)>0 else ("negative" if n and np.median(vv)<0 else "undetermined"),"LOOCV_runs":len(rr),"LOOCV_failed_runs":fail[c],"LOOCV_top1_runs":int((rr<=1).sum()),"LOOCV_top3_runs":int((rr<=3).sum()),"LOOCV_top10_runs":int((rr<=10).sum()),"LOOCV_top1_fraction":float((rr<=1).mean()) if len(rr) else np.nan,"LOOCV_top10_fraction":float((rr<=10).mean()) if len(rr) else np.nan,"LOOCV_top3_fraction":float((rr<=3).mean()) if len(rr) else np.nan,"LOOCV_rank_median":float(np.median(rr)) if len(rr) else np.nan,"LOOCV_rank_mean":float(np.mean(rr)) if len(rr) else np.nan,"LOOCV_rank_min":float(np.min(rr)) if len(rr) else np.nan,"LOOCV_rank_max":float(np.max(rr)) if len(rr) else np.nan,"LOOCV_rank_IQR":float(np.subtract(*np.percentile(rr,[75,25]))) if len(rr) else np.nan,"LOOCV_score_median":float(np.median(ss)) if len(ss) else np.nan,"LOOCV_score_min":float(np.min(ss)) if len(ss) else np.nan,"LOOCV_score_max":float(np.max(ss)) if len(ss) else np.nan,"LOOCV_failure_reason":"insufficient remaining mice" if fail[c] else ""})
+ vv=np.asarray(list(vals.values()),float); expected=getattr(row,"expected_direction","UNRESOLVED"); pos=int((vv>0).sum()); neg=int((vv<0).sum()); support=pos if expected=="POSITIVE_ACTIVATION" else (neg if expected=="NEGATIVE_ACTIVATION" else 0); opposing=neg if expected=="POSITIVE_ACTIVATION" else (pos if expected=="NEGATIVE_ACTIVATION" else 0)
+ rows.append({"candidate":c,"candidate_family_id":row.candidate_family_id,"n_mice":n,"n_mice_supporting":support,"n_mice_opposing":opposing,"direction_consistency":support/n if expected!="UNRESOLVED" and n else np.nan,"expected_direction":expected,"n_positive":pos,"n_negative":neg,"n_zero_or_undetermined":n-pos-neg,"mouse_effect_median":float(np.median(vv)) if n else np.nan,"mouse_effect_mean":float(np.mean(vv)) if n else np.nan,"mouse_effect_IQR":float(np.subtract(*np.percentile(vv,[75,25]))) if n else np.nan,"mouse_effect_sign":"positive" if n and np.median(vv)>0 else ("negative" if n and np.median(vv)<0 else "undetermined"),"LOOCV_runs":len(rr),"LOOCV_failed_runs":fail[c],"LOOCV_top1_runs":int((rr<=1).sum()),"LOOCV_top3_runs":int((rr<=3).sum()),"LOOCV_top10_runs":int((rr<=10).sum()),"LOOCV_top1_fraction":float((rr<=1).mean()) if len(rr) else np.nan,"LOOCV_top10_fraction":float((rr<=10).mean()) if len(rr) else np.nan,"LOOCV_top3_fraction":float((rr<=3).mean()) if len(rr) else np.nan,"LOOCV_rank_median":float(np.median(rr)) if len(rr) else np.nan,"LOOCV_rank_mean":float(np.mean(rr)) if len(rr) else np.nan,"LOOCV_rank_min":float(np.min(rr)) if len(rr) else np.nan,"LOOCV_rank_max":float(np.max(rr)) if len(rr) else np.nan,"LOOCV_rank_IQR":float(np.subtract(*np.percentile(rr,[75,25]))) if len(rr) else np.nan,"LOOCV_score_median":float(np.median(ss)) if len(ss) else np.nan,"LOOCV_score_min":float(np.min(ss)) if len(ss) else np.nan,"LOOCV_score_max":float(np.max(ss)) if len(ss) else np.nan,"LOOCV_failure_reason":"insufficient remaining mice" if fail[c] else ""})
  v=np.asarray(list(vals.values()),float); observed=score(row,vals)
  if len(v)>=2:
   ns=[]
