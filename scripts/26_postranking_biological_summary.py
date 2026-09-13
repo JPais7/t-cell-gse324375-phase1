@@ -10,3 +10,14 @@ if src.exists() and bio.exists():
  if eff.exists() and lo.exists():
   e=pd.read_csv(eff,sep='\t'); s=e.groupby('candidate').effect_value.agg(n_positive=lambda x:int((x>0).sum()),n_negative=lambda x:int((x<0).sum()),n_zero_or_undetermined=lambda x:int((x==0).sum()),n_mice_effects='count').reset_index(); s['majority_direction']=s.apply(lambda r:'positive' if r.n_positive>r.n_negative else ('negative' if r.n_negative>r.n_positive else 'balanced'),axis=1); s['majority_direction_fraction']=s[['n_positive','n_negative']].max(axis=1)/s.n_mice_effects; s['two_sided_direction_strength']=2*(s.majority_direction_fraction-.5).abs(); l=pd.read_csv(lo,sep='\t'); l=l.drop(columns=[c for c in ['n_positive','n_negative','n_zero_or_undetermined','majority_direction','majority_direction_fraction','two_sided_direction_strength','n_mice_effects'] if c in l.columns]); z=l.merge(s,on='candidate',how='left'); z=z.drop(columns=[c for c in ['n_mice_x','n_mice_y'] if c in z.columns]).rename(columns={'n_mice_x':'n_mice'}); z.to_csv(lo,sep='\t',index=False)
  print(f'Post-ranking biological summary: {len(b)} candidates')
+# Normalize merge suffixes so the LOOCV table retains a single n_mice column.
+if lo.exists():
+ l=pd.read_csv(lo,sep='\t')
+ if 'n_mice' not in l.columns and {'n_positive','n_negative','n_zero_or_undetermined'}.issubset(l.columns):
+  l['n_mice']=l['n_positive']+l['n_negative']+l['n_zero_or_undetermined']
+ if 'n_mice' not in l.columns:
+  for c in ('n_mice_x','n_mice_y'):
+   if c in l.columns:
+    l['n_mice']=l[c]; break
+  l=l.drop(columns=[c for c in ('n_mice_x','n_mice_y') if c in l.columns])
+  l.to_csv(lo,sep='\t',index=False)
