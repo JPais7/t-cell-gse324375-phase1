@@ -11,3 +11,10 @@ Pipeline version: Phase1.5d final candidate-aware clean run; random seed 17; 1,0
 ## Freeze status
 
 The leading hypothesis remains a HOLD unless unchanged gates produce GO. No causal claim, therapeutic benefit, or artificial TOP3 is inferred. The manifest is the authoritative record of commit SHA, timestamp, candidate counts, null classes, LOOCV universe and QC status.
+
+## Final freeze decision
+
+QC status: PASS
+Leading GO: NONE
+Leading HOLD: NK → Spp1 → S1pr1 → CD8
+READY_FOR_PHASE1_FREEZE: YES

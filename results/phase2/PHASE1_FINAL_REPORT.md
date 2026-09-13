@@ -96,3 +96,16 @@ The discovery remains observational and does not establish causality or therapeu
 Residual treatment, batch, cell-composition and abundance effects may contribute.
 Spatial contact, longitudinal validation and direct perturbational causality are not established.
 
+## 16. Reproducibility
+
+Random seed: 17.
+Permutations: 1000.
+Inferential unit: mouse.
+LOOCV universe: predeclared priority candidates.
+Primary dataset: GSE324375.
+Contextual/external datasets: GSE289772; GSE314342 as recorded by the pipeline.
+
+## 17. Final decision
+
+NK → Spp1 → S1pr1 → CD8 remains HOLD. The current evidence supports experimental prioritization, not causal or therapeutic claims.
+

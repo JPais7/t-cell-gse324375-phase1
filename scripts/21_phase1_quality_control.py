@@ -77,6 +77,17 @@ if {"null_test_type","null_status","n_unique_null_scores"}.issubset(nu.columns):
  if ((nu.n_permutations>0)&(nu.n_unique_null_scores<=1)&(nu.null_status!="DEGENERATE")).any(): errs.append("degenerate null not marked")
 pre=pd.read_csv(P/"candidate_evidence_pre_audit.tsv",sep="\t",nrows=1)
 if set(pre.columns)&{"LOOCV_stability","empirical_p","empirical_FDR","null_percentile","evidence_score","evidence_gate"}: errs.append("pre-audit table contains post-robustness/final-ranking fields")
+report_text=(P/"PHASE1_FINAL_REPORT.md").read_text()
+required_sections=[f"## {i}. {name}" for i,name in enumerate(["Executive summary","Dataset and inferential unit","Leading candidate","Animal-level replication","LOOCV robustness","Permutation null","Multimodal evidence","External perturbation evidence","Biological validity","Mechanistic chain","Leading HOLD hypotheses","Why the leading candidate remains HOLD","Experimental validation","Falsifiers","Limitations","Reproducibility","Final decision"],1)]
+for section in required_sections:
+ if report_text.count(section)!=1: errs.append(f"final report section count != 1: {section}")
+if all(s in report_text for s in required_sections) and [report_text.index(s) for s in required_sections]!=sorted(report_text.index(s) for s in required_sections): errs.append("final report sections are out of order")
+for token in [": nan.",": NaN.",": None.","Biological reinterpretation: nan"]:
+ if token in report_text: errs.append(f"unformatted missing value: {token}")
+if not report_text.split("## 10. Mechanistic chain",1)[1].split("## 11. Leading HOLD hypotheses",1)[0].strip(): errs.append("mechanistic chain section is empty")
+hold_ids=ready.loc[ready.phase2_decision.eq('HOLD'),'candidate']; expected_hold='NONE' if hold_ids.empty else x[x.candidate.isin(hold_ids)].sort_values(['evidence_score','candidate'],ascending=[False,True]).iloc[0].candidate
+if f"Leading HOLD: {expected_hold}" not in report_text: errs.append("final report leading HOLD mismatch")
+if f"Leading HOLD: {expected_hold}" not in (P/"TOP3_candidates.md").read_text(): errs.append("TOP3 leading HOLD mismatch")
 if errs: raise SystemExit("FAIL\n"+"\n".join(errs))
 print("PASS: Phase 1.5 outputs are current, finite, biologically gated, mouse-robust, sensitivity-complete and experimentally interpretable.")
 print(f"Candidates={len(x):,}; shortlist={len(top)}; families={x.candidate_family_id.nunique():,}")
@@ -86,3 +97,7 @@ leading_hold='NONE' if hold_candidates.empty else x[x.candidate.isin(hold_candid
 dec=ready.phase2_decision.value_counts(); manifest=pd.DataFrame([{"commit_sha":subprocess.check_output(["git","rev-parse","HEAD"],cwd=ROOT,text=True).strip(),"run_utc":datetime.now(timezone.utc).isoformat(),"python_version":sys.version.split()[0],"random_seed":17,"pipeline_version":"Phase1.5d final candidate-aware clean run","clean_run_status":"single_pass","qc_status":"PASS" if not errs else "FAIL","n_candidates_pre_audit":len(pd.read_csv(P/"candidate_evidence_pre_audit.tsv",sep="\t")),"n_candidates_final":len(x),"n_candidate_families":x.candidate_family_id.nunique(),"n_mice":int(mouse_universe),"n_permutations":int(nu.n_permutations.max()),"LOOCV_universe_type":"predeclared priority candidates","LOOCV_universe_size":len(lo),"n_directional_null":int((nu.null_test_type=="DIRECTIONAL_SIGN_NULL").sum()),"n_two_sided_null":int((nu.null_test_type=="TWO_SIDED_SIGN_NULL").sum()),"n_not_applicable_null":int((nu.null_test_type=="NOT_APPLICABLE").sum()),"n_degenerate_null":int((nu.null_status=="DEGENERATE").sum()),"n_GO":int(dec.get('GO',0)),"n_HOLD":int(dec.get('HOLD',0)),"n_REJECT":int(dec.get('REJECT',0)),"leading_GO":("NONE" if not (ready.phase2_decision=='GO').any() else ready.loc[ready.phase2_decision=='GO','candidate'].iloc[0]),"leading_HOLD":(ready.loc[ready.phase2_decision=='HOLD','candidate'].iloc[0] if (ready.phase2_decision=='HOLD').any() else 'NONE'),"input_datasets":"GSE324375","external_datasets":"GSE289772 (contextual); GSE314342 (not assessed)"}])
 manifest.iloc[0,manifest.columns.get_loc('leading_HOLD')]=leading_hold
 manifest.to_csv(ROOT/"results/audit/phase1_run_manifest.tsv",sep="\t",index=False)
+audit_path=ROOT/"results/audit/phase1_5d_pipeline_audit.md"
+audit=audit_path.read_text().split("## Final freeze decision",1)[0].rstrip()
+leading_go=manifest.iloc[0].leading_GO
+audit_path.write_text(audit+f"\n\n## Final freeze decision\n\nQC status: PASS\nLeading GO: {leading_go}\nLeading HOLD: {leading_hold}\nREADY_FOR_PHASE1_FREEZE: YES\n")
